@@ -3217,7 +3217,7 @@ into the management system.
    {{?RFC9108}}.
 
    Thanks to Italo Busi, Benoît Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, Jan Lindblad, and Qiufang Ma for the comments.
+   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, Jan Lindblad, Qiufang Ma, Mahesh Jethanandani, and Robert Wilton for the comments.
 
    Lou Berger suggested to include more details about IANA considerations.
 
