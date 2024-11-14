@@ -18,8 +18,7 @@ RESTCONF protocol operations and content.
 -- Writable nodes section:
 -- 
 -- If the data model contains any writable data nodes (those are all
--- the "config true" nodes), then include the following section of
--- text:
+-- the "config true" nodes), then include the following text:
 
 There are a number of data nodes defined in this YANG module that are
 writable/creatable/deletable (i.e., "config true", which is the
@@ -34,8 +33,8 @@ have particular sensitivities/vulnerabilities:
 -- e.g., ones that might be protected by a "nacm:default-deny-write"
 -- or a "nacm:default-deny-all" extensions statement, then those
 -- subtrees and data nodes must be listed, with an explanation of the
--- associated security risks with a focus on how they can be disruptive
--- if abused. Otherwise, state:
+-- associated security risks with a focus on how they can be
+-- disruptive if abused. Otherwise, state:
 --
 -- "There are no particularly sensitive writable data nodes."
 
@@ -44,7 +43,7 @@ have particular sensitivities/vulnerabilities:
 -- If the data model contains any readable data nodes (i.e., those
 -- that are "config false" nodes, but also all other nodes, because
 -- they can also be read via operations like get or get-config), then
--- include the following section of text:
+-- include the following text:
 
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -68,7 +67,7 @@ vulnerabilities:
 -- RPC operations section:
 --
 -- If the data model contains any RPC operations, then include
--- the following section of text:
+-- the following text:
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -78,8 +77,8 @@ vulnerabilities:
 
 -- If the data model contains any particularly sensitive RPC
 -- operations, then those operations must be listed here, along
--- with an explanation of the associated sensitivity or privacy
--- concerns.
+-- with an explanation of the associated specific sensitivity
+-- or vulnerability concerns.
 --
 -- Otherwise, state:
 -- "There are no particularly sensitive RPC operations."
@@ -99,8 +98,8 @@ be considered sensitive or vulnerable in network environments.
 
 -- No data nodes section:
 -- 
--- If the data model does not define any data nodes, then
--- add the following text
+-- If the data model does not define any data nodes, then add
+-- the following text:
 
 The YANG module defines a set of identities, types, and
 groupings. These nodes are intended to be reused by other YANG
