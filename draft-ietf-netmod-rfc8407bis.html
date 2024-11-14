@@ -2239,24 +2239,24 @@ vulnerabilities:
 -- Otherwise, state:
 -- "There are no particularly sensitive readable data nodes."
 
--- RPC operations section:
+-- RPC/action operations section:
 --
--- If the data model contains any RPC operations, then include
--- the following text:
+-- If the data model contains any RPC or action operations, then
+-- include the following text:
 
-Some of the RPC operations in this YANG module may be considered
-sensitive or vulnerable in some network environments.  It is thus
-important to control access to these operations.  Specifically,
-the following operations have particular sensitivities/
-vulnerabilities:
+Some of the RPC or action operations in this YANG module may be
+considered sensitive or vulnerable in some network environments.
+It is thus important to control access to these operations.
+Specifically, the following operations have particular
+sensitivities/ vulnerabilities:
 
 -- If the data model contains any particularly sensitive RPC
--- operations, then those operations must be listed here, along
--- with an explanation of the associated specific sensitivity
--- or vulnerability concerns.
+-- or action operations, then those operations must be listed
+-- here, along with an explanation of the associated specific
+-- sensitivity or vulnerability concerns.
 --
 -- Otherwise, state:
--- "There are no particularly sensitive RPC operations."
+-- "There are no particularly sensitive RPC or action operations."
 
 -- Reusable groupings from other modules section:
 --
@@ -2273,8 +2273,9 @@ be considered sensitive or vulnerable in network environments.
 
 -- No data nodes section:
 --
--- If the data model does not define any data nodes, then add
--- the following text:
+-- If the data model does not define any data nodes (i.e., none
+-- of the above sections or readable/writable data nodes or RPCs
+-- have been included), then add the following text:
 
 The YANG module defines a set of identities, types, and
 groupings. These nodes are intended to be reused by other YANG
