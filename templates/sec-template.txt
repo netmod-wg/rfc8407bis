@@ -15,29 +15,36 @@ provides the means to restrict access for particular NETCONF or
 RESTCONF users to a preconfigured subset of all available NETCONF or
 RESTCONF protocol operations and content.
 
- -- if you have any writable data nodes (those are all the
- -- "config true" nodes, and remember, that is the default)
- -- describe their specific sensitivity or vulnerability.
+-- Writable nodes section:
+-- 
+-- If the data model contains any writable data nodes (those are all
+-- the "config true" nodes), then include the following section of
+-- text:
 
 There are a number of data nodes defined in this YANG module that are
 writable/creatable/deletable (i.e., "config true", which is the
-default).  These data nodes may be considered sensitive or vulnerable
-in some network environments.  Write operations (e.g., edit-config)
-and delete operations to these data nodes without proper protection
-or authentication can have a negative effect on network operations.
-Specifically, the following subtrees and data nodes have particular
-sensitivities/vulnerabilities:
+default).  All writable data nodes are likely to be reasonably
+sensitive or vulnerable in some network environments.  Write
+operations (e.g., edit-config) and delete operations to these data
+nodes without proper protection or authentication can have a negative
+effect on network operations.  The following subtrees and data nodes
+have particular sensitivities/vulnerabilities:
 
-<list subtrees and data nodes and explain the associated security
- risks with a focus on how they can be disruptive if abused>
+-- If the data model contains any particularly sensitive data nodes,
+-- e.g., ones that might be protected by a "nacm:default-deny-write"
+-- or a "nacm:default-deny-all" extensions statement, then those
+-- subtrees and data nodes must be listed, with an explanation of the
+-- associated security risks with a focus on how they can be disruptive
+-- if abused. Otherwise, state:
+--
+-- "There are no particularly sensitive writable data nodes."
 
- -- for all YANG modules you must evaluate whether any readable data
- -- nodes (those are all the "config false" nodes, but also all other
- -- nodes, because they can also be read via operations like get or
- -- get-config) are sensitive or vulnerable (for instance, if they
- -- might reveal customer information or violate personal privacy
- -- laws such as those of the European Union if exposed to
- -- unauthorized parties)
+-- Readable nodes section:
+--
+-- If the data model contains any readable data nodes (i.e., those
+-- that are "config false" nodes, but also all other nodes, because
+-- they can also be read via operations like get or get-config), then
+-- include the following section of text:
 
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -46,11 +53,22 @@ notification) to these data nodes. Specifically, the following
 subtrees and data nodes have particular sensitivities/
 vulnerabilities:
 
-<list subtrees and data nodes and explain the reasons for
- the sensitivity/privacy concerns>
+-- If the data model contains any particularly sensitive readable
+-- data nodes, e.g., ones that might be protected by a
+-- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
+-- statement, or if they may reveal sensitive customer information
+-- or violate personal privacy laws, such as those of the Euopean
+-- Union, if exposed to unauthorized parties, then those subtrees
+-- and data nodes must be listed here, along with an explanation of
+-- the associated sensitivity, security, or privacy concerns.
+--
+-- Otherwise, state:
+-- "There are no particularly sensitive readable data nodes."
 
- -- if your YANG module has defined any RPC operations
- -- describe their specific sensitivity or vulnerability.
+-- RPC operations section:
+--
+-- If the data model contains any RPC operations, then include
+-- the following section of text:
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -58,13 +76,20 @@ important to control access to these operations.  Specifically,
 the following operations have particular sensitivities/
 vulnerabilities:
 
-<list RPC operations and explain the reasons for the sensitivity/
- privacy concerns>
+-- If the data model contains any particularly sensitive RPC
+-- operations, then those operations must be listed here, along
+-- with an explanation of the associated sensitivity or privacy
+-- concerns.
+--
+-- Otherwise, state:
+-- "There are no particularly sensitive RPC operations."
 
-   -- if your YANG module reuses groupings from other modules and
-   -- the document that specifies these groupings also
-   -- includes those as data nodes, then add this text to remind
-   -- the specific sensitivity or vulnerability of reused nodes.
+-- Reusable groupings from other modules section:
+-- 
+-- If the data model reuses groupings from other modules and
+-- the document that specifies these groupings also
+-- includes those as data nodes, then add this text to remind
+-- the specific sensitivity or vulnerability of reused nodes.
 
 This YANG module uses groupings from other YANG modules that
 define nodes that may be considered sensitive or vulnerable
@@ -72,8 +97,10 @@ in network environments. Refer to the Security Considerations
 of <RFC-insert-numbers> for information as to which nodes may
 be considered sensitive or vulnerable in network environments.
 
-  -- if your YANG module does not define any data nodes, then
-  -- add the following text
+-- No data nodes section:
+-- 
+-- If the data model does not define any data nodes, then
+-- add the following text
 
 The YANG module defines a set of identities, types, and
 groupings. These nodes are intended to be reused by other YANG
