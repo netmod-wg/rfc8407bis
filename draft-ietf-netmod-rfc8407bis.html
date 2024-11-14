@@ -1094,7 +1094,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 17 May 2025</td>
+<td class="center">Expires 18 May 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1113,12 +1113,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-11-13" class="published">13 November 2024</time>
+<time datetime="2024-11-14" class="published">14 November 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-05-17">17 May 2025</time></dd>
+<dd class="expires"><time datetime="2025-05-18">18 May 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1181,7 +1181,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 May 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 May 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -2173,6 +2173,8 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 <div class="breakable sourcecode" id="section-3.7.1-1">
 <pre>&lt;CODE BEGINS&gt;
 
+=============== NOTE: '\' line wrapping per RFC 8792 ================
+
 
 X.  Security Considerations
 
@@ -2190,29 +2192,37 @@ provides the means to restrict access for particular NETCONF or
 RESTCONF users to a preconfigured subset of all available NETCONF or
 RESTCONF protocol operations and content.
 
- -- if you have any writable data nodes (those are all the
- -- "config true" nodes, and remember, that is the default)
- -- describe their specific sensitivity or vulnerability.
+-- Writable nodes section:
+--
+-- If the data model contains any writable data nodes (those are all
+-- the "config true" nodes), then include the following section of
+-- text:
 
 There are a number of data nodes defined in this YANG module that are
 writable/creatable/deletable (i.e., "config true", which is the
-default).  These data nodes may be considered sensitive or vulnerable
-in some network environments.  Write operations (e.g., edit-config)
-and delete operations to these data nodes without proper protection
-or authentication can have a negative effect on network operations.
-Specifically, the following subtrees and data nodes have particular
-sensitivities/vulnerabilities:
+default).  All writable data nodes are likely to be reasonably
+sensitive or vulnerable in some network environments.  Write
+operations (e.g., edit-config) and delete operations to these data
+nodes without proper protection or authentication can have a negative
+effect on network operations.  The following subtrees and data nodes
+have particular sensitivities/vulnerabilities:
 
-&lt;list subtrees and data nodes and explain the associated security
- risks with a focus on how they can be disruptive if abused&gt;
+-- If the data model contains any particularly sensitive data nodes,
+-- e.g., ones that might be protected by a "nacm:default-deny-write"
+-- or a "nacm:default-deny-all" extensions statement, then those
+-- subtrees and data nodes must be listed, with an explanation of the
+-- associated security risks with a focus on how they can be \
+                                                           disruptive
+-- if abused. Otherwise, state:
+--
+-- "There are no particularly sensitive writable data nodes."
 
- -- for all YANG modules you must evaluate whether any readable data
- -- nodes (those are all the "config false" nodes, but also all other
- -- nodes, because they can also be read via operations like get or
- -- get-config) are sensitive or vulnerable (for instance, if they
- -- might reveal customer information or violate personal privacy
- -- laws such as those of the European Union if exposed to
- -- unauthorized parties)
+-- Readable nodes section:
+--
+-- If the data model contains any readable data nodes (i.e., those
+-- that are "config false" nodes, but also all other nodes, because
+-- they can also be read via operations like get or get-config), then
+-- include the following section of text:
 
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -2221,11 +2231,22 @@ notification) to these data nodes. Specifically, the following
 subtrees and data nodes have particular sensitivities/
 vulnerabilities:
 
-&lt;list subtrees and data nodes and explain the reasons for
- the sensitivity/privacy concerns&gt;
+-- If the data model contains any particularly sensitive readable
+-- data nodes, e.g., ones that might be protected by a
+-- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
+-- statement, or if they may reveal sensitive customer information
+-- or violate personal privacy laws, such as those of the Euopean
+-- Union, if exposed to unauthorized parties, then those subtrees
+-- and data nodes must be listed here, along with an explanation of
+-- the associated sensitivity, security, or privacy concerns.
+--
+-- Otherwise, state:
+-- "There are no particularly sensitive readable data nodes."
 
- -- if your YANG module has defined any RPC operations
- -- describe their specific sensitivity or vulnerability.
+-- RPC operations section:
+--
+-- If the data model contains any RPC operations, then include
+-- the following section of text:
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -2233,13 +2254,20 @@ important to control access to these operations.  Specifically,
 the following operations have particular sensitivities/
 vulnerabilities:
 
-&lt;list RPC operations and explain the reasons for the sensitivity/
- privacy concerns&gt;
+-- If the data model contains any particularly sensitive RPC
+-- operations, then those operations must be listed here, along
+-- with an explanation of the associated sensitivity or privacy
+-- concerns.
+--
+-- Otherwise, state:
+-- "There are no particularly sensitive RPC operations."
 
-   -- if your YANG module reuses groupings from other modules and
-   -- the document that specifies these groupings also
-   -- includes those as data nodes, then add this text to remind
-   -- the specific sensitivity or vulnerability of reused nodes.
+-- Reusable groupings from other modules section:
+--
+-- If the data model reuses groupings from other modules and
+-- the document that specifies these groupings also
+-- includes those as data nodes, then add this text to remind
+-- the specific sensitivity or vulnerability of reused nodes.
 
 This YANG module uses groupings from other YANG modules that
 define nodes that may be considered sensitive or vulnerable
@@ -2247,8 +2275,10 @@ in network environments. Refer to the Security Considerations
 of &lt;RFC-insert-numbers&gt; for information as to which nodes may
 be considered sensitive or vulnerable in network environments.
 
-  -- if your YANG module does not define any data nodes, then
-  -- add the following text
+-- No data nodes section:
+--
+-- If the data model does not define any data nodes, then
+-- add the following text
 
 The YANG module defines a set of identities, types, and
 groupings. These nodes are intended to be reused by other YANG
