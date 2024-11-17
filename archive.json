@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-14T01:38:18.495215+00:00",
+  "timestamp": "2024-11-17T01:48:06.898174+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2110,26 +2110,99 @@
       "id": "PR_kwDOJTh_ks6A5O_G",
       "title": "Rob comment on the sec template",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/73",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-11-05T08:11:55Z",
-      "updatedAt": "2024-11-13T10:03:07Z",
+      "updatedAt": "2024-11-14T14:23:46Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "b0cb3b439fc1a18d39d8cafe8448a7b397b68c8c",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "Rob-comment-on-the-sec-template",
       "headRefOid": "48a02de4b037450b7d8e119d22459e5af7b7f9e4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-11-14T06:29:51Z",
+      "mergedAt": "2024-11-14T06:29:51Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "65a9d2dc51877cce730c7b91302b61794efcf6df"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOJTh_ks6RDd9C",
+          "commit": {
+            "abbreviatedOid": "48a02de"
+          },
+          "author": "rgwilton",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-11-13T15:29:07Z",
+          "updatedAt": "2024-11-14T13:51:55Z",
+          "comments": [
+            {
+              "originalPosition": 121,
+              "body": "```suggestion\r\n-- If the data model does not define any data nodes (i.e., none of the above sections or readable/writable data nodes or RPCs have been included), then\r\n```",
+              "createdAt": "2024-11-13T15:29:08Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            },
+            {
+              "originalPosition": 96,
+              "body": "```suggestion\r\n-- If the data model contains any particularly sensitive RPC/Action\r\n```",
+              "createdAt": "2024-11-13T15:29:31Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            },
+            {
+              "originalPosition": 102,
+              "body": "```suggestion\r\n-- \"There are no particularly sensitive RPC/Action operations.\"\r\n```",
+              "createdAt": "2024-11-13T15:29:51Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            },
+            {
+              "originalPosition": 78,
+              "body": "```suggestion\r\n-- RPC/Actions operations section:\r\n```",
+              "createdAt": "2024-11-13T15:30:10Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            },
+            {
+              "originalPosition": 80,
+              "body": "```suggestion\r\n-- If the data model contains any RPC or Action operations, then include\r\n```",
+              "createdAt": "2024-11-13T15:30:37Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            },
+            {
+              "originalPosition": 83,
+              "body": "```suggestion\r\nSome of the RPC or Action operations in this YANG module may be considered\r\n```",
+              "createdAt": "2024-11-13T15:31:34Z",
+              "updatedAt": "2024-11-14T13:51:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOJTh_ks6RNfOA",
+          "commit": {
+            "abbreviatedOid": "48a02de"
+          },
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-11-14T14:23:46Z",
+          "updatedAt": "2024-11-14T14:23:46Z",
+          "comments": [
+            {
+              "originalPosition": 121,
+              "body": "Thanks, Rob. \r\n\r\nFixed at: https://github.com/netmod-wg/rfc8407bis/commit/0d3697c077d67143fff5c2149f469c475c27337c. \r\n\r\nOne minor edit, went with \"action\" instead of \"Action\" to be consistent with RFC7950. ",
+              "createdAt": "2024-11-14T14:23:46Z",
+              "updatedAt": "2024-11-14T14:23:46Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
