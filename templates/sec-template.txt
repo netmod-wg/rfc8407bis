@@ -56,7 +56,7 @@ vulnerabilities:
 -- data nodes, e.g., ones that might be protected by a
 -- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
 -- statement, or if they may reveal sensitive customer information
--- or violate personal privacy laws, such as those of the Euopean
+-- or violate personal privacy laws, such as those of the European
 -- Union, if exposed to unauthorized parties, then those subtrees
 -- and data nodes must be listed here, along with an explanation of
 -- the associated sensitivity, security, or privacy concerns.
