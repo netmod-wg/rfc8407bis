@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 18 May 2025                                              Huawei
-                                                        14 November 2024
+Expires: 16 June 2025                                             Huawei
+                                                        13 December 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 May 2025.
+   This Internet-Draft will expire on 16 June 2025.
 
 Copyright Notice
 
@@ -730,7 +730,7 @@ Table of Contents
    -- data nodes, e.g., ones that might be protected by a
    -- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
    -- statement, or if they may reveal sensitive customer information
-   -- or violate personal privacy laws, such as those of the Euopean
+   -- or violate personal privacy laws, such as those of the European
    -- Union, if exposed to unauthorized parties, then those subtrees
    -- and data nodes must be listed here, along with an explanation of
    -- the associated sensitivity, security, or privacy concerns.
