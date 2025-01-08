@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 18 May 2025                                              Huawei
-                                                        14 November 2024
+Expires: 12 July 2025                                             Huawei
+                                                          8 January 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,11 +56,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 May 2025.
+   This Internet-Draft will expire on 12 July 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -673,6 +673,9 @@ Table of Contents
 3.7.1.  Security Considerations Section Template
 
    <CODE BEGINS>
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+
    X.  Security Considerations
 
    This section is modeled after the template described in Section 3.7
@@ -726,36 +729,39 @@ Table of Contents
    subtrees and data nodes have particular sensitivities/
    vulnerabilities:
 
-   -- If the data model contains any particularly sensitive readable
-   -- data nodes, e.g., ones that might be protected by a
+   -- You must evaluate whether the data model contains any readable \
+                                                                    data
+   -- nodes (those are all the "config false" nodes, but also all other
+   -- nodes, because they can also be read via operations like get or
+   -- get-config) are particularly sensitive or vulnerable (for \
+                                                               instance,
+   -- if they might reveal customer information or violate personal
+   -- privacy laws). Examples of particularly sensitive readable
+   -- data nodes are ones that might be protected by a
    -- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
-   -- statement, or if they may reveal sensitive customer information
-   -- or violate personal privacy laws, such as those of the Euopean
-   -- Union, if exposed to unauthorized parties, then those subtrees
-   -- and data nodes must be listed here, along with an explanation of
-   -- the associated sensitivity, security, or privacy concerns.
+   -- statement.
    --
    -- Otherwise, state:
    -- "There are no particularly sensitive readable data nodes."
 
-   -- RPC operations section:
+   -- RPC/action operations section:
    --
-   -- If the data model contains any RPC operations, then include
-   -- the following text:
+   -- If the data model contains any RPC or action operations, then
+   -- include the following text:
 
-   Some of the RPC operations in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control access to these operations.  Specifically,
-   the following operations have particular sensitivities/
-   vulnerabilities:
+   Some of the RPC or action operations in this YANG module may be
+   considered sensitive or vulnerable in some network environments.
+   It is thus important to control access to these operations.
+   Specifically, the following operations have particular
+   sensitivities/ vulnerabilities:
 
    -- If the data model contains any particularly sensitive RPC
-   -- operations, then those operations must be listed here, along
-   -- with an explanation of the associated specific sensitivity
-   -- or vulnerability concerns.
+   -- or action operations, then those operations must be listed
+   -- here, along with an explanation of the associated specific
+   -- sensitivity or vulnerability concerns.
    --
    -- Otherwise, state:
-   -- "There are no particularly sensitive RPC operations."
+   -- "There are no particularly sensitive RPC or action operations."
 
    -- Reusable groupings from other modules section:
    --
@@ -772,8 +778,9 @@ Table of Contents
 
    -- No data nodes section:
    --
-   -- If the data model does not define any data nodes, then add
-   -- the following text:
+   -- If the data model does not define any data nodes (i.e., none
+   -- of the above sections or readable/writable data nodes or RPCs
+   -- have been included), then add the following text:
 
    The YANG module defines a set of identities, types, and
    groupings. These nodes are intended to be reused by other YANG
