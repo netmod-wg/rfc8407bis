@@ -52,12 +52,12 @@ notification) to these data nodes. Specifically, the following
 subtrees and data nodes have particular sensitivities/
 vulnerabilities:
 
--- You must evaluate whether the data model contains any readable data
--- nodes (those are all the "config false" nodes, but also all other
--- nodes, because they can also be read via operations like get or
--- get-config) are particularly sensitive or vulnerable (for instance,
+-- You must evaluate whether the data model contains any readable
+-- data nodes (those are all the "config false" nodes, but also all
+-- other nodes, because they can also be read via operations like get
+-- or get-config) are particularly sensitive or vulnerable (e.g.,
 -- if they might reveal customer information or violate personal
--- privacy laws). Examples of particularly sensitive readable
+-- privacy laws). Typically, particularly sensitive readable
 -- data nodes are ones that might be protected by a
 -- "nacm:default-deny-read" or a "nacm:default-deny-all" extensions
 -- statement.
