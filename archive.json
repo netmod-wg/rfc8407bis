@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-14T01:34:50.580459+00:00",
+  "timestamp": "2025-01-16T01:35:51.879802+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2209,24 +2209,26 @@
       "id": "PR_kwDOJTh_ks6HFchM",
       "title": "add clarity to readable part",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/74",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-01-08T14:36:49Z",
-      "updatedAt": "2025-01-08T14:36:49Z",
+      "updatedAt": "2025-01-14T16:18:15Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "4949a2f40e00fa203105e01ac5a89506a378ff91",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "add-clarity-to-readable-part",
       "headRefOid": "2d1af637f08163ceb26004cf45b41d58cd8127c3",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-01-14T16:18:13Z",
+      "mergedAt": "2025-01-14T16:18:13Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "68eed39e832c52d0f9e0a4b7a81d36b9850dd70a"
+      },
       "comments": [],
       "reviews": []
     }
