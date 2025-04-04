@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 3 October 2025                                           Huawei
-                                                            1 April 2025
+Expires: 6 October 2025                                           Huawei
+                                                            4 April 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 October 2025.
+   This Internet-Draft will expire on 6 October 2025.
 
 Copyright Notice
 
@@ -673,9 +673,6 @@ Table of Contents
 3.7.1.  Security Considerations Section Template
 
    <CODE BEGINS>
-   =============== NOTE: '\' line wrapping per RFC 8792 ================
-
-
    X.  Security Considerations
 
    This section is modeled after the template described in Section 3.7
@@ -684,10 +681,9 @@ Table of Contents
    The "<module-name>" YANG module defines a data model that is
    designed to be accessed via YANG-based management protocols, such as
    NETCONF [RFC6241] and RESTCONF [RFC8040]. These YANG-based management
-   protocols (1) have to use a secure transport layer (e.g., SSH [\
-                                                               RFC4252],
-   TLS [RFC8446], and QUIC [RFC9000]) and (2) have to use mutual
-   authentication.
+   protocols (1) have to use a secure transport layer
+   (e.g., SSH [RFC4252], TLS [RFC8446], and QUIC [RFC9000]) and (2) have
+   to use mutual authentication.
 
    The Network Configuration Access Control Model (NACM) [RFC8341]
    provides the means to restrict access for particular NETCONF or
