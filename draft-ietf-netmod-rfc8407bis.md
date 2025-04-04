@@ -3255,6 +3255,8 @@ into the management system.
 
    Thanks to Qiufang Ma for the careful shepherd review.
 
+   Thanks to Acee Lindem for triggering the discussion on data model vs. module. 
+
 The author of RFC 8407:
 : Andy Bierman
 : YumaWorks
