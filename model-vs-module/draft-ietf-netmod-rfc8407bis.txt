@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 6 October 2025                                           Huawei
-                                                            4 April 2025
+Expires: 9 October 2025                                           Huawei
+                                                            7 April 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 October 2025.
+   This Internet-Draft will expire on 9 October 2025.
 
 Copyright Notice
 
@@ -427,15 +427,15 @@ Table of Contents
    Both [RFC6020] and [RFC7950] make a distinction between the following
    concepts:
 
-   YANG data model:  Describes how data is represented and accessed.
+   data model:  Describes how data is represented and accessed.
 
       YANG structures data models into modules for ease of use
       [RFC8309].
 
-   YANG module:  Defines hierarchies of schema nodes to make a self-
-      contained and compilable block of YANG definitions and inclusions.
+   module:  Defines hierarchies of schema nodes to make a self-contained
+      and compilable block of YANG definitions and inclusions.
 
-      Is typically a ".yang" file.
+      A YANG module is typically a ".yang" file.
 
    A YANG data model can consist (1) of a single YANG module (e.g.,
    [RFC9129]) or (2) multiple YANG modules and YANG submodules (e.g.,
@@ -446,9 +446,14 @@ Table of Contents
    YANG data model.  Likewise, "YANG data module" should be avoided.
 
    Even if a YANG data model is structured as a single YANG module, YANG
-   data model term should be used in the title, abstract, and when the
-   overall design is described.  "YANG module" should be used when a
-   specific "*.yang" file is quoted.
+   data model term should be used in the title, abstract, and in the
+   body of the document where the overall design is described.  "YANG
+   module" should be used when a specific "*.yang" file is referenced.
+   Likewise, "YANG module" should be used when using terms related to
+   YANG module specifications (e.g., augmentation or deviation).
+   However, when extending the concepts embodied in a YANG module,
+   authors should refer to those as an extension to the "YANG data
+   model".
 
 3.  General Documentation Guidelines
 
