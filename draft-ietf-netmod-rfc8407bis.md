@@ -325,20 +325,20 @@ informative:
 
 Both {{!RFC6020}} and {{!RFC7950}} make a distinction between the following concepts:
 
-YANG data model:
+data model:
 : Describes how data is represented and accessed.
 : YANG structures data models into modules for ease of use {{?RFC8309}}.
 
-YANG module:
+module:
 : Defines hierarchies of schema nodes to make a self-contained and compilable block of YANG definitions and inclusions.
-: Is typically a ".yang" file.
+: A YANG module is typically a ".yang" file.
 
 A YANG data model can consist (1) of a single YANG module (e.g., {{?RFC9129}}) or (2) multiple YANG modules and YANG submodules (e.g., {{?RFC7407}}).
 
 Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
 Likewise, "YANG data module" should be avoided.
 
-Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and when the overall design is described. "YANG module" should be used when a specific "*.yang" file is quoted.
+Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".
 
 #  General Documentation Guidelines
 
