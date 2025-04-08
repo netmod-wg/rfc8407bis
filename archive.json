@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-06T01:52:10.266718+00:00",
+  "timestamp": "2025-04-08T01:47:05.957941+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2270,13 +2270,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-04-04T05:13:44Z",
-      "updatedAt": "2025-04-04T05:38:51Z",
+      "updatedAt": "2025-04-07T11:56:24Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "43da71208d84d5a434474f0b05309f906a8538d4",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "model-vs-module",
-      "headRefOid": "cb4912f1b47dd4e58f7ccc99099da1da56b9957e",
+      "headRefOid": "24d294dce98ed97cf067f7e4d1fa4d8af56272bb",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
