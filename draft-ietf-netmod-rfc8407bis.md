@@ -321,6 +321,26 @@ informative:
 
 {::boilerplate bcp14-tagged}
 
+## YANG Data Model vs. YANG Module
+
+Both {{!RFC6020}} and {{!RFC7950}} make a distinction between the following concepts:
+
+data model:
+: Describes how data is represented and accessed.
+: YANG structures data models into modules for ease of use {{?RFC8309}}.
+
+module:
+: Defines hierarchies of schema nodes to make a self-contained and compilable block of YANG definitions and inclusions.
+: A YANG module is typically a single ".yang" file, starting with a "module" statement.
+: A YANG module may include any number of submodules that are stored in separate ".yang" files starting with a "submodule" statement. Regardless of the presence of submodules, the module and its submodules are externally viewed as a single YANG module.
+
+A YANG data model can consist (1) of a single YANG module (e.g., {{?RFC9129}}) or (2) multiple YANG modules (e.g., {{?RFC7407}}).
+
+Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
+Likewise, "YANG data module" should be avoided.
+
+Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".
+
 #  General Documentation Guidelines
 
    YANG modules under review are likely to be contained in Internet-
@@ -3236,6 +3256,8 @@ into the management system.
    Special thanks to Amanda Baber for the thoughtful and careful review of the document.
 
    Thanks to Qiufang Ma for the careful shepherd review.
+
+   Thanks to Acee Lindem for triggering the discussion on data model vs. module.
 
 The author of RFC 8407:
 : Andy Bierman
