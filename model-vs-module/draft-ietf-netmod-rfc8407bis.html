@@ -1061,7 +1061,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 9 October 2025</td>
+<td class="center">Expires 12 October 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1080,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-07" class="published">7 April 2025</time>
+<time datetime="2025-04-10" class="published">10 April 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-09">9 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-10-12">12 October 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1148,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 12 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1865,11 +1865,16 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
           <dd class="break"></dd>
 <dt id="section-2.5-2.7"></dt>
           <dd style="margin-left: 1.5em" id="section-2.5-2.8">
-            <p id="section-2.5-2.8.1">A YANG module is typically a ".yang" file.<a href="#section-2.5-2.8.1" class="pilcrow">¶</a></p>
+            <p id="section-2.5-2.8.1">A YANG module is typically a single ".yang" file, starting with a "module" statement.<a href="#section-2.5-2.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.5-2.9"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.10">
+            <p id="section-2.5-2.10.1">A YANG module may include any number of submodules that are stored in separate ".yang" files starting with a "submodule" statement. Regardless of the presence of submodules, the module and its submodules are externally viewed as a single YANG module.<a href="#section-2.5-2.10.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
-<p id="section-2.5-3">A YANG data model can consist (1) of a single YANG module (e.g., <span>[<a href="#RFC9129" class="cite xref">RFC9129</a>]</span>) or (2) multiple YANG modules and YANG submodules (e.g., <span>[<a href="#RFC7407" class="cite xref">RFC7407</a>]</span>).<a href="#section-2.5-3" class="pilcrow">¶</a></p>
+<p id="section-2.5-3">A YANG data model can consist (1) of a single YANG module (e.g., <span>[<a href="#RFC9129" class="cite xref">RFC9129</a>]</span>) or (2) multiple YANG modules (e.g., <span>[<a href="#RFC7407" class="cite xref">RFC7407</a>]</span>).<a href="#section-2.5-3" class="pilcrow">¶</a></p>
 <p id="section-2.5-4">Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
 Likewise, "YANG data module" should be avoided.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
 <p id="section-2.5-5">Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".<a href="#section-2.5-5" class="pilcrow">¶</a></p>
