@@ -331,9 +331,10 @@ data model:
 
 module:
 : Defines hierarchies of schema nodes to make a self-contained and compilable block of YANG definitions and inclusions.
-: A YANG module is typically a ".yang" file.
+: A YANG module is typically a single ".yang" file, starting with a "module" statement.
+: A YANG module may include any number of submodules that are stored in separate ".yang" files starting with a "submodule" statement. Regardless of the presence of submodules, the module and its submodules are externally viewed as a single YANG module.
 
-A YANG data model can consist (1) of a single YANG module (e.g., {{?RFC9129}}) or (2) multiple YANG modules and YANG submodules (e.g., {{?RFC7407}}).
+A YANG data model can consist (1) of a single YANG module (e.g., {{?RFC9129}}) or (2) multiple YANG modules (e.g., {{?RFC7407}}).
 
 Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
 Likewise, "YANG data module" should be avoided.
