@@ -1143,9 +1143,9 @@ Table of Contents
    defined YANG statements or YANG extension statements can be used to
    assign semantics in a machine-readable format in YANG.
 
-   Identifiers SHOULD NOT be prefixed or suffixed with their type.  For
-   instance, creating a grouping with the suffix "-grouping" should be
-   avoided.
+   Identifiers SHOULD NOT be prefixed or suffixed with their leaf type
+   or YANG statement.  For instance, creating a grouping with the suffix
+   "-grouping" should be avoided.
 
 4.4.  Defaults
 
