@@ -228,7 +228,7 @@ informative:
    - Recommended against the use of "case + when" construct in some cases.
    - Added a discussion about the prefix pattern to use for example modules.
    - Updated the NMDA guidance in the narrative text to highlight modules that are not NMDA-compliant.
-   - Added a new section about YANG module classification.
+   - Added a new section about YANG module classification.   
    - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
    - Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.
    - Added a new section for modeling abstract data structures.
@@ -874,12 +874,16 @@ data definition statements, especially if these data nodes share a
 common data type.
 
 Identifiers SHOULD NOT carry any special semantics that identify data
-modeling properties.  Only YANG statements and YANG extension
+modeling properties. Only YANG statements and YANG extension
 statements are designed to convey machine-readable data modeling
 properties.  For example, naming an object "config" or "state" does
 not change whether it is configuration data or state data.  Only
 defined YANG statements or YANG extension statements can be used to
 assign semantics in a machine-readable format in YANG.
+
+Identifiers SHOULD NOT be prefixed or suffixed with their type.
+For instance, creating a grouping with the suffix "-grouping"
+should be avoided.
 
 ## Defaults
 
