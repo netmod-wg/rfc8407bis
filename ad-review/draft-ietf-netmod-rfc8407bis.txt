@@ -185,21 +185,22 @@ Table of Contents
    [RFC8040], requires a modular set of data models that can be reused
    and extended over time.
 
-   This document defines a set of usage guidelines for documents
-   containing YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models,
-   including IANA-maintained modules.  YANG is used to define the data
-   structures, protocol operations, and notification content used within
-   a NETCONF and/or RESTCONF server.  YANG is also used to define
-   abstract data structures [RFC8791].  A NETCONF or RESTCONF server
-   that supports a particular YANG module will support client NETCONF
-   and/or RESTCONF operation requests, as indicated by the specific
-   content defined in the YANG module.
+   This document defines a set of guidelines for documents containing
+   YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models, including
+   IANA-maintained modules.  YANG is used to define the data structures,
+   protocol operations, and notification content used within a NETCONF
+   and/or RESTCONF server.  YANG is also used to define abstract data
+   structures [RFC8791].  A NETCONF or RESTCONF server that supports a
+   particular YANG module will support client NETCONF and/or RESTCONF
+   operation requests, as indicated by the specific content defined in
+   the YANG module.
 
    Many YANG constructs are defined as optional to use, such as the
    "description" statement.  However, in order to make YANG modules more
-   useful, it is desirable to define a set of usage guidelines that
-   entails a higher level of compliance than the minimum level defined
-   in the YANG specification [RFC7950].
+   readable and interoperable, it is desirable to define a set of
+   descriptive usage guidelines that entails a higher level of
+   compliance than the minimum level defined in the YANG specification
+   [RFC7950].
 
    In addition, YANG allows constructs such as infinite length
    identifiers and string values, or top-level mandatory nodes, that a
@@ -1007,7 +1008,7 @@ Table of Contents
    usage examples, either throughout the document or in an appendix.
    This includes example instance document snippets in an appropriate
    encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-   the YANG module(s).  Example modules MUST be validated.  Refer to
+   the YANG module(s).  Examples MUST be validated.  Refer to
    Section 3.10 for tools that validate YANG modules and examples.  If
    IP addresses/prefixes are used, then a mix of either IPv4 and IPv6
    addresses/prefixes or IPv6 addresses/prefixes exclusively SHOULD be
@@ -1030,6 +1031,9 @@ Table of Contents
    *  Reserved domain names for documentation are defined in [RFC2606].
 
    URI examples SHOULD be prefixed with "example:".
+
+   In order to ease extraction and validation of examples, it is
+   RECOMMENDED to use code markers.
 
 4.  YANG Usage Guidelines
 
@@ -1068,11 +1072,12 @@ Table of Contents
    Example modules are non-normative and SHOULD be named with the prefix
    "example-".
 
-   It is suggested that a stable prefix be selected that represents the
-   entire organization.  All normative YANG modules published by the
-   IETF MUST begin with the prefix "ietf-".  Another standards
-   organization, such as the IEEE, might use the prefix "ieee-" for all
-   YANG modules.
+   It is suggested that a stable module name prefix be selected that
+   represents the entire organization.  All normative YANG modules
+   published by the IETF MUST begin with the prefix "ietf-".  All IANA-
+   maintained YANG modules MUST begin with the prefix "iana-".  Another
+   standards organization, such as the IEEE, might use the prefix
+   "ieee-" for all YANG modules.
 
    Once a module name is published, it MUST NOT be reused, even if the
    RFC containing the module is reclassified to "Historic" status.  A
@@ -1137,6 +1142,10 @@ Table of Contents
    *  The local module prefix MAY be used for references to typedefs,
       groupings, extensions, features, and identities defined in the
       module.
+
+   Consistent with Section 7.1.4 of [RFC7950], the prefix defined by a
+   module SHOULD be used when the module is imported, unless there is a
+   conflict.
 
    Prefix values SHOULD be short but meaningful to the intended user.
    Prefix values SHOULD NOT conflict with known modules that have been
@@ -3089,11 +3098,10 @@ Table of Contents
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
-   For the sake of consistency, better flexibility to support new
-   values, and maintaining IANA registries as the unique authoritative
-   source of information, when such an information is maintained in a
-   registry, this document encourages the use of IANA-maintained
-   modules.
+   For the sake of consistency and ability to support new values while
+   maintaining IANA registries as the unique authoritative source of
+   information, this document encourages the use of IANA-maintained
+   modules as the single source of information.
 
    The following section provides a set of guidelines for YANG module
    authors related to the design of IANA-maintained modules.  These
@@ -3141,13 +3149,14 @@ Table of Contents
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
    module or only a script to be used (including by IANA) for generating
-   the module (e.g., an XSLT stylesheet as in Appendix A of [RFC9108]).
-   For both cases, the document that defines an IANA-maintained module
-   MUST include a note indicating that the document is only documenting
-   the initial version of the module and that the authoritative version
-   is to be retrieved from the IANA registry.  Also, the IANA-maintained
-   module MUST include the following note indicating the RFC that
-   registered the initial version of the IANA-maintained module:
+   the module (e.g., an XSLT stylesheet as in Appendix A of [RFC9108] or
+   a Python script as in [RFC9645]).  For both cases, the document that
+   defines an IANA-maintained module MUST include a note indicating that
+   the document is only documenting the initial version of the module
+   and that the authoritative version is to be retrieved from the IANA
+   registry.  Also, the IANA-maintained module MUST include the
+   following note indicating the RFC that registered the initial version
+   of the IANA-maintained module:
 
       The initial version of this YANG module is part of RFC IIII; see
       the RFC itself for full legal notices.
@@ -3210,7 +3219,9 @@ Table of Contents
 
    *  A request to IANA to add a note to the authoritative IANA registry
       to indicate that any change to the registry must be reflected into
-      the corresponding IANA-maintained module.
+      the corresponding IANA-maintained module.  That is, any changes to
+      the registry must be accompanied by an update to the corresponding
+      IANA-maintained module.
 
    *  Details about the required actions (e.g., add a new "identity" or
       "enum" statement) to update the IANA-maintained module to reflect
@@ -3573,8 +3584,8 @@ Table of Contents
 
 5.2.  Update YANG Parameters Registry
 
-   Also, this document requests IANA to update the reference for the
-   "YANG Module Names" registry under the "YANG Parameters" registry
+   Also, this document requests IANA to update the RFC8407 reference for
+   the "YANG Module Names" registry under the "YANG Parameters" registry
    group to point to the RFC number that will be assigned to this
    document as it contains the template necessary for registration in
    Appendix B.
@@ -3956,6 +3967,10 @@ Table of Contents
               RFC 9362, DOI 10.17487/RFC9362, February 2023,
               <https://www.rfc-editor.org/rfc/rfc9362>.
 
+   [RFC9645]  Watsen, K., "YANG Groupings for TLS Clients and TLS
+              Servers", RFC 9645, DOI 10.17487/RFC9645, October 2024,
+              <https://www.rfc-editor.org/rfc/rfc9645>.
+
    [Style]    "IANA YANG", n.d., <https://github.com/llhotka/iana-yang>.
 
 Appendix A.  Module Review Checklist
@@ -4106,16 +4121,28 @@ Appendix B.  Template for IETF Modules
         This version of this YANG module is part of RFC XXXX; see
         the RFC itself for full legal notices.";
 
-     // RFC Ed.: replace XXXX with actual RFC number and remove
+     // RFC Ed.: replace XXXX/YYYY with actual RFC number and remove
      // this note
 
-     // replace '2023-07-26' with the module publication date
+     // replace 'date-revision' with the module publication date
      // the format is (YYYY-MM-DD)
 
-     revision 2023-07-26 {
+     revision date-revision {
        description
-         "what changed in this revision";
-       reference "RFC XXXX: <Replace With Document Title>";
+         "What changed in this revision.";
+       reference
+         "RFC XXXX: <Replace With Document Title>";
+     }
+
+     // RFC Ed.: Update with the RFC number and title
+     // of the RFC that defined the initial version of
+     // the module and remove this note
+
+     revision date-initial {
+       description
+         "Initial version";
+       reference
+         "RFC YYYY: <Replace With Document Title>";
      }
 
      // extension statements
