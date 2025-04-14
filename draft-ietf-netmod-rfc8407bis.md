@@ -222,6 +222,8 @@ informative:
    - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
+   - Added guidelines about the use of "YANG module" and "YANG data model".
+   - Added a clarification about embedding types in identifiers.
    - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
@@ -894,12 +896,16 @@ data definition statements, especially if these data nodes share a
 common data type.
 
 Identifiers SHOULD NOT carry any special semantics that identify data
-modeling properties.  Only YANG statements and YANG extension
+modeling properties. Only YANG statements and YANG extension
 statements are designed to convey machine-readable data modeling
 properties.  For example, naming an object "config" or "state" does
 not change whether it is configuration data or state data.  Only
 defined YANG statements or YANG extension statements can be used to
 assign semantics in a machine-readable format in YANG.
+
+Identifiers SHOULD NOT be prefixed or suffixed with their leaf type
+or YANG statement. For instance, creating a grouping with the suffix "-grouping"
+should be avoided.
 
 ## Defaults
 
