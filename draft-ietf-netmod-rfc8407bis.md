@@ -219,6 +219,7 @@ informative:
    - Added a note that RFC8792-folding of YANG modules can be used if and only if built-in YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
+   - Added a recommendation to ease extracting and validating examples.
    - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
@@ -477,7 +478,7 @@ in the following example:
 ~~~
 
 Built-in YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
-Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if Built-in YANG features are not sufficient.
+Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if built-in YANG features are not sufficient.
 A similar approach (e.g., use "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ### YANG Module Classification
