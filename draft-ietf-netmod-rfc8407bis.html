@@ -1061,7 +1061,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 12 October 2025</td>
+<td class="center">Expires 16 October 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1080,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-10" class="published">10 April 2025</time>
+<time datetime="2025-04-14" class="published">14 April 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-12">12 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-10-16">16 October 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1148,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 12 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 16 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1199,6 +1199,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.4">
                 <p id="section-toc.1-1.2.2.4.1"><a href="#section-2.4" class="auto internal xref">2.4</a>.  <a href="#name-requirements-notation" class="internal xref">Requirements Notation</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2.2.5">
+                <p id="section-toc.1-1.2.2.5.1"><a href="#section-2.5" class="auto internal xref">2.5</a>.  <a href="#name-yang-data-model-vs-yang-mod" class="internal xref">YANG Data Model vs. YANG Module</a></p>
 </li>
             </ul>
 </li>
@@ -1836,6 +1839,45 @@ svg :is([fill="white"], [fill^="#fff"]) {
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
 appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="yang-data-model-vs-yang-module">
+<section id="section-2.5">
+        <h3 id="name-yang-data-model-vs-yang-mod">
+<a href="#section-2.5" class="section-number selfRef">2.5. </a><a href="#name-yang-data-model-vs-yang-mod" class="section-name selfRef">YANG Data Model vs. YANG Module</a>
+        </h3>
+<p id="section-2.5-1">Both <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> and <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> make a distinction between the following concepts:<a href="#section-2.5-1" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-2.5-2">
+          <dt id="section-2.5-2.1">data model:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.2">
+            <p id="section-2.5-2.2.1">Describes how data is represented and accessed.<a href="#section-2.5-2.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.5-2.3"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.4">
+            <p id="section-2.5-2.4.1">YANG structures data models into modules for ease of use <span>[<a href="#RFC8309" class="cite xref">RFC8309</a>]</span>.<a href="#section-2.5-2.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.5-2.5">module:</dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.6">
+            <p id="section-2.5-2.6.1">Defines hierarchies of schema nodes to make a self-contained and compilable block of YANG definitions and inclusions.<a href="#section-2.5-2.6.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.5-2.7"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.8">
+            <p id="section-2.5-2.8.1">A YANG module is typically a single ".yang" file, starting with a "module" statement.<a href="#section-2.5-2.8.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-2.5-2.9"></dt>
+          <dd style="margin-left: 1.5em" id="section-2.5-2.10">
+            <p id="section-2.5-2.10.1">A YANG module may include any number of submodules that are stored in separate ".yang" files starting with a "submodule" statement. Regardless of the presence of submodules, the module and its submodules are externally viewed as a single YANG module.<a href="#section-2.5-2.10.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
+<p id="section-2.5-3">A YANG data model can consist (1) of a single YANG module (e.g., <span>[<a href="#RFC9129" class="cite xref">RFC9129</a>]</span>) or (2) multiple YANG modules (e.g., <span>[<a href="#RFC7407" class="cite xref">RFC7407</a>]</span>).<a href="#section-2.5-3" class="pilcrow">¶</a></p>
+<p id="section-2.5-4">Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
+Likewise, "YANG data module" should be avoided.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
+<p id="section-2.5-5">Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".<a href="#section-2.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -5678,6 +5720,10 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
         <dd>
 <span class="refAuthor">Flanagan, H.</span> and <span class="refAuthor">S. Ginoza</span>, <span class="refTitle">"RFC Style Guide"</span>, <span class="seriesInfo">RFC 7322</span>, <span class="seriesInfo">DOI 10.17487/RFC7322</span>, <time datetime="2014-09" class="refDate">September 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7322">https://www.rfc-editor.org/rfc/rfc7322</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC7407">[RFC7407]</dt>
+        <dd>
+<span class="refAuthor">Bjorklund, M.</span> and <span class="refAuthor">J. Schoenwaelder</span>, <span class="refTitle">"A YANG Data Model for SNMP Configuration"</span>, <span class="seriesInfo">RFC 7407</span>, <span class="seriesInfo">DOI 10.17487/RFC7407</span>, <time datetime="2014-12" class="refDate">December 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7407">https://www.rfc-editor.org/rfc/rfc7407</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC7841">[RFC7841]</dt>
         <dd>
 <span class="refAuthor">Halpern, J., Ed.</span>, <span class="refAuthor">Daigle, L., Ed.</span>, and <span class="refAuthor">O. Kolkman, Ed.</span>, <span class="refTitle">"RFC Streams, Headers, and Boilerplates"</span>, <span class="seriesInfo">RFC 7841</span>, <span class="seriesInfo">DOI 10.17487/RFC7841</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7841">https://www.rfc-editor.org/rfc/rfc7841</a>&gt;</span>. </dd>
@@ -5745,6 +5791,10 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dt id="RFC9108">[RFC9108]</dt>
         <dd>
 <span class="refAuthor">Lhotka, L.</span> and <span class="refAuthor">P. Špaček</span>, <span class="refTitle">"YANG Types for DNS Classes and Resource Record Types"</span>, <span class="seriesInfo">RFC 9108</span>, <span class="seriesInfo">DOI 10.17487/RFC9108</span>, <time datetime="2021-09" class="refDate">September 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9108">https://www.rfc-editor.org/rfc/rfc9108</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9129">[RFC9129]</dt>
+        <dd>
+<span class="refAuthor">Yeung, D.</span>, <span class="refAuthor">Qu, Y.</span>, <span class="refAuthor">Zhang, Z.</span>, <span class="refAuthor">Chen, I.</span>, and <span class="refAuthor">A. Lindem</span>, <span class="refTitle">"YANG Data Model for the OSPF Protocol"</span>, <span class="seriesInfo">RFC 9129</span>, <span class="seriesInfo">DOI 10.17487/RFC9129</span>, <time datetime="2022-10" class="refDate">October 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9129">https://www.rfc-editor.org/rfc/rfc9129</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9132">[RFC9132]</dt>
         <dd>
@@ -6102,35 +6152,36 @@ module iana-template {
 <p id="appendix-D-9">Kent Watsen contributed text to the security and IANA-maintained module templates.<a href="#appendix-D-9" class="pilcrow">¶</a></p>
 <p id="appendix-D-10">Special thanks to Amanda Baber for the thoughtful and careful review of the document.<a href="#appendix-D-10" class="pilcrow">¶</a></p>
 <p id="appendix-D-11">Thanks to Qiufang Ma for the careful shepherd review.<a href="#appendix-D-11" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-D-12">
-        <dt id="appendix-D-12.1">The author of RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-12.2">
-          <p id="appendix-D-12.2.1">Andy Bierman<a href="#appendix-D-12.2.1" class="pilcrow">¶</a></p>
+<p id="appendix-D-12">Thanks to Acee Lindem for triggering the discussion on data model vs. module.<a href="#appendix-D-12" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-D-13">
+        <dt id="appendix-D-13.1">The author of RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-13.2">
+          <p id="appendix-D-13.2.1">Andy Bierman<a href="#appendix-D-13.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-12.3"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-12.4">
-          <p id="appendix-D-12.4.1">YumaWorks<a href="#appendix-D-12.4.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-13.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-13.4">
+          <p id="appendix-D-13.4.1">YumaWorks<a href="#appendix-D-13.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-12.5"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-12.6">
-          <p id="appendix-D-12.6.1">email: andy@yumaworks.com<a href="#appendix-D-12.6.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-13.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-13.6">
+          <p id="appendix-D-13.6.1">email: andy@yumaworks.com<a href="#appendix-D-13.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-12.7">Acknowledgments from RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-12.8">
-          <p id="appendix-D-12.8.1">The structure and contents of this document are adapted from
+<dt id="appendix-D-13.7">Acknowledgments from RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-13.8">
+          <p id="appendix-D-13.8.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by
- C. M. Heard.<a href="#appendix-D-12.8.1" class="pilcrow">¶</a></p>
+ C. M. Heard.<a href="#appendix-D-13.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-12.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-12.10">
-          <p id="appendix-D-12.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
+<dt id="appendix-D-13.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-13.10">
+          <p id="appendix-D-13.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
 Ladislav Lhotka, Jernej Tuljak, Lou Berger, Robert Wilton, Kent
 Watsen, and William Lupton for their extensive reviews and
-contributions to this document.<a href="#appendix-D-12.10.1" class="pilcrow">¶</a></p>
+contributions to this document.<a href="#appendix-D-13.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
