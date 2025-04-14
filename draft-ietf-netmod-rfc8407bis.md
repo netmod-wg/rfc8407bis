@@ -421,7 +421,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
 ###  Example Modules
 
 Example modules are not code components.  The ``<CODE BEGINS>``
-convention MUST NOT be used for example modules.
+convention MUST NOT be used for example modules. However, example modules MUST be validated.
 
 An example module SHOULD be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".
