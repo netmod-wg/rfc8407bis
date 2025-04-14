@@ -2832,11 +2832,10 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
-   For the sake of consistency, better flexibility to support new
-   values, and maintaining IANA registries as the unique authoritative
-   source of information, when such an information is maintained in a
-   registry, this document encourages the use of IANA-maintained
-   modules.
+   For the sake of consistency and ability to support new values while
+   maintaining IANA registries as the unique authoritative source of 
+   information, this document encourages the use of IANA-maintained modules
+   as the single source of information.
 
    The following section provides a set of guidelines for YANG module authors
    related to the design of IANA-maintained modules.  These guidelines
@@ -2884,7 +2883,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
    module or only a script to be used (including by IANA) for generating
-   the module (e.g., an XSLT stylesheet as in Appendix A of {{?RFC9108}}).
+   the module (e.g., an XSLT stylesheet as in Appendix A of {{?RFC9108}} or a Python script as in {{?RFC9645}}).
    For both cases, the document that defines an IANA-maintained module
    MUST include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
@@ -2952,7 +2951,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 
    *  A request to IANA to add a note to the authoritative IANA registry
       to indicate that any change to the registry must be reflected into
-      the corresponding IANA-maintained module.
+      the corresponding IANA-maintained module. That is, any changes to the registry must be accompanied by an update to the corresponding
+      IANA-maintained module.
 
    *  Details about the required actions (e.g., add a new "identity" or
       "enum" statement) to update the IANA-maintained module to reflect
@@ -3078,7 +3078,7 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 
 ## Update YANG Parameters Registry
 
-Also, this document requests IANA to update the reference for
+Also, this document requests IANA to update the RFC8407 reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.
