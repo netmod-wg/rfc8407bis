@@ -52,7 +52,7 @@ normative:
               target: https://authors.ietf.org/en/content-guidelines-overview
 
    W3C.REC-xpath:
-              target: http://www.w3.org/TR/1999/REC-xpath-19991116
+              target: https://www.w3.org/TR/1999/REC-xpath-19991116
               title: "XML Path Language (XPath) Version 1.0"
               author:
                 - name: James Clark
@@ -82,7 +82,7 @@ informative:
               author:
                 org: RFC Editor
               date: false
-              target: http://www.rfc-editor.org/styleguide/
+              target: https://www.rfc-editor.org/styleguide/
 
    IANA_BFD_URL:
               title: "iana-bfd-types YANG Module"
@@ -141,7 +141,7 @@ informative:
    specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
-   (NETCONF) and RESTCONF protocol implementations that utilize YANG
+   (NETCONF) and RESTCONF Protocol implementations that utilize YANG
    modules.  This document obsoletes RFC 8407.
 
    Also, this document updates RFC 8126 by
@@ -155,7 +155,7 @@ informative:
 
    The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol (NETCONF) {{!RFC6241}} and the RESTCONF protocol {{!RFC8040}},
+   Configuration Protocol (NETCONF) {{!RFC6241}} and the RESTCONF Protocol {{!RFC8040}},
    requires a modular set of data models that can be reused and extended
    over time.
 
@@ -216,7 +216,7 @@ informative:
    - Added a recommendation about long trees.
    - Fixed a reference bug in {{sec-module-naming-conventions}}.
    - Added a recommendation for the use of meaningful prefix values.
-   - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
+   - Added a note that RFC8792-folding of YANG modules can be used if and only if built-in YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
    - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
@@ -476,8 +476,8 @@ in the following example:
 {::include-fold ./examples/long-line-ex.txt}
 ~~~
 
-Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
-Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
+Built-in YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
+Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if Built-in YANG features are not sufficient.
 A similar approach (e.g., use "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ### YANG Module Classification
@@ -816,8 +816,8 @@ new module, not a name change.
 ## Prefixes
 
 All YANG definitions are scoped by the module containing the
-definition being referenced.  This allows definitions from multiple
-modules to be used, even if the names are not unique.  In the example
+definition being referenced. This allows the same name to be used
+in multiple moodules, even if the names are not unique. In the example
 below, the identifier "foo" is used in all three modules:
 
 ~~~ yang
@@ -1064,7 +1064,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
 {{Section 8.1 of !RFC7950}} includes provisions for defining constraints
 on state data and specifies that a constraint must be true in a valid state data tree.
 However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
-constraints to be violated under some circumstances to help detecting anomalies.
+constraints to be violated under some circumstances to help to detect anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
@@ -1936,7 +1936,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    It has been found that the "anyxml" statement is not implemented
    consistently across all servers.  It is possible that mixed-mode XML
-   will not be supported or that configuration anyxml nodes will not
+   will not be supported or that configuration anyxml nodes will not be
    supported.
 
    If there are referential integrity constraints associated with the
@@ -2195,7 +2195,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    of the target data node because the client does not have any control
    over this external data.
 
-   In the following dummy example, it is okay to augment the "interface"
+   In the following sample, it is okay to augment the "interface"
    entry with "mandatory-leaf" because the augmentation depends on
    support for "some-new-iftype".  The old client does not know about
    this type, so it would never select this type; therefore, it would
@@ -2801,10 +2801,9 @@ registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
 
 ## Modeling Abstract Data Structures
 
-For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of {{!RFC8791}}
-is RECOMMENDED compared to the "yang-data" extension statement {{!RFC8040}}.
+For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of the "structure" extension statement {{!RFC8791}} is RECOMMENDED compared to the "yang-data" extension statement {{!RFC8040}}.
 
-> Examples of modules that rely upon {{!RFC8791}} are {{?RFC9132}} or {{?RFC9195}}.
+> Examples of modules that rely upon the "structure" extension statement {{!RFC8791}} are {{?RFC9132}} or {{?RFC9195}}.
 
 Abstract data structures can be augmented using the "augment-structure" statement {{!RFC8791}}.
 
@@ -2946,12 +2945,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    registry.  Concretely, the IANA Considerations Section SHALL at least
    provide the following information:
 
-   *  An IANA request to add a note to the page displaying the
+   *  A request to IANA to add a note to the page displaying the
       information about the IANA-maintained module that new values must
-      not be directly added to the module, but to an authoritative IANA
+      not be directly added to the module. These values should be added to an authoritative IANA
       registry.
 
-   *  An IANA request to add a note to the authoritative IANA registry
+   *  A request to IANA to add a note to the authoritative IANA registry
       to indicate that any change to the registry must be reflected into
       the corresponding IANA-maintained module.
 
@@ -2975,13 +2974,13 @@ Abstract data structures can be augmented using the "augment-structure" statemen
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
 
          - If a new registration uses an identifier that does not comply with the naming conventions
-      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
+      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If all else failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
 
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
 
-   *  An indication whether experimental values are included in the
-      IANA-maintained module.  Absent such an indication, experimental
+   *  An instruction whether experimental values should be included in the
+      IANA-maintained module. If no instruction is provided, experimental
       values MUST NOT be listed in the IANA-maintained module.
 
    *  An instruction about how to generate the "revision" statement.
@@ -3051,7 +3050,7 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-   IANA is requested to register the following URI in the "ns" subregistry within
+   IANA is requested to update the following URI in the "ns" subregistry within
    the "IETF XML Registry" {{!RFC3688}}:
 
 ~~~~
@@ -3086,7 +3085,7 @@ for registration in Appendix B.
 
 ## Revisions of Published Modules
 
-IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows:
+IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on the uniqueness of names as follows:
 
 {: vspace="0"}
 OLD:
@@ -3120,10 +3119,10 @@ The underlying registry:
 
 #  Security Considerations
 
-This document defines documentation guidelines for NETCONF or
-RESTCONF content defined with the YANG data modeling language;
-therefore, it does not introduce any new or increased security risks
-into the management system.
+This document defines guidelines for NETCONF or
+RESTCONF content defined with the YANG data modeling language.
+It does not introduce any new or increased security risks
+that need to be discussed.
 
 --- back
 
