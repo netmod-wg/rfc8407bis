@@ -159,7 +159,7 @@ informative:
    requires a modular set of data models that can be reused and extended
    over time.
 
-   This document defines a set of usage guidelines for documents
+   This document defines a set of guidelines for documents
    containing YANG 1.1 {{!RFC7950}} and YANG 1.0 {{!RFC6020}} data models, including IANA-maintained modules.
    YANG is used to define the data structures, protocol operations, and
    notification content used within a NETCONF and/or RESTCONF server.
@@ -170,7 +170,7 @@ informative:
 
    Many YANG constructs are defined as optional to use, such as the
    "description" statement.  However, in order to make YANG modules more
-   useful, it is desirable to define a set of usage guidelines that
+   readable and interoperable, it is desirable to define a set of descriptive usage guidelines that
    entails a higher level of compliance than the minimum level defined
    in the YANG specification {{!RFC7950}}.
 
@@ -750,7 +750,7 @@ Each specification that defines one or more modules SHOULD contain
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Example modules MUST be validated.  Refer to
+the YANG module(s).  Examples MUST be validated.  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively SHOULD be used in the examples.
@@ -765,6 +765,7 @@ documentation use. Authors SHOULD use these reserved values in the usage example
 
 URI examples SHOULD be prefixed with "example:".
 
+In order to ease extraction and validation of examples, it is RECOMMENDED to use code markers.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
@@ -802,9 +803,9 @@ progress is using the same module name.
 Example modules are non-normative and SHOULD be named with the prefix
 "example-".
 
-It is suggested that a stable prefix be selected that represents the
+It is suggested that a stable module name prefix be selected that represents the
 entire organization.  All normative YANG modules published by the
-IETF MUST begin with the prefix "ietf-".  Another standards
+IETF MUST begin with the prefix "ietf-". All IANA-maintained YANG modules MUST begin with the prefix "iana-".  Another standards
 organization, such as the IEEE, might use the prefix "ieee-" for all
 YANG modules.
 
@@ -860,6 +861,9 @@ module:
 * The local module prefix SHOULD be used instead of no prefix in all path expressions.
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
+
+Consistent with {{Section 7.1.4 of !RFC7950}}, the prefix defined by a module
+SHOULD be used when the module is imported, unless there is a conflict.
 
 Prefix values SHOULD be short but meaningful to the intended user. Prefix values SHOULD NOT conflict with known modules that have been previously published.
 
@@ -2833,7 +2837,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    values are assigned or some values are deprecated.
 
    For the sake of consistency and ability to support new values while
-   maintaining IANA registries as the unique authoritative source of 
+   maintaining IANA registries as the unique authoritative source of
    information, this document encourages the use of IANA-maintained modules
    as the single source of information.
 
