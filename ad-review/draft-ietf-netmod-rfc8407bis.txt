@@ -274,6 +274,8 @@ Table of Contents
 
    *  Added tool validation checks of JSON-encoded examples.
 
+   *  Added a recommendation to ease extracting and validating examples.
+
    *  Updated many examples to be aligned with the consistent
       indentation recommendation (internal consistency).
 
@@ -607,7 +609,7 @@ Table of Contents
 
    Built-in YANG features (e.g., breaking line, "+") SHOULD be used to
    fit a module into the line limits.  Exceptionally, RFC8792-folding of
-   YANG modules MAY be used if and only if Built-in YANG features are
+   YANG modules MAY be used if and only if built-in YANG features are
    not sufficient.  A similar approach (e.g., use "--tree-line-length
    69" or split a tree into subtrees) SHOULD be followed for tree
    diagrams.
