@@ -224,7 +224,6 @@ informative:
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
    - Added guidelines about the use of "YANG module" and "YANG data model".
-   - Added a clarification about embedding types in identifiers.
    - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
