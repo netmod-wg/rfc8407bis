@@ -903,10 +903,6 @@ not change whether it is configuration data or state data.  Only
 defined YANG statements or YANG extension statements can be used to
 assign semantics in a machine-readable format in YANG.
 
-Identifiers SHOULD NOT be prefixed or suffixed with their leaf type
-or YANG statement. For instance, creating a grouping with the suffix "-grouping"
-should be avoided.
-
 ## Defaults
 
 In general, it is suggested that substatements containing very common
