@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-15T01:50:28.434180+00:00",
+  "timestamp": "2025-04-17T01:48:34.306457+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -377,6 +377,22 @@
           "updatedAt": "2024-08-01T08:57:54Z"
         }
       ]
+    },
+    {
+      "number": 80,
+      "id": "I_kwDOJTh_ks6yhhvx",
+      "title": "grouping comment from Per",
+      "url": "https://github.com/netmod-wg/rfc8407bis/issues/80",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Identifiers SHOULD NOT be prefixed or suffixed with their leaf type\nor YANG statement. For instance, creating a grouping with the suffix \"-grouping\"\nshould be avoided.",
+      "createdAt": "2025-04-15T05:07:14Z",
+      "updatedAt": "2025-04-15T05:07:14Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -2354,13 +2370,13 @@
       "labels": [],
       "body": "start with nits part first",
       "createdAt": "2025-04-14T03:14:44Z",
-      "updatedAt": "2025-04-14T06:13:52Z",
+      "updatedAt": "2025-04-15T08:57:11Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "35cc8b5c2ad7a73ba56cd09d9a9d719e5d48b71f",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "ad-review",
-      "headRefOid": "a6c567b7be425fbe3aa5af1f8261609b37e09ea8",
+      "headRefOid": "671c72962c22c26cfc52f5c4c1936138fa7e76c9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
