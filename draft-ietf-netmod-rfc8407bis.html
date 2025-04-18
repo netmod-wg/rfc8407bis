@@ -13,7 +13,7 @@
    specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
-   (NETCONF) and RESTCONF protocol implementations that utilize YANG
+   (NETCONF) and RESTCONF Protocol implementations that utilize YANG
    modules.  This document obsoletes RFC 8407. 
        Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
@@ -27,7 +27,7 @@
 <meta content="draft-ietf-netmod-rfc8407bis-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.1
-    Python 3.12.9
+    Python 3.12.10
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
@@ -1061,7 +1061,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 17 October 2025</td>
+<td class="center">Expires 20 October 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1080,12 +1080,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-15" class="published">15 April 2025</time>
+<time datetime="2025-04-18" class="published">18 April 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-17">17 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-10-20">20 October 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1111,7 +1111,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
-   (NETCONF) and RESTCONF protocol implementations that utilize YANG
+   (NETCONF) and RESTCONF Protocol implementations that utilize YANG
    modules.  This document obsoletes RFC 8407.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
@@ -1148,7 +1148,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 20 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1531,10 +1531,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-1-1">The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol (NETCONF) <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> and the RESTCONF protocol <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>,
+   Configuration Protocol (NETCONF) <span>[<a href="#RFC6241" class="cite xref">RFC6241</a>]</span> and the RESTCONF Protocol <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>,
    requires a modular set of data models that can be reused and extended
    over time.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">This document defines a set of usage guidelines for documents
+<p id="section-1-2">This document defines a set of guidelines for documents
    containing YANG 1.1 <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and YANG 1.0 <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> data models, including IANA-maintained modules.
    YANG is used to define the data structures, protocol operations, and
    notification content used within a NETCONF and/or RESTCONF server.
@@ -1544,7 +1544,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    indicated by the specific content defined in the YANG module.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">Many YANG constructs are defined as optional to use, such as the
    "description" statement.  However, in order to make YANG modules more
-   useful, it is desirable to define a set of usage guidelines that
+   readable and interoperable, it is desirable to define a set of descriptive usage guidelines that
    entails a higher level of compliance than the minimum level defined
    in the YANG specification <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-1-3" class="pilcrow">¶</a></p>
 <p id="section-1-4">In addition, YANG allows constructs such as infinite length
@@ -1619,7 +1619,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.14.1">Added a recommendation for the use of meaningful prefix values.<a href="#section-1.1-2.14.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.15">
-            <p id="section-1.1-2.15.1">Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.<a href="#section-1.1-2.15.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.15.1">Added a note that RFC8792-folding of YANG modules can be used if and only if built-in YANG features (e.g., break line, "+") are not sufficient.<a href="#section-1.1-2.15.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.16">
             <p id="section-1.1-2.16.1">Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.<a href="#section-1.1-2.16.1" class="pilcrow">¶</a></p>
@@ -1628,67 +1628,70 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.17.1">Added tool validation checks of JSON-encoded examples.<a href="#section-1.1-2.17.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.18">
-            <p id="section-1.1-2.18.1">Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).<a href="#section-1.1-2.18.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.18.1">Added a recommendation to ease extracting and validating examples.<a href="#section-1.1-2.18.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.19">
-            <p id="section-1.1-2.19.1">Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.<a href="#section-1.1-2.19.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.19.1">Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).<a href="#section-1.1-2.19.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.20">
-            <p id="section-1.1-2.20.1">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.20.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.20.1">Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.<a href="#section-1.1-2.20.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.21">
-            <p id="section-1.1-2.21.1">Added guidelines about the use of "YANG module" and "YANG data model".<a href="#section-1.1-2.21.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.21.1">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.21.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.22">
-            <p id="section-1.1-2.22.1">Elaborated the guidance for the use of values reserved for documentation in examples.<a href="#section-1.1-2.22.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.22.1">Added guidelines about the use of "YANG module" and "YANG data model".<a href="#section-1.1-2.22.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.23">
-            <p id="section-1.1-2.23.1">Recommended the use of "example:" for URI examples.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.23.1">Elaborated the guidance for the use of values reserved for documentation in examples.<a href="#section-1.1-2.23.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.24">
-            <p id="section-1.1-2.24.1">Added a new section "Defining Standard Tags" (<a href="#sec-tags" class="auto internal xref">Section 4.28</a>) to echo the guidance in <span>[<a href="#RFC8819" class="cite xref">RFC8819</a>]</span>.<a href="#section-1.1-2.24.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.24.1">Recommended the use of "example:" for URI examples.<a href="#section-1.1-2.24.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.25">
-            <p id="section-1.1-2.25.1">Recommended against the use of "case + when" construct in some cases.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.25.1">Added a new section "Defining Standard Tags" (<a href="#sec-tags" class="auto internal xref">Section 4.28</a>) to echo the guidance in <span>[<a href="#RFC8819" class="cite xref">RFC8819</a>]</span>.<a href="#section-1.1-2.25.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.26">
-            <p id="section-1.1-2.26.1">Added a discussion about the prefix pattern to use for example modules.<a href="#section-1.1-2.26.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.26.1">Recommended against the use of "case + when" construct in some cases.<a href="#section-1.1-2.26.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.27">
-            <p id="section-1.1-2.27.1">Updated the NMDA guidance in the narrative text to highlight modules that are not NMDA-compliant.<a href="#section-1.1-2.27.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.27.1">Added a discussion about the prefix pattern to use for example modules.<a href="#section-1.1-2.27.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.28">
-            <p id="section-1.1-2.28.1">Added a new section about YANG module classification.<a href="#section-1.1-2.28.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.28.1">Updated the NMDA guidance in the narrative text to highlight modules that are not NMDA-compliant.<a href="#section-1.1-2.28.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.29">
-            <p id="section-1.1-2.29.1">Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.<a href="#section-1.1-2.29.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.29.1">Added a new section about YANG module classification.<a href="#section-1.1-2.29.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.30">
-            <p id="section-1.1-2.30.1">Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.<a href="#section-1.1-2.30.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.30.1">Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.<a href="#section-1.1-2.30.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.31">
-            <p id="section-1.1-2.31.1">Added a new section for modeling abstract data structures.<a href="#section-1.1-2.31.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.31.1">Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.<a href="#section-1.1-2.31.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.32">
-            <p id="section-1.1-2.32.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.32.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.32.1">Added a new section for modeling abstract data structures.<a href="#section-1.1-2.32.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.33">
-            <p id="section-1.1-2.33.1">Added text about summary of changes in revision statements.<a href="#section-1.1-2.33.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.33.1">Added a discussion about "must + error-message" constructs for state data.<a href="#section-1.1-2.33.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.34">
-            <p id="section-1.1-2.34.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.34.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.34.1">Added text about summary of changes in revision statements.<a href="#section-1.1-2.34.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.35">
-            <p id="section-1.1-2.35.1">Updates RFC 6020 to record current IANA practices for registering modules and their revisions.<a href="#section-1.1-2.35.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.35.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.35.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.36">
-            <p id="section-1.1-2.36.1">Updated the wiki URLs to use the new structure instead of the old trac.<a href="#section-1.1-2.36.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.36.1">Updates RFC 6020 to record current IANA practices for registering modules and their revisions.<a href="#section-1.1-2.36.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.37">
-            <p id="section-1.1-2.37.1">Added anydata to the list of statements with mandatory description (<a href="#sec-data-def" class="auto internal xref">Section 4.14</a>).<a href="#section-1.1-2.37.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.37.1">Updated the wiki URLs to use the new structure instead of the old trac.<a href="#section-1.1-2.37.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.38">
-            <p id="section-1.1-2.38.1">Fixed an error (invalid statements) in Section 4.24.<a href="#section-1.1-2.38.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.38.1">Added anydata to the list of statements with mandatory description (<a href="#sec-data-def" class="auto internal xref">Section 4.14</a>).<a href="#section-1.1-2.38.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-1.1-2.39">
+            <p id="section-1.1-2.39.1">Fixed an error (invalid statements) in Section 4.24.<a href="#section-1.1-2.39.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -1986,7 +1989,7 @@ Likewise, "YANG data module" should be avoided.<a href="#section-2.5-4" class="p
 <a href="#section-3.2.1" class="section-number selfRef">3.2.1. </a><a href="#name-example-modules" class="section-name selfRef">Example Modules</a>
           </h4>
 <p id="section-3.2.1-1">Example modules are not code components.  The <code>&lt;CODE BEGINS&gt;</code>
-convention <span class="bcp14">MUST NOT</span> be used for example modules.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
+convention <span class="bcp14">MUST NOT</span> be used for example modules. However, example modules <span class="bcp14">MUST</span> be validated.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-2">An example module <span class="bcp14">SHOULD</span> be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".<a href="#section-3.2.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-3">See <a href="#sec-namespace-assignments" class="auto internal xref">Section 4.9</a> regarding the namespace guidelines for example
@@ -2053,8 +2056,8 @@ in the following example:<a href="#section-3.5-4" class="pilcrow">¶</a></p>
 value so the line needs to wrap to stay within 72 characters&lt;/myleaf&gt;
 </pre><a href="#section-3.5-5" class="pilcrow">¶</a>
 </div>
-<p id="section-3.5-6">Native YANG features (e.g., breaking line, "+") <span class="bcp14">SHOULD</span> be used to fit a module into the line limits.
-Exceptionally, RFC8792-folding of YANG modules <span class="bcp14">MAY</span> be used if and only if native YANG features are not sufficient.
+<p id="section-3.5-6">Built-in YANG features (e.g., breaking line, "+") <span class="bcp14">SHOULD</span> be used to fit a module into the line limits.
+Exceptionally, RFC8792-folding of YANG modules <span class="bcp14">MAY</span> be used if and only if built-in YANG features are not sufficient.
 A similar approach (e.g., use "--tree-line-length 69" or split a tree into subtrees) <span class="bcp14">SHOULD</span> be followed for tree diagrams.<a href="#section-3.5-6" class="pilcrow">¶</a></p>
 <div id="yang-module-classification">
 <section id="section-3.5.1">
@@ -2526,7 +2529,7 @@ extract YANG modules from a document.<a href="#section-3.11-4" class="pilcrow">�
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Example modules <span class="bcp14">MUST</span> be validated.  Refer to
+the YANG module(s).  Examples <span class="bcp14">MUST</span> be validated.  Refer to
 <a href="#sec-tools" class="auto internal xref">Section 3.10</a> for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively <span class="bcp14">SHOULD</span> be used in the examples.<a href="#section-3.12-1" class="pilcrow">¶</a></p>
@@ -2547,6 +2550,7 @@ documentation use. Authors <span class="bcp14">SHOULD</span> use these reserved 
 </li>
         </ul>
 <p id="section-3.12-4">URI examples <span class="bcp14">SHOULD</span> be prefixed with "example:".<a href="#section-3.12-4" class="pilcrow">¶</a></p>
+<p id="section-3.12-5">In order to ease extraction and validation of examples, it is <span class="bcp14">RECOMMENDED</span> to use code markers.<a href="#section-3.12-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2586,9 +2590,9 @@ unpublished modules, the authors need to check that no other work in
 progress is using the same module name.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
 <p id="section-4.1-4">Example modules are non-normative and <span class="bcp14">SHOULD</span> be named with the prefix
 "example-".<a href="#section-4.1-4" class="pilcrow">¶</a></p>
-<p id="section-4.1-5">It is suggested that a stable prefix be selected that represents the
+<p id="section-4.1-5">It is suggested that a stable module name prefix be selected that represents the
 entire organization.  All normative YANG modules published by the
-IETF <span class="bcp14">MUST</span> begin with the prefix "ietf-".  Another standards
+IETF <span class="bcp14">MUST</span> begin with the prefix "ietf-". All IANA-maintained YANG modules <span class="bcp14">MUST</span> begin with the prefix "iana-".  Another standards
 organization, such as the IEEE, might use the prefix "ieee-" for all
 YANG modules.<a href="#section-4.1-5" class="pilcrow">¶</a></p>
 <p id="section-4.1-6">Once a module name is published, it <span class="bcp14">MUST NOT</span> be reused, even if the
@@ -2603,8 +2607,8 @@ new module, not a name change.<a href="#section-4.1-6" class="pilcrow">¶</a></p
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-prefixes" class="section-name selfRef">Prefixes</a>
         </h3>
 <p id="section-4.2-1">All YANG definitions are scoped by the module containing the
-definition being referenced.  This allows definitions from multiple
-modules to be used, even if the names are not unique.  In the example
+definition being referenced. This allows the same name to be used
+in multiple moodules, even if the names are not unique. In the example
 below, the identifier "foo" is used in all three modules:<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.2-2">
 <pre>
@@ -2662,10 +2666,12 @@ module:<a href="#section-4.2-5" class="pilcrow">¶</a></p>
             <p id="section-4.2-6.3.1">The local module prefix <span class="bcp14">MAY</span> be used for references to typedefs, groupings, extensions, features, and identities defined in the module.<a href="#section-4.2-6.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-4.2-7">Prefix values <span class="bcp14">SHOULD</span> be short but meaningful to the intended user. Prefix values <span class="bcp14">SHOULD NOT</span> conflict with known modules that have been previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
-<p id="section-4.2-8">For convenience, prefix values of example modules <span class="bcp14">MAY</span> be prefixed with "ex"
+<p id="section-4.2-7">Consistent with <span><a href="https://rfc-editor.org/rfc/rfc7950#section-7.1.4" class="relref">Section 7.1.4</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>, the prefix defined by a module
+<span class="bcp14">SHOULD</span> be used when the module is imported, unless there is a conflict.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
+<p id="section-4.2-8">Prefix values <span class="bcp14">SHOULD</span> be short but meaningful to the intended user. Prefix values <span class="bcp14">SHOULD NOT</span> conflict with known modules that have been previously published.<a href="#section-4.2-8" class="pilcrow">¶</a></p>
+<p id="section-4.2-9">For convenience, prefix values of example modules <span class="bcp14">MAY</span> be prefixed with "ex"
 or similar patterns. In doing so, readers of example modules or tree diagrams
-that mix both example and standard modules can easily identify example parts.<a href="#section-4.2-8" class="pilcrow">¶</a></p>
+that mix both example and standard modules can easily identify example parts.<a href="#section-4.2-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="identifiers">
@@ -2897,7 +2903,7 @@ Such constructs with duplicated information <span class="bcp14">SHOULD NOT</span
 <p id="section-4.5-13"><span><a href="https://rfc-editor.org/rfc/rfc7950#section-8.1" class="relref">Section 8.1</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> includes provisions for defining constraints
 on state data and specifies that a constraint must be true in a valid state data tree.
 However, <span><a href="https://rfc-editor.org/rfc/rfc8342#section-5.3" class="relref">Section 5.3</a> of [<a href="#RFC8342" class="cite xref">RFC8342</a>]</span> softens that behavior by allowing semantic
-constraints to be violated under some circumstances to help detecting anomalies.
+constraints to be violated under some circumstances to help to detect anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
@@ -3856,7 +3862,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    syntax and semantics.<a href="#section-4.14-4" class="pilcrow">¶</a></p>
 <p id="section-4.14-5">It has been found that the "anyxml" statement is not implemented
    consistently across all servers.  It is possible that mixed-mode XML
-   will not be supported or that configuration anyxml nodes will not
+   will not be supported or that configuration anyxml nodes will not be
    supported.<a href="#section-4.14-5" class="pilcrow">¶</a></p>
 <p id="section-4.14-6">If there are referential integrity constraints associated with the
    desired semantics that can be represented with XPath, then one or
@@ -4144,7 +4150,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <p id="section-4.19.2-5">The XPath "when" statement condition <span class="bcp14">MUST NOT</span> reference data outside
    of the target data node because the client does not have any control
    over this external data.<a href="#section-4.19.2-5" class="pilcrow">¶</a></p>
-<p id="section-4.19.2-6">In the following dummy example, it is okay to augment the "interface"
+<p id="section-4.19.2-6">In the following sample, it is okay to augment the "interface"
    entry with "mandatory-leaf" because the augmentation depends on
    support for "some-new-iftype".  The old client does not know about
    this type, so it would never select this type; therefore, it would
@@ -4869,11 +4875,10 @@ registry within the "YANG Module Tags" registry <span>[<a href="#IANA-TAGS" clas
         <h3 id="name-modeling-abstract-data-stru">
 <a href="#section-4.29" class="section-number selfRef">4.29. </a><a href="#name-modeling-abstract-data-stru" class="section-name selfRef">Modeling Abstract Data Structures</a>
         </h3>
-<p id="section-4.29-1">For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>
-is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension statement <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>.<a href="#section-4.29-1" class="pilcrow">¶</a></p>
+<p id="section-4.29-1">For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of the "structure" extension statement <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension statement <span>[<a href="#RFC8040" class="cite xref">RFC8040</a>]</span>.<a href="#section-4.29-1" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4.29-2.1">
-            <p id="section-4.29-2.1.1">Examples of modules that rely upon <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> are <span>[<a href="#RFC9132" class="cite xref">RFC9132</a>]</span> or <span>[<a href="#RFC9195" class="cite xref">RFC9195</a>]</span>.<a href="#section-4.29-2.1.1" class="pilcrow">¶</a></p>
+            <p id="section-4.29-2.1.1">Examples of modules that rely upon the "structure" extension statement <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> are <span>[<a href="#RFC9132" class="cite xref">RFC9132</a>]</span> or <span>[<a href="#RFC9195" class="cite xref">RFC9195</a>]</span>.<a href="#section-4.29-2.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-4.29-3">Abstract data structures can be augmented using the "augment-structure" statement <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>.<a href="#section-4.29-3" class="pilcrow">¶</a></p>
@@ -4910,11 +4915,10 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    IANA registry.  Such a design is suboptimal as it creates another
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.<a href="#section-4.30.1-2" class="pilcrow">¶</a></p>
-<p id="section-4.30.1-3">For the sake of consistency, better flexibility to support new
-   values, and maintaining IANA registries as the unique authoritative
-   source of information, when such an information is maintained in a
-   registry, this document encourages the use of IANA-maintained
-   modules.<a href="#section-4.30.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.30.1-3">For the sake of consistency and ability to support new values while
+   maintaining IANA registries as the unique authoritative source of
+   information, this document encourages the use of IANA-maintained modules
+   as the single source of information.<a href="#section-4.30.1-3" class="pilcrow">¶</a></p>
 <p id="section-4.30.1-4">The following section provides a set of guidelines for YANG module authors
    related to the design of IANA-maintained modules.  These guidelines
    are meant to leverage existing IANA registries and use YANG as
@@ -4962,7 +4966,7 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
 <p id="section-4.30.2-5">Designers of IANA-maintained modules <span class="bcp14">MAY</span> supply the full initial
    version of the module in a specification document that registers the
    module or only a script to be used (including by IANA) for generating
-   the module (e.g., an XSLT stylesheet as in Appendix A of <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>).
+   the module (e.g., an XSLT stylesheet as in Appendix A of <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span> or a Python script as in <span>[<a href="#RFC9645" class="cite xref">RFC9645</a>]</span>).
    For both cases, the document that defines an IANA-maintained module
    <span class="bcp14">MUST</span> include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
@@ -5030,15 +5034,16 @@ is <span class="bcp14">RECOMMENDED</span> compared to the "yang-data" extension 
    provide the following information:<a href="#section-4.30.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.30.3-2.1">
-              <p id="section-4.30.3-2.1.1">An IANA request to add a note to the page displaying the
+              <p id="section-4.30.3-2.1.1">A request to IANA to add a note to the page displaying the
 information about the IANA-maintained module that new values must
-not be directly added to the module, but to an authoritative IANA
+not be directly added to the module. These values should be added to an authoritative IANA
 registry.<a href="#section-4.30.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.30.3-2.2">
-              <p id="section-4.30.3-2.2.1">An IANA request to add a note to the authoritative IANA registry
+              <p id="section-4.30.3-2.2.1">A request to IANA to add a note to the authoritative IANA registry
 to indicate that any change to the registry must be reflected into
-the corresponding IANA-maintained module.<a href="#section-4.30.3-2.2.1" class="pilcrow">¶</a></p>
+the corresponding IANA-maintained module. That is, any changes to the registry must be accompanied by an update to the corresponding
+IANA-maintained module.<a href="#section-4.30.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.30.3-2.3">
               <p id="section-4.30.3-2.3.1">Details about the required actions (e.g., add a new "identity" or
@@ -5069,7 +5074,7 @@ begins with a number, it is <span class="bcp14">RECOMMENDED</span> to spell out 
 </li>
                 <li class="normal" id="section-4.30.3-2.3.2.3">
                   <p id="section-4.30.3-2.3.2.3.1">If a new registration uses an identifier that does not comply with the naming conventions
-listed in <a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy (<span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span>) or responsible Area Director).<a href="#section-4.30.3-2.3.2.3.1" class="pilcrow">¶</a></p>
+listed in <a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If all else failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy (<span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span>) or responsible Area Director).<a href="#section-4.30.3-2.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
@@ -5078,8 +5083,8 @@ listed in <a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>,
 the IANA-maintained module.<a href="#section-4.30.3-2.4.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.30.3-2.5">
-              <p id="section-4.30.3-2.5.1">An indication whether experimental values are included in the
-IANA-maintained module.  Absent such an indication, experimental
+              <p id="section-4.30.3-2.5.1">An instruction whether experimental values should be included in the
+IANA-maintained module. If no instruction is provided, experimental
 values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained module.<a href="#section-4.30.3-2.5.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.30.3-2.6">
@@ -5408,7 +5413,7 @@ to update this registration to reference this document.<a href="#section-5.1-1" 
      XML: N/A, the requested URI is an XML namespace.
 </pre><a href="#section-5.1-2" class="pilcrow">¶</a>
 </div>
-<p id="section-5.1-3">IANA is requested to register the following URI in the "ns" subregistry within
+<p id="section-5.1-3">IANA is requested to update the following URI in the "ns" subregistry within
    the "IETF XML Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span>:<a href="#section-5.1-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-5.1-4">
 <pre>
@@ -5441,7 +5446,7 @@ Names" registry <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> 
         <h3 id="name-update-yang-parameters-regi">
 <a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-update-yang-parameters-regi" class="section-name selfRef">Update YANG Parameters Registry</a>
         </h3>
-<p id="section-5.2-1">Also, this document requests IANA to update the reference for
+<p id="section-5.2-1">Also, this document requests IANA to update the RFC8407 reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
@@ -5452,7 +5457,7 @@ for registration in Appendix B.<a href="#section-5.2-1" class="pilcrow">¶</a></
         <h3 id="name-revisions-of-published-modu">
 <a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-revisions-of-published-modu" class="section-name selfRef">Revisions of Published Modules</a>
         </h3>
-<p id="section-5.3-1">IANA considerations to register YANG module and submodule names are specified in <span><a href="https://rfc-editor.org/rfc/rfc6020#section-14" class="relref">Section 14</a> of [<a href="#RFC6020" class="cite xref">RFC6020</a>]</span>. This document amends the guidance on names unicity as follows:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">IANA considerations to register YANG module and submodule names are specified in <span><a href="https://rfc-editor.org/rfc/rfc6020#section-14" class="relref">Section 14</a> of [<a href="#RFC6020" class="cite xref">RFC6020</a>]</span>. This document amends the guidance on the uniqueness of names as follows:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlNewline" id="section-5.3-2">
           <dt id="section-5.3-2.1">OLD:</dt>
           <dd style="margin-left: 1.5em" id="section-5.3-2.2">
@@ -5525,10 +5530,10 @@ authoritative event triggering the update to the YANG module. In all cases, the 
       <h2 id="name-security-considerations">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-6-1">This document defines documentation guidelines for NETCONF or
-RESTCONF content defined with the YANG data modeling language;
-therefore, it does not introduce any new or increased security risks
-into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">This document defines guidelines for NETCONF or
+RESTCONF content defined with the YANG data modeling language.
+It does not introduce any new or increased security risks
+that need to be discussed.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-combined-references">
@@ -5612,7 +5617,7 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dd class="break"></dd>
 <dt id="W3C.REC-xpath">[W3C.REC-xpath]</dt>
       <dd>
-<span class="refAuthor">Clark, J.</span> and <span class="refAuthor">S. DeRose</span>, <span class="refTitle">"XML Path Language (XPath) Version 1.0"</span>, <span class="seriesInfo">W3C Recommendation REC-xpath-19991116</span>, <time datetime="1999-11" class="refDate">November 1999</time>, <span>&lt;<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">http://www.w3.org/TR/1999/REC-xpath-19991116</a>&gt;</span>. </dd>
+<span class="refAuthor">Clark, J.</span> and <span class="refAuthor">S. DeRose</span>, <span class="refTitle">"XML Path Language (XPath) Version 1.0"</span>, <span class="seriesInfo">W3C Recommendation REC-xpath-19991116</span>, <time datetime="1999-11" class="refDate">November 1999</time>, <span>&lt;<a href="https://www.w3.org/TR/1999/REC-xpath-19991116">https://www.w3.org/TR/1999/REC-xpath-19991116</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -5661,7 +5666,7 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dd class="break"></dd>
 <dt id="RFC-STYLE">[RFC-STYLE]</dt>
         <dd>
-<span class="refAuthor">RFC Editor</span>, <span class="refTitle">"Style Guide"</span>, <span>&lt;<a href="http://www.rfc-editor.org/styleguide/">http://www.rfc-editor.org/styleguide/</a>&gt;</span>. </dd>
+<span class="refAuthor">RFC Editor</span>, <span class="refTitle">"Style Guide"</span>, <span>&lt;<a href="https://www.rfc-editor.org/styleguide/">https://www.rfc-editor.org/styleguide/</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2026">[RFC2026]</dt>
         <dd>
@@ -5822,6 +5827,10 @@ into the management system.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <dt id="RFC9362">[RFC9362]</dt>
         <dd>
 <span class="refAuthor">Boucadair, M.</span> and <span class="refAuthor">J. Shallow</span>, <span class="refTitle">"Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Configuration Attributes for Robust Block Transmission"</span>, <span class="seriesInfo">RFC 9362</span>, <span class="seriesInfo">DOI 10.17487/RFC9362</span>, <time datetime="2023-02" class="refDate">February 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9362">https://www.rfc-editor.org/rfc/rfc9362</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9645">[RFC9645]</dt>
+        <dd>
+<span class="refAuthor">Watsen, K.</span>, <span class="refTitle">"YANG Groupings for TLS Clients and TLS Servers"</span>, <span class="seriesInfo">RFC 9645</span>, <span class="seriesInfo">DOI 10.17487/RFC9645</span>, <time datetime="2024-10" class="refDate">October 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9645">https://www.rfc-editor.org/rfc/rfc9645</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="Style">[Style]</dt>
       <dd>
@@ -5997,16 +6006,28 @@ module ietf-template {
      This version of this YANG module is part of RFC XXXX; see
      the RFC itself for full legal notices.";
 
-  // RFC Ed.: replace XXXX with actual RFC number and remove
+  // RFC Ed.: replace XXXX/YYYY with actual RFC number and remove
   // this note
 
-  // replace '2023-07-26' with the module publication date
+  // replace 'date-revision' with the module publication date
   // the format is (YYYY-MM-DD)
 
-  revision 2023-07-26 {
+  revision date-revision {
     description
-      "what changed in this revision";
-    reference "RFC XXXX: &lt;Replace With Document Title&gt;";
+      "What changed in this revision.";
+    reference
+      "RFC XXXX: &lt;Replace With Document Title&gt;";
+  }
+
+  // RFC Ed.: Update with the RFC number and title
+  // of the RFC that defined the initial version of
+  // the module and remove this note
+
+  revision date-initial {
+    description
+      "Initial version";
+    reference
+      "RFC YYYY: &lt;Replace With Document Title&gt;";
   }
 
   // extension statements
