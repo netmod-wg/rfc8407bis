@@ -51,16 +51,28 @@ module ietf-template {
      This version of this YANG module is part of RFC XXXX; see
      the RFC itself for full legal notices.";
 
-  // RFC Ed.: replace XXXX with actual RFC number and remove
+  // RFC Ed.: replace XXXX/YYYY with actual RFC number and remove
   // this note
 
-  // replace '2023-07-26' with the module publication date
+  // replace 'date-revision' with the module publication date
   // the format is (YYYY-MM-DD)
 
-  revision 2023-07-26 {
+  revision date-revision {
     description
-      "what changed in this revision";
-    reference "RFC XXXX: <Replace With Document Title>";
+      "What changed in this revision.";
+    reference
+      "RFC XXXX: <Replace With Document Title>";
+  }
+
+  // RFC Ed.: Update with the RFC number and title 
+  // of the RFC that defined the initial version of
+  // the module and remove this note
+
+  revision date-initial {
+    description
+      "Initial version";
+    reference
+      "RFC YYYY: <Replace With Document Title>";
   }
 
   // extension statements

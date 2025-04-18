@@ -52,7 +52,7 @@ normative:
               target: https://authors.ietf.org/en/content-guidelines-overview
 
    W3C.REC-xpath:
-              target: http://www.w3.org/TR/1999/REC-xpath-19991116
+              target: https://www.w3.org/TR/1999/REC-xpath-19991116
               title: "XML Path Language (XPath) Version 1.0"
               author:
                 - name: James Clark
@@ -82,7 +82,7 @@ informative:
               author:
                 org: RFC Editor
               date: false
-              target: http://www.rfc-editor.org/styleguide/
+              target: https://www.rfc-editor.org/styleguide/
 
    IANA_BFD_URL:
               title: "iana-bfd-types YANG Module"
@@ -141,7 +141,7 @@ informative:
    specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
-   (NETCONF) and RESTCONF protocol implementations that utilize YANG
+   (NETCONF) and RESTCONF Protocol implementations that utilize YANG
    modules.  This document obsoletes RFC 8407.
 
    Also, this document updates RFC 8126 by
@@ -155,11 +155,11 @@ informative:
 
    The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol (NETCONF) {{!RFC6241}} and the RESTCONF protocol {{!RFC8040}},
+   Configuration Protocol (NETCONF) {{!RFC6241}} and the RESTCONF Protocol {{!RFC8040}},
    requires a modular set of data models that can be reused and extended
    over time.
 
-   This document defines a set of usage guidelines for documents
+   This document defines a set of guidelines for documents
    containing YANG 1.1 {{!RFC7950}} and YANG 1.0 {{!RFC6020}} data models, including IANA-maintained modules.
    YANG is used to define the data structures, protocol operations, and
    notification content used within a NETCONF and/or RESTCONF server.
@@ -170,7 +170,7 @@ informative:
 
    Many YANG constructs are defined as optional to use, such as the
    "description" statement.  However, in order to make YANG modules more
-   useful, it is desirable to define a set of usage guidelines that
+   readable and interoperable, it is desirable to define a set of descriptive usage guidelines that
    entails a higher level of compliance than the minimum level defined
    in the YANG specification {{!RFC7950}}.
 
@@ -216,9 +216,10 @@ informative:
    - Added a recommendation about long trees.
    - Fixed a reference bug in {{sec-module-naming-conventions}}.
    - Added a recommendation for the use of meaningful prefix values.
-   - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
+   - Added a note that RFC8792-folding of YANG modules can be used if and only if built-in YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
+   - Added a recommendation to ease extracting and validating examples.
    - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
@@ -419,7 +420,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
 ###  Example Modules
 
 Example modules are not code components.  The ``<CODE BEGINS>``
-convention MUST NOT be used for example modules.
+convention MUST NOT be used for example modules. However, example modules MUST be validated.
 
 An example module SHOULD be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -475,8 +476,8 @@ in the following example:
 {::include-fold ./examples/long-line-ex.txt}
 ~~~
 
-Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
-Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
+Built-in YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
+Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if built-in YANG features are not sufficient.
 A similar approach (e.g., use "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ### YANG Module Classification
@@ -749,7 +750,7 @@ Each specification that defines one or more modules SHOULD contain
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Example modules MUST be validated.  Refer to
+the YANG module(s).  Examples MUST be validated.  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively SHOULD be used in the examples.
@@ -764,6 +765,7 @@ documentation use. Authors SHOULD use these reserved values in the usage example
 
 URI examples SHOULD be prefixed with "example:".
 
+In order to ease extraction and validation of examples, it is RECOMMENDED to use code markers.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
@@ -801,9 +803,9 @@ progress is using the same module name.
 Example modules are non-normative and SHOULD be named with the prefix
 "example-".
 
-It is suggested that a stable prefix be selected that represents the
+It is suggested that a stable module name prefix be selected that represents the
 entire organization.  All normative YANG modules published by the
-IETF MUST begin with the prefix "ietf-".  Another standards
+IETF MUST begin with the prefix "ietf-". All IANA-maintained YANG modules MUST begin with the prefix "iana-".  Another standards
 organization, such as the IEEE, might use the prefix "ieee-" for all
 YANG modules.
 
@@ -815,8 +817,8 @@ new module, not a name change.
 ## Prefixes
 
 All YANG definitions are scoped by the module containing the
-definition being referenced.  This allows definitions from multiple
-modules to be used, even if the names are not unique.  In the example
+definition being referenced. This allows the same name to be used
+in multiple moodules, even if the names are not unique. In the example
 below, the identifier "foo" is used in all three modules:
 
 ~~~ yang
@@ -859,6 +861,9 @@ module:
 * The local module prefix SHOULD be used instead of no prefix in all path expressions.
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
+
+Consistent with {{Section 7.1.4 of !RFC7950}}, the prefix defined by a module
+SHOULD be used when the module is imported, unless there is a conflict.
 
 Prefix values SHOULD be short but meaningful to the intended user. Prefix values SHOULD NOT conflict with known modules that have been previously published.
 
@@ -1059,7 +1064,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
 {{Section 8.1 of !RFC7950}} includes provisions for defining constraints
 on state data and specifies that a constraint must be true in a valid state data tree.
 However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
-constraints to be violated under some circumstances to help detecting anomalies.
+constraints to be violated under some circumstances to help to detect anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
@@ -1931,7 +1936,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    It has been found that the "anyxml" statement is not implemented
    consistently across all servers.  It is possible that mixed-mode XML
-   will not be supported or that configuration anyxml nodes will not
+   will not be supported or that configuration anyxml nodes will not be
    supported.
 
    If there are referential integrity constraints associated with the
@@ -2190,7 +2195,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    of the target data node because the client does not have any control
    over this external data.
 
-   In the following dummy example, it is okay to augment the "interface"
+   In the following sample, it is okay to augment the "interface"
    entry with "mandatory-leaf" because the augmentation depends on
    support for "some-new-iftype".  The old client does not know about
    this type, so it would never select this type; therefore, it would
@@ -2796,10 +2801,9 @@ registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
 
 ## Modeling Abstract Data Structures
 
-For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of {{!RFC8791}}
-is RECOMMENDED compared to the "yang-data" extension statement {{!RFC8040}}.
+For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of the "structure" extension statement {{!RFC8791}} is RECOMMENDED compared to the "yang-data" extension statement {{!RFC8040}}.
 
-> Examples of modules that rely upon {{!RFC8791}} are {{?RFC9132}} or {{?RFC9195}}.
+> Examples of modules that rely upon the "structure" extension statement {{!RFC8791}} are {{?RFC9132}} or {{?RFC9195}}.
 
 Abstract data structures can be augmented using the "augment-structure" statement {{!RFC8791}}.
 
@@ -2828,11 +2832,10 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
-   For the sake of consistency, better flexibility to support new
-   values, and maintaining IANA registries as the unique authoritative
-   source of information, when such an information is maintained in a
-   registry, this document encourages the use of IANA-maintained
-   modules.
+   For the sake of consistency and ability to support new values while
+   maintaining IANA registries as the unique authoritative source of
+   information, this document encourages the use of IANA-maintained modules
+   as the single source of information.
 
    The following section provides a set of guidelines for YANG module authors
    related to the design of IANA-maintained modules.  These guidelines
@@ -2880,7 +2883,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
    module or only a script to be used (including by IANA) for generating
-   the module (e.g., an XSLT stylesheet as in Appendix A of {{?RFC9108}}).
+   the module (e.g., an XSLT stylesheet as in Appendix A of {{?RFC9108}} or a Python script as in {{?RFC9645}}).
    For both cases, the document that defines an IANA-maintained module
    MUST include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
@@ -2941,14 +2944,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    registry.  Concretely, the IANA Considerations Section SHALL at least
    provide the following information:
 
-   *  An IANA request to add a note to the page displaying the
+   *  A request to IANA to add a note to the page displaying the
       information about the IANA-maintained module that new values must
-      not be directly added to the module, but to an authoritative IANA
+      not be directly added to the module. These values should be added to an authoritative IANA
       registry.
 
-   *  An IANA request to add a note to the authoritative IANA registry
+   *  A request to IANA to add a note to the authoritative IANA registry
       to indicate that any change to the registry must be reflected into
-      the corresponding IANA-maintained module.
+      the corresponding IANA-maintained module. That is, any changes to the registry must be accompanied by an update to the corresponding
+      IANA-maintained module.
 
    *  Details about the required actions (e.g., add a new "identity" or
       "enum" statement) to update the IANA-maintained module to reflect
@@ -2970,13 +2974,13 @@ Abstract data structures can be augmented using the "augment-structure" statemen
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
 
          - If a new registration uses an identifier that does not comply with the naming conventions
-      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
+      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If all else failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
 
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
 
-   *  An indication whether experimental values are included in the
-      IANA-maintained module.  Absent such an indication, experimental
+   *  An instruction whether experimental values should be included in the
+      IANA-maintained module. If no instruction is provided, experimental
       values MUST NOT be listed in the IANA-maintained module.
 
    *  An instruction about how to generate the "revision" statement.
@@ -3046,7 +3050,7 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-   IANA is requested to register the following URI in the "ns" subregistry within
+   IANA is requested to update the following URI in the "ns" subregistry within
    the "IETF XML Registry" {{!RFC3688}}:
 
 ~~~~
@@ -3074,14 +3078,14 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 
 ## Update YANG Parameters Registry
 
-Also, this document requests IANA to update the reference for
+Also, this document requests IANA to update the RFC8407 reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.
 
 ## Revisions of Published Modules
 
-IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows:
+IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on the uniqueness of names as follows:
 
 {: vspace="0"}
 OLD:
@@ -3115,10 +3119,10 @@ The underlying registry:
 
 #  Security Considerations
 
-This document defines documentation guidelines for NETCONF or
-RESTCONF content defined with the YANG data modeling language;
-therefore, it does not introduce any new or increased security risks
-into the management system.
+This document defines guidelines for NETCONF or
+RESTCONF content defined with the YANG data modeling language.
+It does not introduce any new or increased security risks
+that need to be discussed.
 
 --- back
 
