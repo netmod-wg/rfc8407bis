@@ -252,7 +252,7 @@ informative:
   The following terms are used throughout this document:
 
   IANA-maintained module:
-  : A YANG module that is maintained by IANA (e.g., "iana-tunnel-type" {{?RFC8675}} or "iana-pseudowire-types" {{?RFC9291}}).
+  : A YANG module that is maintained by IANA and has an IANA registry associated with it (e.g., "iana-tunnel-type" {{?RFC8675}} or "iana-pseudowire-types" {{?RFC9291}}).
 
   IETF module:
   : A YANG module that is published by the IETF and which is not maintained by IANA.
