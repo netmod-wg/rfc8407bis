@@ -2,6 +2,7 @@
 title: "Update to YANG Module Names Registration"
 abbrev: "YANG Module Names"
 category: std
+updates: 6020
 
 docname: draft-ietf-netmod-rfc6020-iana-update-latest
 submissiontype: IETF
@@ -69,6 +70,10 @@ the practice followed by IANA is not consistent with that guidance.
 This document amends the guidance on the uniqueness of names to comply with the practice
 followed by IANA.
 
+# Requirements Notation
+
+{::boilerplate bcp14-tagged}
+
 #  IANA Considerations {#sec-iana}
 
 ## Update YANG Parameters Registry
@@ -79,7 +84,7 @@ to point to the RFC number that will be assigned to this document.
 
 ## Revisions of Published Modules
 
-This document amends the guidance on the uniqueness of names, initially defined in {{Section 14 of !RFC6020}, as follows:
+This document amends the guidance on the uniqueness of names, initially defined in {{Section 14 of !RFC6020}}, as follows:
 
 {: vspace="0"}
 OLD:
@@ -88,10 +93,11 @@ OLD:
 
 NEW:
 : Modules and their revisions are maintained in the registry.
-: All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
-: All module revisions MUST have the same XML namespace as the initial version of the module.
 : All initial version module and submodule names in the registry MUST be unique.
 : All XML namespaces of initial version modules in the registry MUST be unique.
+: All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
+: All module revisions MUST have the same XML namespace as the initial version of the module.
+
 
 #  Security Considerations
 
