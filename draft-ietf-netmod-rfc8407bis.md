@@ -4,7 +4,7 @@ abbrev: "Guidelines for YANG Documents"
 category: bcp
 bcp: 216
 obsoletes: 8407
-updates: 6020, 8126
+updates: 8126
 
 docname: draft-ietf-netmod-rfc8407bis-latest
 submissiontype: IETF
@@ -146,8 +146,7 @@ informative:
 
    Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
-   for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
-   by clarifying how modules and their revisions are handled by IANA.
+   for RFCs that specify IANA-maintained modules.
 
 --- middle
 
@@ -237,7 +236,6 @@ informative:
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
-   - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
    - Updated the wiki URLs to use the new structure instead of the old trac.
    - Added anydata to the list of statements with mandatory description ({{sec-data-def}}).
    - Fixed an error (invalid statements) in Section 4.24.
@@ -3082,22 +3080,6 @@ Also, this document requests IANA to update the RFC8407 reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.
-
-## Revisions of Published Modules
-
-IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on the uniqueness of names as follows:
-
-{: vspace="0"}
-OLD:
-: All module and submodule names in the registry MUST be unique.
-: All XML namespaces in the registry MUST be unique.
-
-NEW:
-: Modules and their revisions are maintained in the registry.
-: A module and all its revisions MUST have the same name and namespace.
-: All initial version module and submodule names in the registry MUST be unique.
-: All XML namespaces of initial version modules in the registry MUST be unique.
-
 
 ## IANA-Maintained Modules
 
