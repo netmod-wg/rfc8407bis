@@ -3246,6 +3246,8 @@ that need to be discussed.
 
    Thanks to Acee Lindem for triggering the discussion on data model vs. module.
 
+   Thanks to Mahesh Jethanandani for the thoughtful AD review.
+
 The author of RFC 8407:
 : Andy Bierman
 : YumaWorks
