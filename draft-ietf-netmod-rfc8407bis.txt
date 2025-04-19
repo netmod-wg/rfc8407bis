@@ -5,7 +5,7 @@
 Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
-Updates: 6020, 8126 (if approved)                                 Orange
+Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
 Expires: 21 October 2025                                          Huawei
                                                            19 April 2025
@@ -27,8 +27,7 @@ Abstract
 
    Also, this document updates RFC 8126 by providing additional
    guidelines for writing the IANA considerations for RFCs that specify
-   IANA-maintained modules.  The document also updates RFC 6020 by
-   clarifying how modules and their revisions are handled by IANA.
+   IANA-maintained modules.
 
 Discussion Venues
 
@@ -165,8 +164,7 @@ Table of Contents
    5.  IANA Considerations
      5.1.  YANG Modules
      5.2.  Update YANG Parameters Registry
-     5.3.  Revisions of Published Modules
-     5.4.  IANA-Maintained Modules
+     5.3.  IANA-Maintained Modules
    6.  Security Considerations
    7.  References
      7.1.  Normative References
@@ -321,9 +319,6 @@ Table of Contents
    *  Added text about summary of changes in revision statements.
 
    *  Added a template for IANA-maintained modules.
-
-   *  Updates RFC 6020 to record current IANA practices for registering
-      modules and their revisions.
 
    *  Updated the wiki URLs to use the new structure instead of the old
       trac.
@@ -3587,34 +3582,7 @@ Table of Contents
    document as it contains the template necessary for registration in
    Appendix B.
 
-5.3.  Revisions of Published Modules
-
-   IANA considerations to register YANG module and submodule names are
-   specified in Section 14 of [RFC6020].  This document amends the
-   guidance on the uniqueness of names as follows:
-
-   OLD:
-      All module and submodule names in the registry MUST be unique.
-
-  
-      All XML namespaces in the registry MUST be unique.
-
-   NEW:
-      Modules and their revisions are maintained in the registry.
-
-  
-      A module and all its revisions MUST have the same name and
-      namespace.
-
-  
-      All initial version module and submodule names in the registry
-      MUST be unique.
-
-  
-      All XML namespaces of initial version modules in the registry MUST
-      be unique.
-
-5.4.  IANA-Maintained Modules
+5.3.  IANA-Maintained Modules
 
    IANA should refer to Section 4.30.3 for information necessary to
    populate "revision" statements and "identity" and "enum"

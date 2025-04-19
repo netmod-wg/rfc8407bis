@@ -17,8 +17,7 @@
    modules.  This document obsoletes RFC 8407. 
        Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
-   for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
-   by clarifying how modules and their revisions are handled by IANA. 
+   for RFCs that specify IANA-maintained modules. 
     " name="description">
 <meta content="xml2rfc 3.28.1" name="generator">
 <meta content="NETCONF" name="keyword">
@@ -1077,7 +1076,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8407" class="eref">8407</a> (if approved)</dd>
 <dt class="label-updates">Updates:</dt>
 <dd class="updates">
-<a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
+<a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2025-04-19" class="published">19 April 2025</time>
@@ -1115,8 +1114,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    modules.  This document obsoletes RFC 8407.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 <p id="section-abstract-2">Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
-   for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
-   by clarifying how modules and their revisions are handled by IANA.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
+   for RFCs that specify IANA-maintained modules.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1484,10 +1482,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-update-yang-parameters-regi" class="internal xref">Update YANG Parameters Registry</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
-                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-revisions-of-published-modu" class="internal xref">Revisions of Published Modules</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.4">
-                <p id="section-toc.1-1.5.2.4.1"><a href="#section-5.4" class="auto internal xref">5.4</a>.  <a href="#name-iana-maintained-modules-2" class="internal xref">IANA-Maintained Modules</a></p>
+                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-iana-maintained-modules-2" class="internal xref">IANA-Maintained Modules</a></p>
 </li>
             </ul>
 </li>
@@ -1682,16 +1677,13 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.35.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.35.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.36">
-            <p id="section-1.1-2.36.1">Updates RFC 6020 to record current IANA practices for registering modules and their revisions.<a href="#section-1.1-2.36.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.36.1">Updated the wiki URLs to use the new structure instead of the old trac.<a href="#section-1.1-2.36.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.37">
-            <p id="section-1.1-2.37.1">Updated the wiki URLs to use the new structure instead of the old trac.<a href="#section-1.1-2.37.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.37.1">Added anydata to the list of statements with mandatory description (<a href="#sec-data-def" class="auto internal xref">Section 4.14</a>).<a href="#section-1.1-2.37.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.38">
-            <p id="section-1.1-2.38.1">Added anydata to the list of statements with mandatory description (<a href="#sec-data-def" class="auto internal xref">Section 4.14</a>).<a href="#section-1.1-2.38.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-1.1-2.39">
-            <p id="section-1.1-2.39.1">Fixed an error (invalid statements) in Section 4.24.<a href="#section-1.1-2.39.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.38.1">Fixed an error (invalid statements) in Section 4.24.<a href="#section-1.1-2.38.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -5452,72 +5444,32 @@ to point to the RFC number that will be assigned to this document as it contains
 for registration in Appendix B.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="revisions-of-published-modules">
-<section id="section-5.3">
-        <h3 id="name-revisions-of-published-modu">
-<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-revisions-of-published-modu" class="section-name selfRef">Revisions of Published Modules</a>
-        </h3>
-<p id="section-5.3-1">IANA considerations to register YANG module and submodule names are specified in <span><a href="https://rfc-editor.org/rfc/rfc6020#section-14" class="relref">Section 14</a> of [<a href="#RFC6020" class="cite xref">RFC6020</a>]</span>. This document amends the guidance on the uniqueness of names as follows:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="section-5.3-2">
-          <dt id="section-5.3-2.1">OLD:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.2">
-            <p id="section-5.3-2.2.1">All module and submodule names in the registry <span class="bcp14">MUST</span> be unique.<a href="#section-5.3-2.2.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.3-2.3"></dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.4">
-            <p id="section-5.3-2.4.1">All XML namespaces in the registry <span class="bcp14">MUST</span> be unique.<a href="#section-5.3-2.4.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.3-2.5">NEW:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.6">
-            <p id="section-5.3-2.6.1">Modules and their revisions are maintained in the registry.<a href="#section-5.3-2.6.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.3-2.7"></dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.8">
-            <p id="section-5.3-2.8.1">A module and all its revisions <span class="bcp14">MUST</span> have the same name and namespace.<a href="#section-5.3-2.8.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.3-2.9"></dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.10">
-            <p id="section-5.3-2.10.1">All initial version module and submodule names in the registry <span class="bcp14">MUST</span> be unique.<a href="#section-5.3-2.10.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-<dt id="section-5.3-2.11"></dt>
-          <dd style="margin-left: 1.5em" id="section-5.3-2.12">
-            <p id="section-5.3-2.12.1">All XML namespaces of initial version modules in the registry <span class="bcp14">MUST</span> be unique.<a href="#section-5.3-2.12.1" class="pilcrow">¶</a></p>
-</dd>
-        <dd class="break"></dd>
-</dl>
-</section>
-</div>
 <div id="iana-maintained-modules-1">
-<section id="section-5.4">
+<section id="section-5.3">
         <h3 id="name-iana-maintained-modules-2">
-<a href="#section-5.4" class="section-number selfRef">5.4. </a><a href="#name-iana-maintained-modules-2" class="section-name selfRef">IANA-Maintained Modules</a>
+<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-iana-maintained-modules-2" class="section-name selfRef">IANA-Maintained Modules</a>
         </h3>
-<p id="section-5.4-1">IANA should refer to <a href="#sec-iana-mm" class="auto internal xref">Section 4.30.3</a> for information necessary to populate "revision" statements and "identity" and "enum" substatements in IANA-maintained modules. These considerations cover both the creation and maintenance of an IANA-mainatined module. In particular, the following should be noted:<a href="#section-5.4-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-1">IANA should refer to <a href="#sec-iana-mm" class="auto internal xref">Section 4.30.3</a> for information necessary to populate "revision" statements and "identity" and "enum" substatements in IANA-maintained modules. These considerations cover both the creation and maintenance of an IANA-mainatined module. In particular, the following should be noted:<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-5.4-2.1">
-            <p id="section-5.4-2.1.1">When an underlying registration is deprecated or obsoleted, a corresponding "status" substatement should be added to the identity or enumeration statement.<a href="#section-5.4-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-5.3-2.1">
+            <p id="section-5.3-2.1.1">When an underlying registration is deprecated or obsoleted, a corresponding "status" substatement should be added to the identity or enumeration statement.<a href="#section-5.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-5.4-2.2">
-            <p id="section-5.4-2.2.1">The "reference" substatement should point specifically to the published module (i.e., IANA_FOO_URL_With_REV). When the
+          <li class="normal" id="section-5.3-2.2">
+            <p id="section-5.3-2.2.1">The "reference" substatement should point specifically to the published module (i.e., IANA_FOO_URL_With_REV). When the
 registration is triggered by an RFC, that RFC must also be included in the "reference" substatement. It may also point to an
-authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.<a href="#section-5.4-2.2.1" class="pilcrow">¶</a></p>
+authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.<a href="#section-5.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.4-3">In addition, when the module is published, IANA must add the following notes to:<a href="#section-5.4-3" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlNewline" id="section-5.4-4">
-          <dt id="section-5.4-4.1">The YANG Module Names registry:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.4-4.2">
-            <p id="section-5.4-4.2.1">New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry.<a href="#section-5.4-4.2.1" class="pilcrow">¶</a></p>
+<p id="section-5.3-3">In addition, when the module is published, IANA must add the following notes to:<a href="#section-5.3-3" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-5.3-4">
+          <dt id="section-5.3-4.1">The YANG Module Names registry:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.3-4.2">
+            <p id="section-5.3-4.2.1">New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry.<a href="#section-5.3-4.2.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-5.4-4.3">The underlying registry:</dt>
-          <dd style="margin-left: 1.5em" id="section-5.4-4.4">
-            <p id="section-5.4-4.4.1">When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII.<a href="#section-5.4-4.4.1" class="pilcrow">¶</a></p>
+<dt id="section-5.3-4.3">The underlying registry:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.3-4.4">
+            <p id="section-5.3-4.4.1">When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII.<a href="#section-5.3-4.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
