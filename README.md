@@ -7,6 +7,15 @@ This is the working area for the IETF NETMOD Internet-Draft, "Guidelines for Aut
 * [Compare Editor's Copy to Datatracker](https://netmod-wg.github.io/rfc8407bis/#go.draft-ietf-netmod-rfc8407bis.diff)
 * [Compare Editor's Copy to RFC8407](https://author-tools.ietf.org/diff?doc_1=rfc8407&url_2=https://netmod-wg.github.io/rfc8407bis/draft-ietf-netmod-rfc8407bis.txt)
 
+# Update to YANG Module Names Registration
+
+This is the working area for the IETF NETMOD Internet-Draft, "Update to YANG Module Names Registration".
+
+* [Editor's Copy](https://netmod-wg.github.io/rfc8407bis/#go.draft-ietf-netmod-rfc6020-iana-update.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-netmod-rfc6020-iana-update)
+* [Compare Editor's Copy to Datatracker](https://netmod-wg.github.io/rfc8407bis/#go.draft-ietf-netmod-rfc6020-iana-update.diff)
+* [Compare Editor's Copy to RFC8407](https://author-tools.ietf.org/diff?doc_1=rfc8407&url_2=https://netmod-wg.github.io/rfc8407bis/draft-ietf-netmod-rfc6020-iana-update.txt)
+
 
 ## Contributing
 
