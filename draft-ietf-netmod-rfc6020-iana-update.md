@@ -55,7 +55,7 @@ informative:
 
    This document amends the IANA guidance on the uniqueness of YANG module and submodule names.
 
-   This document updates RFC 6020.
+   The document updates RFC 6020 to clarify how modules and their revisions are handled by IANA.
 
 --- middle
 
@@ -67,8 +67,8 @@ Specifically, IANA considerations to register YANG module and submodule names ar
 These considerations require that all module and submodule names in the registry must be unique. However,
 the practice followed by IANA is not consistent with that guidance.
 
-This document amends the guidance on the uniqueness of names to comply with the practice
-followed by IANA.
+This document amends the guidance on the uniqueness of names ({{Section 14 of !RFC6020}})
+to comply with the IANA practices for registering modules and their revisions.
 
 # Requirements Notation
 
@@ -97,7 +97,6 @@ NEW:
 : All XML namespaces of initial version modules in the registry MUST be unique.
 : All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
 : All module revisions MUST have the same XML namespace as the initial version of the module.
-
 
 #  Security Considerations
 
