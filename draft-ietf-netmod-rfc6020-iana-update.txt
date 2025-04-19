@@ -19,7 +19,8 @@ Abstract
    This document amends the IANA guidance on the uniqueness of YANG
    module and submodule names.
 
-   This document updates RFC 6020.
+   The document updates RFC 6020 to clarify how modules and their
+   revisions are handled by IANA.
 
 Discussion Venues
 
@@ -88,8 +89,9 @@ Table of Contents
    registry must be unique.  However, the practice followed by IANA is
    not consistent with that guidance.
 
-   This document amends the guidance on the uniqueness of names to
-   comply with the practice followed by IANA.
+   This document amends the guidance on the uniqueness of names
+   (Section 14 of [RFC6020]) to comply with the IANA practices for
+   registering modules and their revisions.
 
 2.  Requirements Notation
 
