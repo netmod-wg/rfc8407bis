@@ -3048,7 +3048,7 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-   IANA is requested to update the following URI in the "ns" subregistry within
+   IANA is requested to register the following URI in the "ns" subregistry within
    the "IETF XML Registry" {{!RFC3688}}:
 
 ~~~~
