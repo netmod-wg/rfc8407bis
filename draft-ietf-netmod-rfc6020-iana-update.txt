@@ -6,9 +6,9 @@ Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Updates: 6020 (if approved)                            M. Boucadair, Ed.
 Intended status: Standards Track                                  Orange
-Expires: 21 October 2025                                           Q. Wu
+Expires: 22 October 2025                                           Q. Wu
                                                                   Huawei
-                                                           19 April 2025
+                                                           20 April 2025
 
 
                 Update to YANG Module Names Registration
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 October 2025.
+   This Internet-Draft will expire on 22 October 2025.
 
 Copyright Notice
 
@@ -170,9 +170,9 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-23, 15 April 2025,
+              netmod-rfc8407bis-24, 18 April 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-23>.
+              rfc8407bis-24>.
 
    [IANA-MOD-NAMES]
               IANA, "YANG Module Names",

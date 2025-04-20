@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 21 October 2025                                          Huawei
-                                                           19 April 2025
+Expires: 22 October 2025                                          Huawei
+                                                           20 April 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 October 2025.
+   This Internet-Draft will expire on 22 October 2025.
 
 Copyright Notice
 
@@ -3551,8 +3551,8 @@ Table of Contents
         Registrant Contact: The IESG.
         XML: N/A, the requested URI is an XML namespace.
 
-   IANA is requested to update the following URI in the "ns" subregistry
-   within the "IETF XML Registry" [RFC3688]:
+   IANA is requested to register the following URI in the "ns"
+   subregistry within the "IETF XML Registry" [RFC3688]:
 
       URI:  urn:ietf:params:xml:ns:yang:iana-template
       Registrant Contact:  The IESG.
