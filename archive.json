@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-17T01:48:34.306457+00:00",
+  "timestamp": "2025-04-20T01:55:02.976822+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2363,24 +2363,26 @@
       "id": "PR_kwDOJTh_ks6Say7J",
       "title": "AD review",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/79",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "start with nits part first",
       "createdAt": "2025-04-14T03:14:44Z",
-      "updatedAt": "2025-04-15T08:57:11Z",
+      "updatedAt": "2025-04-18T12:48:49Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "35cc8b5c2ad7a73ba56cd09d9a9d719e5d48b71f",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "ad-review",
       "headRefOid": "671c72962c22c26cfc52f5c4c1936138fa7e76c9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-04-18T12:48:47Z",
+      "mergedAt": "2025-04-18T12:48:47Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "a6b9e6e58387a6ceeeba8ddbfaa610a41566df42"
+      },
       "comments": [],
       "reviews": []
     }
