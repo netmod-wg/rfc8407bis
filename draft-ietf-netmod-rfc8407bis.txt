@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 22 October 2025                                          Huawei
-                                                           20 April 2025
+Expires: 26 October 2025                                          Huawei
+                                                           24 April 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 October 2025.
+   This Internet-Draft will expire on 26 October 2025.
 
 Copyright Notice
 
@@ -641,8 +641,8 @@ Table of Contents
       described in [RFC8199] or the device configuration model discussed
       in [RFC8309].
 
-      Device models are also used to refer to model a function embedded
-      in a device (e.g., Access Control Lists (ACLs) [RFC8519]).
+      Device models are also used to model a function embedded in a
+      device (e.g., Access Control Lists (ACLs) [RFC8519]).
 
       A comprehensive list of device models is provided in Appendix 4.2
       of [RFC8969].
