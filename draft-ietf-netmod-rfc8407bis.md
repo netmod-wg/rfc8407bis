@@ -3248,7 +3248,7 @@ that need to be discussed.
 
    Thanks to Mahesh Jethanandani for the thoughtful AD review.
 
-   thanks to Christer Holmberg for the genart review.
+   Thanks to Christer Holmberg for the genart review.
 
 The author of RFC 8407:
 : Andy Bierman
