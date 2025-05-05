@@ -3232,7 +3232,7 @@ that need to be discussed.
 
    Michal Vaško reported an inconsistency in {{Sections 4.6.2 and 4.6.4 of ?RFC8407}}.
 
-   Thanks to Xufeng Liu for reviewing the document, including providing a YANGDOCTORS review.
+   Thanks to Xufeng Liu for reviewing the document, including providing YANGDOCTORS reviews.
 
    Italo Busi provided the examples of "case + when" construct.
 
@@ -3248,7 +3248,8 @@ that need to be discussed.
 
    Thanks to Mahesh Jethanandani for the thoughtful AD review.
 
-   Thanks to Christer Holmberg for the genart review.
+   Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
+   Ralf Weber for the dnsdir, and Giuseppe Fioccola for the opsdir review.
 
 The author of RFC 8407:
 : Andy Bierman
