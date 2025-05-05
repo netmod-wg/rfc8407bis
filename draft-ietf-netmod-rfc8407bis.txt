@@ -2827,7 +2827,7 @@ Table of Contents
    state subtrees, whenever possible.
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2846,7 +2846,7 @@ Table of Contents
    Old Module:
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2862,7 +2862,7 @@ Table of Contents
    Converted NMDA Module:
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2887,7 +2887,7 @@ Table of Contents
    with configuration data nodes (to be NMDA compliant).
 
      module example-foo-state {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+       namespace "urn:example:params:xml:ns:yang:example-foo-state";
        prefix "foo-s";
 
        // import new or converted module; not used in this example
