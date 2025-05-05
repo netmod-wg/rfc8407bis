@@ -2570,7 +2570,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
 ~~~ yang
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -2591,7 +2591,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
 ~~~ yang
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -2609,7 +2609,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
 ~~~ yang
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -2636,7 +2636,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
 ~~~ yang
   module example-foo-state {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+    namespace "urn:example:params:xml:ns:yang:example-foo-state";
     prefix "foo-s";
 
     // import new or converted module; not used in this example
