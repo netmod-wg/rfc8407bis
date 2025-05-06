@@ -784,6 +784,8 @@ guidelines for specific YANG constructs.
 Only guidelines that clarify or restrict the minimum conformance
 requirements are included here.
 
+A template for IETF modules is provided in {{tem-ietf}}.
+
 ##  Module Naming Conventions {#sec-module-naming-conventions}
 
 Normative modules contained in Standards Track documents MUST be
