@@ -187,6 +187,9 @@ informative:
    improve the readability and interoperability of published YANG data
    models.
 
+   YANG 1.0 modules have to conform to {{!RFC6020}} while YANG 1.1 modules have to conform to {{!RFC7950}}.
+   This document adds usage guidelines in addition to these YANG RFCs.
+
    {{sec-iana-mm}} updates {{!RFC8126}} by providing guidance for writing the
    IANA considerations for RFCs that specify IANA-maintained modules.
 
