@@ -1056,11 +1056,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Guidelines for YANG Documents</td>
-<td class="right">April 2025</td>
+<td class="right">May 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 25 October 2025</td>
+<td class="center">Expires 14 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1079,12 +1079,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-23" class="published">23 April 2025</time>
+<time datetime="2025-05-13" class="published">13 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-25">25 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-14">14 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1146,7 +1146,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 14 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1553,14 +1553,16 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1-6">These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
    models.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7"><a href="#sec-iana-mm" class="auto internal xref">Section 4.30.3</a> updates <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> by providing guidance for writing the
-   IANA considerations for RFCs that specify IANA-maintained modules.<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">Note that this document is not a YANG tutorial, and the reader is
+<p id="section-1-7">YANG 1.0 modules have to conform to <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> while YANG 1.1 modules have to conform to <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.
+   This document adds usage guidelines in addition to these YANG RFCs.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8"><a href="#sec-iana-mm" class="auto internal xref">Section 4.30.3</a> updates <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> by providing guidance for writing the
+   IANA considerations for RFCs that specify IANA-maintained modules.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<p id="section-1-9">Note that this document is not a YANG tutorial, and the reader is
    expected to know the YANG data modeling language before implementing
-   the guidance in this document.<a href="#section-1-8" class="pilcrow">¶</a></p>
+   the guidance in this document.<a href="#section-1-9" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-1-9.1">
-          <p id="section-1-9.1.1">Note to the RFC Editor: Please replace "AAAA" through the document with the RFC number assigned to this document.<a href="#section-1-9.1.1" class="pilcrow">¶</a></p>
+<li class="normal ulEmpty" id="section-1-10.1">
+          <p id="section-1-10.1.1">Note to the RFC Editor: Please replace "AAAA" through the document with the RFC number assigned to this document.<a href="#section-1-10.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="changes-since-rfc-8407">
@@ -2095,7 +2097,7 @@ equipment and operating environment.<a href="#section-3.5.1-2.2.1" class="pilcro
             <dd class="break"></dd>
 <dt id="section-3.5.1-2.13"></dt>
             <dd style="margin-left: 1.5em" id="section-3.5.1-2.14">
-              <p id="section-3.5.1-2.14.1">Device models are also used to refer to model a function embedded in a device (e.g., Access Control Lists (ACLs) <span>[<a href="#RFC8519" class="cite xref">RFC8519</a>]</span>).<a href="#section-3.5.1-2.14.1" class="pilcrow">¶</a></p>
+              <p id="section-3.5.1-2.14.1">Device models are also used to model a function embedded in a device (e.g., Access Control Lists (ACLs) <span>[<a href="#RFC8519" class="cite xref">RFC8519</a>]</span>).<a href="#section-3.5.1-2.14.1" class="pilcrow">¶</a></p>
 </dd>
             <dd class="break"></dd>
 <dt id="section-3.5.1-2.15"></dt>
@@ -2563,6 +2565,7 @@ based on previous experience, the following sections establish usage
 guidelines for specific YANG constructs.<a href="#section-4-2" class="pilcrow">¶</a></p>
 <p id="section-4-3">Only guidelines that clarify or restrict the minimum conformance
 requirements are included here.<a href="#section-4-3" class="pilcrow">¶</a></p>
+<p id="section-4-4">A template for IETF modules is provided in <a href="#tem-ietf" class="auto internal xref">Appendix B</a>.<a href="#section-4-4" class="pilcrow">¶</a></p>
 <div id="sec-module-naming-conventions">
 <section id="section-4.1">
         <h3 id="name-module-naming-conventions">
@@ -4575,7 +4578,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <div class="lang-yang sourcecode" id="section-4.23.3.2-2">
 <pre>
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -4600,7 +4603,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <div class="lang-yang sourcecode" id="section-4.23.3.3-3">
 <pre>
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -4622,7 +4625,7 @@ Converted NMDA Module:
 <div class="lang-yang sourcecode" id="section-4.23.3.3-5">
 <pre>
   module example-foo {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    namespace "urn:example:params:xml:ns:yang:example-foo";
     prefix "foo";
 
     container foo {
@@ -4654,7 +4657,7 @@ Converted NMDA Module:
 <div class="lang-yang sourcecode" id="section-4.23.3.4-2">
 <pre>
   module example-foo-state {
-    namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+    namespace "urn:example:params:xml:ns:yang:example-foo-state";
     prefix "foo-s";
 
     // import new or converted module; not used in this example
@@ -6118,11 +6121,11 @@ module iana-template {
    for sharing more context that led to the design documented in
    <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>.<a href="#appendix-D-1" class="pilcrow">¶</a></p>
 <p id="appendix-D-2">Thanks to Italo Busi, Benoît Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, Jan Lindblad, Qiufang Ma, Mahesh Jethanandani, and Robert Wilton for the comments.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
+   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, Jan Lindblad, Qiufang Ma, Mahesh Jethanandani, Robert Wilton, and Thomas Fossati for the comments.<a href="#appendix-D-2" class="pilcrow">¶</a></p>
 <p id="appendix-D-3">Lou Berger suggested to include more details about IANA considerations.<a href="#appendix-D-3" class="pilcrow">¶</a></p>
 <p id="appendix-D-4"><a href="#sec-tags" class="auto internal xref">Section 4.28</a> is inspired from <span>[<a href="#RFC8819" class="cite xref">RFC8819</a>]</span>.<a href="#appendix-D-4" class="pilcrow">¶</a></p>
 <p id="appendix-D-5">Michal Vaško reported an inconsistency in Sections <a href="https://rfc-editor.org/rfc/rfc8407#section-4.6.2" class="relref">4.6.2</a> and <a href="https://rfc-editor.org/rfc/rfc8407#section-4.6.4" class="relref">4.6.4</a> of <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>.<a href="#appendix-D-5" class="pilcrow">¶</a></p>
-<p id="appendix-D-6">Thanks to Xufeng Liu for reviewing the document, including providing a YANGDOCTORS review.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
+<p id="appendix-D-6">Thanks to Xufeng Liu for reviewing the document, including providing YANGDOCTORS reviews.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
 <p id="appendix-D-7">Italo Busi provided the examples of "case + when" construct.<a href="#appendix-D-7" class="pilcrow">¶</a></p>
 <p id="appendix-D-8">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-8" class="pilcrow">¶</a></p>
 <p id="appendix-D-9">Kent Watsen contributed text to the security and IANA-maintained module templates.<a href="#appendix-D-9" class="pilcrow">¶</a></p>
@@ -6130,35 +6133,37 @@ module iana-template {
 <p id="appendix-D-11">Thanks to Qiufang Ma for the careful shepherd review.<a href="#appendix-D-11" class="pilcrow">¶</a></p>
 <p id="appendix-D-12">Thanks to Acee Lindem for triggering the discussion on data model vs. module.<a href="#appendix-D-12" class="pilcrow">¶</a></p>
 <p id="appendix-D-13">Thanks to Mahesh Jethanandani for the thoughtful AD review.<a href="#appendix-D-13" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-D-14">
-        <dt id="appendix-D-14.1">The author of RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-14.2">
-          <p id="appendix-D-14.2.1">Andy Bierman<a href="#appendix-D-14.2.1" class="pilcrow">¶</a></p>
+<p id="appendix-D-14">Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
+   Ralf Weber for the dnsdir, and Giuseppe Fioccola for the opsdir review.<a href="#appendix-D-14" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-D-15">
+        <dt id="appendix-D-15.1">The author of RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-15.2">
+          <p id="appendix-D-15.2.1">Andy Bierman<a href="#appendix-D-15.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-14.3"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-14.4">
-          <p id="appendix-D-14.4.1">YumaWorks<a href="#appendix-D-14.4.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-15.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-15.4">
+          <p id="appendix-D-15.4.1">YumaWorks<a href="#appendix-D-15.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-14.5"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-14.6">
-          <p id="appendix-D-14.6.1">email: andy@yumaworks.com<a href="#appendix-D-14.6.1" class="pilcrow">¶</a></p>
+<dt id="appendix-D-15.5"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-15.6">
+          <p id="appendix-D-15.6.1">email: andy@yumaworks.com<a href="#appendix-D-15.6.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-14.7">Acknowledgments from RFC 8407:</dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-14.8">
-          <p id="appendix-D-14.8.1">The structure and contents of this document are adapted from
+<dt id="appendix-D-15.7">Acknowledgments from RFC 8407:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-15.8">
+          <p id="appendix-D-15.8.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by
- C. M. Heard.<a href="#appendix-D-14.8.1" class="pilcrow">¶</a></p>
+ C. M. Heard.<a href="#appendix-D-15.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="appendix-D-14.9"></dt>
-        <dd style="margin-left: 1.5em" id="appendix-D-14.10">
-          <p id="appendix-D-14.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
+<dt id="appendix-D-15.9"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-D-15.10">
+          <p id="appendix-D-15.10.1">The working group thanks Martin Bjorklund, Juergen Schoenwaelder,
 Ladislav Lhotka, Jernej Tuljak, Lou Berger, Robert Wilton, Kent
 Watsen, and William Lupton for their extensive reviews and
-contributions to this document.<a href="#appendix-D-14.10.1" class="pilcrow">¶</a></p>
+contributions to this document.<a href="#appendix-D-15.10.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>

@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 25 October 2025                                          Huawei
-                                                           23 April 2025
+Expires: 14 November 2025                                         Huawei
+                                                             13 May 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 October 2025.
+   This Internet-Draft will expire on 14 November 2025.
 
 Copyright Notice
 
@@ -213,6 +213,10 @@ Table of Contents
    These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
    models.
+
+   YANG 1.0 modules have to conform to [RFC6020] while YANG 1.1 modules
+   have to conform to [RFC7950].  This document adds usage guidelines in
+   addition to these YANG RFCs.
 
    Section 4.30.3 updates [RFC8126] by providing guidance for writing
    the IANA considerations for RFCs that specify IANA-maintained
@@ -641,8 +645,8 @@ Table of Contents
       described in [RFC8199] or the device configuration model discussed
       in [RFC8309].
 
-      Device models are also used to refer to model a function embedded
-      in a device (e.g., Access Control Lists (ACLs) [RFC8519]).
+      Device models are also used to model a function embedded in a
+      device (e.g., Access Control Lists (ACLs) [RFC8519]).
 
       A comprehensive list of device models is provided in Appendix 4.2
       of [RFC8969].
@@ -1046,6 +1050,8 @@ Table of Contents
 
    Only guidelines that clarify or restrict the minimum conformance
    requirements are included here.
+
+   A template for IETF modules is provided in Appendix B.
 
 4.1.  Module Naming Conventions
 
@@ -2827,7 +2833,7 @@ Table of Contents
    state subtrees, whenever possible.
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2846,7 +2852,7 @@ Table of Contents
    Old Module:
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2862,7 +2868,7 @@ Table of Contents
    Converted NMDA Module:
 
      module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       namespace "urn:example:params:xml:ns:yang:example-foo";
        prefix "foo";
 
        container foo {
@@ -2887,7 +2893,7 @@ Table of Contents
    with configuration data nodes (to be NMDA compliant).
 
      module example-foo-state {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+       namespace "urn:example:params:xml:ns:yang:example-foo-state";
        prefix "foo-s";
 
        // import new or converted module; not used in this example
@@ -4230,7 +4236,8 @@ Acknowledgments
 
    Thanks to Italo Busi, Benoît Claise, Tom Petch, Randy Presuhn, Martin
    Björklund, Acee Lindem, Dale R.  Worley, Kent Watsen, Jan Lindblad,
-   Qiufang Ma, Mahesh Jethanandani, and Robert Wilton for the comments.
+   Qiufang Ma, Mahesh Jethanandani, Robert Wilton, and Thomas Fossati
+   for the comments.
 
    Lou Berger suggested to include more details about IANA
    considerations.
@@ -4241,7 +4248,7 @@ Acknowledgments
    [RFC8407].
 
    Thanks to Xufeng Liu for reviewing the document, including providing
-   a YANGDOCTORS review.
+   YANGDOCTORS reviews.
 
    Italo Busi provided the examples of "case + when" construct.
 
@@ -4259,6 +4266,10 @@ Acknowledgments
    module.
 
    Thanks to Mahesh Jethanandani for the thoughtful AD review.
+
+   Thanks to Christer Holmberg for the genart review, Jean Mahoney for
+   the check on RPC implications, Ralf Weber for the dnsdir, and
+   Giuseppe Fioccola for the opsdir review.
 
    The author of RFC 8407:  Andy Bierman
 
