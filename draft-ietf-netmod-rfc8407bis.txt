@@ -4268,8 +4268,9 @@ Acknowledgments
    Thanks to Mahesh Jethanandani for the thoughtful AD review.
 
    Thanks to Christer Holmberg for the genart review, Jean Mahoney for
-   the check on RPC implications, Ralf Weber for the dnsdir, and
-   Giuseppe Fioccola for the opsdir review.
+   the check on RPC implications, Ralf Weber for the dnsdir, Giuseppe
+   Fioccola for the opsdir review, and Joseph Touch for the tsvart
+   review.
 
    The author of RFC 8407:  Andy Bierman
 
