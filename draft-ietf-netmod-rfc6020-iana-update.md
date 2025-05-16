@@ -76,11 +76,12 @@ to comply with the IANA practices for registering modules and their revisions.
 
 #  IANA Considerations {#sec-iana}
 
-## Update YANG Parameters Registry
+## Update YANG Parameters Registry {#sec-update}
 
 This document requests IANA to update the reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group {{IANA-MOD-NAMES}}
-to point to the RFC number that will be assigned to this document.
+to also list to the RFC number that will be assigned to this document. This update is needed
+because the procedure in this document is authoritative for assigning names in that registry.
 
 ## Revisions of Published Modules
 
