@@ -3104,6 +3104,10 @@ The YANG Module Names registry:
 The underlying registry:
 : When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
+# Operations and Manageability Considerations
+
+Although the document focuses on network management guidance, the document does not define a protocol or a protocol extension. As such, there are no new operations or manageability requirements introduced by this document.
+
 #  Security Considerations
 
 This document defines guidelines for NETCONF or
