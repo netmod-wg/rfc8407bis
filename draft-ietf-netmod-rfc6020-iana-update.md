@@ -1,5 +1,5 @@
 ---
-title: "Update to YANG Module Names Registration"
+title: "An Update to YANG Module Names Registration"
 abbrev: "YANG Module Names"
 category: std
 updates: 6020
@@ -98,6 +98,10 @@ NEW:
 : All XML namespaces of initial version modules in the registry MUST be unique.
 : All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
 : All module revisions MUST have the same XML namespace as the initial version of the module.
+
+# Operations and Manageability Considerations
+
+This document aligns an IANA policy with the practice for handling YANG module names. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
