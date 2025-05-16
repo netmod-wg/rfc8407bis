@@ -165,10 +165,11 @@ Table of Contents
      5.1.  YANG Modules
      5.2.  Update YANG Parameters Registry
      5.3.  IANA-Maintained Modules
-   6.  Security Considerations
-   7.  References
-     7.1.  Normative References
-     7.2.  Informative References
+   6.  Operations and Manageability Considerations
+   7.  Security Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Appendix A.  Module Review Checklist
    Appendix B.  Template for IETF Modules
    Appendix C.  Template for IANA-Maintained Modules
@@ -3618,15 +3619,22 @@ Table of Contents
       When this registry is modified, the YANG module "iana-foo"
       [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
-6.  Security Considerations
+6.  Operations and Manageability Considerations
+
+   Although the document focuses on network management guidance, the
+   document does not define a protocol or a protocol extension.  As
+   such, there are no new operations or manageability requirements
+   introduced by this document.
+
+7.  Security Considerations
 
    This document defines guidelines for NETCONF or RESTCONF content
    defined with the YANG data modeling language.  It does not introduce
    any new or increased security risks that need to be discussed.
 
-7.  References
+8.  References
 
-7.1.  Normative References
+8.1.  Normative References
 
    [ID-Guidelines]
               IETF, "Guidelines to Authors of Internet-Drafts", n.d.,
@@ -3711,7 +3719,7 @@ Table of Contents
               November 1999,
               <https://www.w3.org/TR/1999/REC-xpath-19991116>.
 
-7.2.  Informative References
+8.2.  Informative References
 
    [IANA-MOD-NAMES]
               IANA, "YANG Module Names",
