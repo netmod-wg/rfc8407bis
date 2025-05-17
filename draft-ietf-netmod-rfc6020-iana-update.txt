@@ -6,9 +6,9 @@ Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Updates: 6020 (if approved)                            M. Boucadair, Ed.
 Intended status: Standards Track                                  Orange
-Expires: 17 November 2025                                          Q. Wu
+Expires: 18 November 2025                                          Q. Wu
                                                                   Huawei
-                                                             16 May 2025
+                                                             17 May 2025
 
 
               An Update to YANG Module Names Registration
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 November 2025.
+   This Internet-Draft will expire on 18 November 2025.
 
 Copyright Notice
 
