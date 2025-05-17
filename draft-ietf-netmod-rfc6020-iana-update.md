@@ -83,7 +83,7 @@ the "YANG Module Names" registry under the "YANG Parameters" registry group {{IA
 to also list to the RFC number that will be assigned to this document. This update is needed
 because the procedure in this document is authoritative for assigning names in that registry.
 
-## Revisions of Published Modules
+## Revisions of Published Modules {#sec-amend}
 
 This document amends the guidance on the uniqueness of names, initially defined in {{Section 14 of !RFC6020}}, as follows:
 
@@ -101,11 +101,11 @@ NEW:
 
 # Operations and Manageability Considerations
 
-This document aligns an IANA policy with the practice for handling YANG module names. As such, there are no new operations or manageability requirements introduced by this document.
+This document aligns an IANA policy with the practice for handling YANG module names ({{sec-amend}}). As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
-This document defines an update to an IANA registration procedure defined in {{!RFC6020}}.
+This document defines a new IANA action ({{sec-update}}) and defines an update ({{sec-amend}}) to an IANA registration procedure defined in {{!RFC6020}}.
 It does not introduce any new or increased security risks that need to be discussed.
 
 --- back
