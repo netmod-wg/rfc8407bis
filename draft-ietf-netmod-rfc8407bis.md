@@ -3106,7 +3106,7 @@ The underlying registry:
 
 # Operations and Manageability Considerations
 
-Although the document focuses on network management guidance, the document does not define a protocol or a protocol extension. As such, there are no new operations or manageability requirements introduced by this document.
+Although the document focuses on YANG data modeling language guidance, the document does not define a protocol or a protocol extension. As such, there are no new operations or manageability requirements introduced by this document.
 
 #  Security Considerations
 
