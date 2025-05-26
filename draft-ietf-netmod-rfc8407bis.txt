@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 18 November 2025                                         Huawei
-                                                             17 May 2025
+Expires: 27 November 2025                                         Huawei
+                                                             26 May 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 November 2025.
+   This Internet-Draft will expire on 27 November 2025.
 
 Copyright Notice
 
@@ -4277,8 +4277,8 @@ Acknowledgments
 
    Thanks to Christer Holmberg for the genart review, Jean Mahoney for
    the check on RPC implications, Ralf Weber for the dnsdir, Giuseppe
-   Fioccola for the opsdir review, and Joseph Touch for the tsvart
-   review.
+   Fioccola for the opsdir review, Joseph Touch for the tsvart review,
+   and Yoav Nir for the secdir review.
 
    The author of RFC 8407:  Andy Bierman
 
