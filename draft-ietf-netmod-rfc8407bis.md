@@ -3258,7 +3258,8 @@ that need to be discussed.
    Thanks to Mahesh Jethanandani for the thoughtful AD review.
 
    Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
-   Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, and Joseph Touch for the tsvart review.
+   Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
+   and Yoav Nir for the secdir review.
 
 The author of RFC 8407:
 : Andy Bierman
