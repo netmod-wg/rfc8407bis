@@ -116,4 +116,4 @@ It does not introduce any new or increased security risks that need to be discus
 The content of this document was part of {{?I-D.ietf-netmod-rfc8407bis}}.
 
 Mahesh Jethanandani suggested to offload this part from {{?I-D.ietf-netmod-rfc8407bis}}.
-Thanks to Mahesh for the discussion and comments.
+Thanks to Mahesh and Kent Watsen for the discussion and comments.
