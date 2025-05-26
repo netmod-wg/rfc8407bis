@@ -193,8 +193,8 @@ Acknowledgments
    [I-D.ietf-netmod-rfc8407bis].
 
    Mahesh Jethanandani suggested to offload this part from
-   [I-D.ietf-netmod-rfc8407bis].  Thanks to Mahesh for the discussion
-   and comments.
+   [I-D.ietf-netmod-rfc8407bis].  Thanks to Mahesh and Kent Watsen for
+   the discussion and comments.
 
 Authors' Addresses
 
