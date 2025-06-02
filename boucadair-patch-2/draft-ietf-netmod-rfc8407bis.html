@@ -10,7 +10,7 @@
 <meta content="Qin Wu" name="author">
 <meta content="
        This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -1107,7 +1107,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -3540,13 +3540,20 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    patterns used in a type definition have known limitations such as
    false negative or false positive matches, then these limitations
    <span class="bcp14">SHOULD</span> be documented within the typedef or data definition.<a href="#section-4.11.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.11.2-2">The following typedef from <span>[<a href="#RFC6991" class="cite xref">RFC6991</a>]</span> demonstrates the proper use of
+<p id="section-4.11.2-2">The following typedefs from <span>[<a href="#RFC6991" class="cite xref">RFC6991</a>]</span> demonstrate the proper use of
    the "pattern" statement:<a href="#section-4.11.2-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.2-3">
 <pre>
     typedef ipv4-address-no-zone {
       type inet:ipv4-address {
         pattern '[0-9\.]*';
+      }
+      ...
+    }
+
+    typedef ipv6-address-no-zone {
+      type inet:ipv6-address {
+        pattern '[0-9a-fA-F:\.]*';
       }
       ...
     }
