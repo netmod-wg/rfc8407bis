@@ -138,7 +138,7 @@ informative:
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -1673,13 +1673,20 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    false negative or false positive matches, then these limitations
    SHOULD be documented within the typedef or data definition.
 
-   The following typedef from {{?RFC6991}} demonstrates the proper use of
+   The following typedefs from {{?RFC6991}} demonstrate the proper use of
    the "pattern" statement:
 
 ~~~ yang
     typedef ipv4-address-no-zone {
       type inet:ipv4-address {
         pattern '[0-9\.]*';
+      }
+      ...
+    }
+
+    typedef ipv6-address-no-zone {
+      type inet:ipv6-address {
+        pattern '[0-9a-fA-F:\.]*';
       }
       ...
     }
