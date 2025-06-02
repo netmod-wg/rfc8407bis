@@ -3261,7 +3261,7 @@ that need to be discussed.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke for the IESG review. 
+   Thanks Éric Vyncke for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
