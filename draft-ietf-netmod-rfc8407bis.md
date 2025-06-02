@@ -514,7 +514,7 @@ semantics are needed in the module.  If any of the imported YANG
 modules are written using YANG 1.1, then the module MUST be written
 using YANG 1.1.
 
-A YIN syntax version of the module MAY also be present in the
+A YIN syntax version {{!RFC6020}} {{!RFC7950}} of the module MAY also be present in the
 document.  There MAY also be other types of modules present in the
 document, such as Structure of Management Information Version 2
 (SMIv2), which are not affected by these guidelines.
