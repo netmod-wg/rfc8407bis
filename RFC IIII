@@ -43,6 +43,12 @@ author:
     email: bill.wu@huawei.com
 
 normative:
+   ID-Guidelines:
+              title: "Guidelines to Authors of Internet-Drafts"
+              author:
+                org: IETF
+                date: false
+              target: https://authors.ietf.org/en/content-guidelines-overview
 
    W3C.REC-xpath:
               target: https://www.w3.org/TR/1999/REC-xpath-19991116
@@ -55,14 +61,6 @@ normative:
                 "W3C": Recommendation REC-xpath-19991116
 
 informative:
-
-   ID-Guidelines:
-              title: "Guidelines to Authors of Internet-Drafts"
-              author:
-                org: IETF
-                date: false
-              target: https://authors.ietf.org/en/content-guidelines-overview
-
    IANA-MOD-NAMES:
               title: "YANG Module Names"
               author:
