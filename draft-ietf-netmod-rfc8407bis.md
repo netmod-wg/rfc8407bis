@@ -584,14 +584,6 @@ Note:
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
-In order to comply with IESG policy as set forth in ``<https://www.ietf.org/id-info/checklist.html>``, every I-D that is
-submitted to the IESG for publication MUST contain an IANA
-Considerations section.  The requirements for this section vary
-depending on what actions are required of the IANA. If there are no
-IANA considerations applicable to the document, then the IANA
-Considerations section will state that "This document has no IANA
-actions".  Refer to the guidelines in {{!RFC8126}} for more details.
-
 Each normative YANG module MUST be registered in both the "IETF XML
 Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
 {{!RFC6020}} {{IANA-MOD-NAMES}}. The registration request in the "YANG Module Names" registry
