@@ -245,7 +245,7 @@ informative:
 
 #  Terminology & Notation Conventions
 
-  Some of the templates defined in the document uses "--" to easily identify
+  Some of the templates defined in the document use "--" to easily identify
   specific instructions to the authors. Text prefixed with "--" must not be
   copied as such when using a template. Note that for YANG templates, "//"
   is used to convey such instructions.
@@ -470,7 +470,7 @@ Refer to {{sec-op-state}} for more NMDA-related guidance. Specifically, {{sec-4.
 
 Consistent indentation SHOULD be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
-is done for formatting purposes, then this SHOULD be noted following {{!RFC8792}}, as shown
+is done for formatting purposes, then this SHOULD be indicated per the guidance in {{!RFC8792}}, as shown
 in the following example:
 
 ~~~
@@ -564,7 +564,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
 
-Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, following the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
+Documents that exclusively define modules that follow the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, following the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
@@ -577,7 +577,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 ~~~
 
 Note:
-: {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
+: {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as a normative reference.
 : By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and RFC AAAA (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
@@ -3260,6 +3260,8 @@ that need to be discussed.
    Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
+
+   Thanks to Mike Bishop for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
