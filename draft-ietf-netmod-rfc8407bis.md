@@ -356,7 +356,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
    * Definitions section ({{sec-def}})
 
    Additional YANG-specific considerations MUST be included for the following sections:
-   
+
    * Security Considerations section ({{sec-sec-cons-sec}})
    * IANA Considerations section ({{sec-iana-cons}})
    * References section ({{sec-ref}})
