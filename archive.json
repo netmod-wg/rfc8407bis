@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-20T01:55:02.976822+00:00",
+  "timestamp": "2025-06-03T01:57:07.781280+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2383,6 +2383,58 @@
       "mergeCommit": {
         "oid": "a6b9e6e58387a6ceeeba8ddbfaa610a41566df42"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 81,
+      "id": "PR_kwDOJTh_ks6Ypoia",
+      "title": "Eric Vyncke comments",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/81",
+      "state": "CLOSED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-02T15:18:18Z",
+      "updatedAt": "2025-06-02T17:06:26Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "75c14251f694587c4431a7f62730299a35285d0e",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "\u00c9ric-Vyncke-IESG-review",
+      "headRefOid": "b2e63a8a0fd43aba4c2492009eb9d2c0627fe445",
+      "closedAt": "2025-06-02T17:06:26Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 82,
+      "id": "PR_kwDOJTh_ks6YpqBB",
+      "title": "Eric V comments",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/82",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-02T15:20:32Z",
+      "updatedAt": "2025-06-02T17:15:19Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "75c14251f694587c4431a7f62730299a35285d0e",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "d5ba43083d2acf4cbbd438657b5dc80c2e29c4a7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
