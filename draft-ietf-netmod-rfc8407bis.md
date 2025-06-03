@@ -44,13 +44,6 @@ author:
 
 normative:
 
-   ID-Guidelines:
-              title: "Guidelines to Authors of Internet-Drafts"
-              author:
-                org: IETF
-                date: false
-              target: https://authors.ietf.org/en/content-guidelines-overview
-
    W3C.REC-xpath:
               target: https://www.w3.org/TR/1999/REC-xpath-19991116
               title: "XML Path Language (XPath) Version 1.0"
@@ -134,6 +127,12 @@ informative:
               date: false
               target: https://www.iana.org/assignments/iana-tunnel-type/iana-tunnel-type.xhtml
 
+   ID-Guidelines:
+              title: "Guidelines to Authors of Internet-Drafts"
+              author:
+                org: IETF
+                date: false
+              target: https://authors.ietf.org/en/content-guidelines-overview
 
 --- abstract
 
