@@ -1552,7 +1552,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    Note that a different URN prefix string SHOULD be used for modules
    that are not Standards Track.  The string SHOULD be selected
-   according to the guidelines in {{!RFC7950}}.
+   according to the guidelines in {{Section 5.3 of !RFC7950}}.
 
    The following URIs exemplify what might be used by modules that are
    not Standards Track.  Note that the domain "example.com" SHOULD be
