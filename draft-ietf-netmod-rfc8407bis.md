@@ -1331,7 +1331,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The YANG status statement MUST be present within a definition if its
    value is "deprecated" or "obsolete".  The status SHOULD NOT be
    changed from "current" directly to "obsolete".  An object SHOULD be
-   available for at least one year publication date with a "deprecated" status before it
+   available for at least one year after the publication date with a "deprecated" status before it
    is changed to "obsolete".
 
    The module or submodule name MUST NOT be changed, once the document
