@@ -18,7 +18,7 @@ Expires: 5 December 2025                                          Huawei
 Abstract
 
    This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained
+   specifications containing YANG data models, including IANA-maintained
    modules.  Recommendations and procedures are defined, which are
    intended to increase interoperability and usability of Network
    Configuration Protocol (NETCONF) and RESTCONF Protocol
@@ -346,8 +346,8 @@ Table of Contents
       has an IANA registry associated with it (e.g., "iana-tunnel-type"
       [RFC8675] or "iana-pseudowire-types" [RFC9291]).
 
-   IETF module:  A YANG module that is published by the IETF and which
-      is not maintained by IANA.
+   IETF module:  A YANG module that is published by the IETF and that is
+      not maintained by IANA.
 
    published:  A stable release of a module or submodule.  For example,
       the "Request for Comments" described in Section 2.1 of [RFC2026]
@@ -454,7 +454,8 @@ Table of Contents
 
    Note that the term "YANG model" is sometimes used as an abbreviation
    of YANG data model.  However, that term should be avoided in favor of
-   YANG data model.  Likewise, "YANG data module" should be avoided.
+   YANG data model.  Likewise, "YANG data module" has no meaning and
+   must be avoided.
 
    Even if a YANG data model is structured as a single YANG module, YANG
    data model term should be used in the title, abstract, and in the
@@ -474,8 +475,8 @@ Table of Contents
    defined in the following: [RFC7322] (and any future RFCs that
    obsolete it), [RFC-STYLE], and [RFC7841].
 
-   The following sections MUST be present in an I-D containing a YANG
-   module:
+   The following sections MUST be present in an I-D or RFC containing a
+   YANG module:
 
    *  Narrative sections
 
@@ -573,12 +574,12 @@ Table of Contents
 3.5.  Narrative Sections
 
    The narrative part MUST include an overview section that describes
-   the scope and field of application of the module(s) defined by the
-   specification and that specifies the relationship (if any) of these
-   modules to other standards, particularly to standards containing
-   other YANG modules.  The narrative part SHOULD include one or more
-   sections to briefly describe the structure of the modules defined in
-   the specification.
+   the scope and field of application of the data model(s) defined by
+   the specification and that specifies the relationship (if any) of
+   these data models to other standards, particularly to standards
+   containing other YANG data models.  The narrative part SHOULD include
+   one or more sections to briefly describe the structure of the data
+   models defined in the specification.
 
    If the module or modules defined by the specification imports
    definitions from other modules (except for those defined in [RFC7950]
@@ -590,7 +591,7 @@ Table of Contents
 
    If the document contains major Network Management Datastore
    Architecture (NMDA) exceptions or include a temporary non-NMDA module
-   [RFC8342], then the Introduction section should mention this fact
+   [RFC8342], then the Introduction section SHOULD mention this fact
    with the reasoning that motivated that design.  Refer to Section 4.23
    for more NMDA-related guidance.  Specifically, Section 4.23.2
    includes a recommendation for designers to describe and justify any
@@ -661,10 +662,10 @@ Table of Contents
    modules are written using YANG 1.1, then the module MUST be written
    using YANG 1.1.
 
-   A YIN syntax version of the module MAY also be present in the
-   document.  There MAY also be other types of modules present in the
-   document, such as Structure of Management Information Version 2
-   (SMIv2), which are not affected by these guidelines.
+   A YIN syntax version (Section 13 of [RFC7950]) of the module MAY also
+   be present in the document.  There MAY also be other types of modules
+   present in the document, such as Structure of Management Information
+   Version 2 (SMIv2), which are not affected by these guidelines.
 
    Note that if the module itself is considered normative and not an
    example module or example YANG fragment, then all YANG statements
@@ -1021,7 +1022,7 @@ Table of Contents
    Examples of reserved values are listed below:
 
    *  IPv4 and IPv6 addresses/prefixes reserved for documentation are
-      defined in [RFC5737] and [RFC3849].
+      defined in [RFC5737], [RFC3849], and [RFC9637].
 
    *  The Enterprise Number 32473 reserved for documentation use is
       defined in [RFC5612].
@@ -1091,7 +1092,7 @@ Table of Contents
 
    All YANG definitions are scoped by the module containing the
    definition being referenced.  This allows the same name to be used in
-   multiple moodules, even if the names are not unique.  In the example
+   multiple modules, even if the names are not unique.  In the example
    below, the identifier "foo" is used in all three modules:
 
        module example-foo {
@@ -1611,8 +1612,8 @@ Table of Contents
    The YANG status statement MUST be present within a definition if its
    value is "deprecated" or "obsolete".  The status SHOULD NOT be
    changed from "current" directly to "obsolete".  An object SHOULD be
-   available for at least one year with a "deprecated" status before it
-   is changed to "obsolete".
+   available for at least one year publication date with a "deprecated"
+   status before it is changed to "obsolete".
 
    The module or submodule name MUST NOT be changed, once the document
    containing the module or submodule is published.
@@ -1943,9 +1944,9 @@ Table of Contents
    The following typedef from [RFC6991] demonstrates the proper use of
    the "pattern" statement:
 
-       typedef ipv4-address-no-zone {
-         type inet:ipv4-address {
-           pattern '[0-9\.]*';
+       typedef ipv6-address-no-zone {
+         type inet:ipv6-address {
+           pattern '[0-9a-fA-F:\.]*';
          }
          ...
        }
@@ -3946,6 +3947,10 @@ Table of Contents
               RFC 9362, DOI 10.17487/RFC9362, February 2023,
               <https://www.rfc-editor.org/rfc/rfc9362>.
 
+   [RFC9637]  Huston, G. and N. Buraglio, "Expanding the IPv6
+              Documentation Space", RFC 9637, DOI 10.17487/RFC9637,
+              August 2024, <https://www.rfc-editor.org/rfc/rfc9637>.
+
    [RFC9645]  Watsen, K., "YANG Groupings for TLS Clients and TLS
               Servers", RFC 9645, DOI 10.17487/RFC9645, October 2024,
               <https://www.rfc-editor.org/rfc/rfc9645>.
@@ -4260,7 +4265,7 @@ Acknowledgments
 
    Italo Busi provided the examples of "case + when" construct.
 
-   Thanks to Rach Salz and Michael Richardson for the SAAG review.
+   Thanks to Rich Salz and Michael Richardson for the SAAG review.
 
    Kent Watsen contributed text to the security and IANA-maintained
    module templates.
@@ -4280,7 +4285,7 @@ Acknowledgments
    Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks to Mike Bishop for the IESG review.
+   Thanks Éric Vyncke and Mike Bishop for the IESG review.
 
    The author of RFC 8407:  Andy Bierman
 

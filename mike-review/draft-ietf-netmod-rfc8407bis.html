@@ -10,7 +10,7 @@
 <meta content="Qin Wu" name="author">
 <meta content="
        This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -1107,7 +1107,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -1713,7 +1713,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <dd class="break"></dd>
 <dt id="section-2-3.3">IETF module:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.4">
-          <p id="section-2-3.4.1">A YANG module that is published by the IETF and which is not maintained by IANA.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-3.4.1">A YANG module that is published by the IETF and that is not maintained by IANA.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 <dt id="section-2-3.5">published:</dt>
@@ -1879,7 +1879,7 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
 </dl>
 <p id="section-2.5-3">A YANG data model can consist (1) of a single YANG module (e.g., <span>[<a href="#RFC9129" class="cite xref">RFC9129</a>]</span>) or (2) multiple YANG modules (e.g., <span>[<a href="#RFC7407" class="cite xref">RFC7407</a>]</span>).<a href="#section-2.5-3" class="pilcrow">¶</a></p>
 <p id="section-2.5-4">Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
-Likewise, "YANG data module" should be avoided.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
+Likewise, "YANG data module" has no meaning and must be avoided.<a href="#section-2.5-4" class="pilcrow">¶</a></p>
 <p id="section-2.5-5">Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".<a href="#section-2.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1895,7 +1895,7 @@ Likewise, "YANG data module" should be avoided.<a href="#section-2.5-4" class="p
    be followed.  The guidelines for RFCs should be followed and are
    defined in the following: <span>[<a href="#RFC7322" class="cite xref">RFC7322</a>]</span> (and any future RFCs that
    obsolete it), <span>[<a href="#RFC-STYLE" class="cite xref">RFC-STYLE</a>]</span>, and <span>[<a href="#RFC7841" class="cite xref">RFC7841</a>]</span>.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">The following sections <span class="bcp14">MUST</span> be present in an I-D containing a YANG module:<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-2">The following sections <span class="bcp14">MUST</span> be present in an I-D or RFC containing a YANG module:<a href="#section-3-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-3.1">
           <p id="section-3-3.1.1">Narrative sections<a href="#section-3-3.1.1" class="pilcrow">¶</a></p>
@@ -2025,11 +2025,11 @@ Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="r
 <a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-narrative-sections" class="section-name selfRef">Narrative Sections</a>
         </h3>
 <p id="section-3.5-1">The narrative part <span class="bcp14">MUST</span> include an overview section that describes
-the scope and field of application of the module(s) defined by the
+the scope and field of application of the data model(s) defined by the
 specification and that specifies the relationship (if any) of these
-modules to other standards, particularly to standards containing
-other YANG modules.  The narrative part <span class="bcp14">SHOULD</span> include one or more
-sections to briefly describe the structure of the modules defined in
+data models to other standards, particularly to standards containing
+other YANG data models.  The narrative part <span class="bcp14">SHOULD</span> include one or more
+sections to briefly describe the structure of the data models defined in
 the specification.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
 <p id="section-3.5-2">If the module or modules defined by the specification imports
 definitions from other modules (except for those defined in <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>
@@ -2039,7 +2039,7 @@ special interpretations of definitions in other modules <span class="bcp14">MUST
 as well.  Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.3" class="relref">Section 2.3</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of this
 overview section.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
 <p id="section-3.5-3">If the document contains major Network Management Datastore Architecture (NMDA) exceptions or include a temporary non-NMDA module <span>[<a href="#RFC8342" class="cite xref">RFC8342</a>]</span>, then the Introduction
-section should mention this fact with the reasoning that motivated that design.
+section <span class="bcp14">SHOULD</span> mention this fact with the reasoning that motivated that design.
 Refer to <a href="#sec-op-state" class="auto internal xref">Section 4.23</a> for more NMDA-related guidance. Specifically, <a href="#sec-4.23.2" class="auto internal xref">Section 4.23.2</a> includes a recommendation for designers to describe and justify any NMDA exceptions in detail as part of the module itself.<a href="#section-3.5-3" class="pilcrow">¶</a></p>
 <p id="section-3.5-4">Consistent indentation <span class="bcp14">SHOULD</span> be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
@@ -2124,7 +2124,7 @@ YANG 1.0 <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> syntax 
 semantics are needed in the module.  If any of the imported YANG
 modules are written using YANG 1.1, then the module <span class="bcp14">MUST</span> be written
 using YANG 1.1.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
-<p id="section-3.6-2">A YIN syntax version of the module <span class="bcp14">MAY</span> also be present in the
+<p id="section-3.6-2">A YIN syntax version (<span><a href="https://rfc-editor.org/rfc/rfc7950#section-13" class="relref">Section 13</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>) of the module <span class="bcp14">MAY</span> also be present in the
 document.  There <span class="bcp14">MAY</span> also be other types of modules present in the
 document, such as Structure of Management Information Version 2
 (SMIv2), which are not affected by these guidelines.<a href="#section-3.6-2" class="pilcrow">¶</a></p>
@@ -2534,7 +2534,7 @@ addresses/prefixes exclusively <span class="bcp14">SHOULD</span> be used in the 
 documentation use. Authors <span class="bcp14">SHOULD</span> use these reserved values in the usage examples if these types are used. Examples of reserved values are listed below:<a href="#section-3.12-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.12-3.1">
-            <p id="section-3.12-3.1.1">IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in <span>[<a href="#RFC5737" class="cite xref">RFC5737</a>]</span> and <span>[<a href="#RFC3849" class="cite xref">RFC3849</a>]</span>.<a href="#section-3.12-3.1.1" class="pilcrow">¶</a></p>
+            <p id="section-3.12-3.1.1">IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in <span>[<a href="#RFC5737" class="cite xref">RFC5737</a>]</span>, <span>[<a href="#RFC3849" class="cite xref">RFC3849</a>]</span>, and <span>[<a href="#RFC9637" class="cite xref">RFC9637</a>]</span>.<a href="#section-3.12-3.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.12-3.2">
             <p id="section-3.12-3.2.1">The Enterprise Number 32473 reserved for documentation use is defined in <span>[<a href="#RFC5612" class="cite xref">RFC5612</a>]</span>.<a href="#section-3.12-3.2.1" class="pilcrow">¶</a></p>
@@ -2606,7 +2606,7 @@ new module, not a name change.<a href="#section-4.1-6" class="pilcrow">¶</a></p
         </h3>
 <p id="section-4.2-1">All YANG definitions are scoped by the module containing the
 definition being referenced. This allows the same name to be used
-in multiple moodules, even if the names are not unique. In the example
+in multiple modules, even if the names are not unique. In the example
 below, the identifier "foo" is used in all three modules:<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.2-2">
 <pre>
@@ -3188,7 +3188,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 <p id="section-4.7-1">The YANG status statement <span class="bcp14">MUST</span> be present within a definition if its
    value is "deprecated" or "obsolete".  The status <span class="bcp14">SHOULD NOT</span> be
    changed from "current" directly to "obsolete".  An object <span class="bcp14">SHOULD</span> be
-   available for at least one year with a "deprecated" status before it
+   available for at least one year publication date with a "deprecated" status before it
    is changed to "obsolete".<a href="#section-4.7-1" class="pilcrow">¶</a></p>
 <p id="section-4.7-2">The module or submodule name <span class="bcp14">MUST NOT</span> be changed, once the document
    containing the module or submodule is published.<a href="#section-4.7-2" class="pilcrow">¶</a></p>
@@ -3544,9 +3544,9 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    the "pattern" statement:<a href="#section-4.11.2-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.2-3">
 <pre>
-    typedef ipv4-address-no-zone {
-      type inet:ipv4-address {
-        pattern '[0-9\.]*';
+    typedef ipv6-address-no-zone {
+      type inet:ipv6-address {
+        pattern '[0-9a-fA-F:\.]*';
       }
       ...
     }
@@ -5794,6 +5794,10 @@ that need to be discussed.<a href="#section-7-1" class="pilcrow">¶</a></p>
         <dd>
 <span class="refAuthor">Boucadair, M.</span> and <span class="refAuthor">J. Shallow</span>, <span class="refTitle">"Distributed Denial-of-Service Open Threat Signaling (DOTS) Signal Channel Configuration Attributes for Robust Block Transmission"</span>, <span class="seriesInfo">RFC 9362</span>, <span class="seriesInfo">DOI 10.17487/RFC9362</span>, <time datetime="2023-02" class="refDate">February 2023</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9362">https://www.rfc-editor.org/rfc/rfc9362</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC9637">[RFC9637]</dt>
+        <dd>
+<span class="refAuthor">Huston, G.</span> and <span class="refAuthor">N. Buraglio</span>, <span class="refTitle">"Expanding the IPv6 Documentation Space"</span>, <span class="seriesInfo">RFC 9637</span>, <span class="seriesInfo">DOI 10.17487/RFC9637</span>, <time datetime="2024-08" class="refDate">August 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9637">https://www.rfc-editor.org/rfc/rfc9637</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC9645">[RFC9645]</dt>
         <dd>
 <span class="refAuthor">Watsen, K.</span>, <span class="refTitle">"YANG Groupings for TLS Clients and TLS Servers"</span>, <span class="seriesInfo">RFC 9645</span>, <span class="seriesInfo">DOI 10.17487/RFC9645</span>, <time datetime="2024-10" class="refDate">October 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9645">https://www.rfc-editor.org/rfc/rfc9645</a>&gt;</span>. </dd>
@@ -6138,7 +6142,7 @@ module iana-template {
 <p id="appendix-D-5">Michal Vaško reported an inconsistency in Sections <a href="https://rfc-editor.org/rfc/rfc8407#section-4.6.2" class="relref">4.6.2</a> and <a href="https://rfc-editor.org/rfc/rfc8407#section-4.6.4" class="relref">4.6.4</a> of <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>.<a href="#appendix-D-5" class="pilcrow">¶</a></p>
 <p id="appendix-D-6">Thanks to Xufeng Liu for reviewing the document, including providing YANGDOCTORS reviews.<a href="#appendix-D-6" class="pilcrow">¶</a></p>
 <p id="appendix-D-7">Italo Busi provided the examples of "case + when" construct.<a href="#appendix-D-7" class="pilcrow">¶</a></p>
-<p id="appendix-D-8">Thanks to Rach Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-8" class="pilcrow">¶</a></p>
+<p id="appendix-D-8">Thanks to Rich Salz and Michael Richardson for the SAAG review.<a href="#appendix-D-8" class="pilcrow">¶</a></p>
 <p id="appendix-D-9">Kent Watsen contributed text to the security and IANA-maintained module templates.<a href="#appendix-D-9" class="pilcrow">¶</a></p>
 <p id="appendix-D-10">Special thanks to Amanda Baber for the thoughtful and careful review of the document.<a href="#appendix-D-10" class="pilcrow">¶</a></p>
 <p id="appendix-D-11">Thanks to Qiufang Ma for the careful shepherd review.<a href="#appendix-D-11" class="pilcrow">¶</a></p>
@@ -6147,7 +6151,7 @@ module iana-template {
 <p id="appendix-D-14">Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.<a href="#appendix-D-14" class="pilcrow">¶</a></p>
-<p id="appendix-D-15">Thanks to Mike Bishop for the IESG review.<a href="#appendix-D-15" class="pilcrow">¶</a></p>
+<p id="appendix-D-15">Thanks Éric Vyncke and Mike Bishop for the IESG review.<a href="#appendix-D-15" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlParallel" id="appendix-D-16">
         <dt id="appendix-D-16.1">The author of RFC 8407:</dt>
         <dd style="margin-left: 1.5em" id="appendix-D-16.2">
