@@ -514,7 +514,7 @@ semantics are needed in the module.  If any of the imported YANG
 modules are written using YANG 1.1, then the module MUST be written
 using YANG 1.1.
 
-A YIN syntax version {{!RFC6020}} {{!RFC7950}} of the module MAY also be present in the
+A YIN syntax version ({{Section 13 !RFC7950}}) of the module MAY also be present in the
 document.  There MAY also be other types of modules present in the
 document, such as Structure of Management Information Version 2
 (SMIv2), which are not affected by these guidelines.
@@ -1331,7 +1331,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The YANG status statement MUST be present within a definition if its
    value is "deprecated" or "obsolete".  The status SHOULD NOT be
    changed from "current" directly to "obsolete".  An object SHOULD be
-   available for at least one year with a "deprecated" status before it
+   available for at least one year publication date with a "deprecated" status before it
    is changed to "obsolete".
 
    The module or submodule name MUST NOT be changed, once the document
@@ -1677,13 +1677,6 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    the "pattern" statement:
 
 ~~~ yang
-    typedef ipv4-address-no-zone {
-      type inet:ipv4-address {
-        pattern '[0-9\.]*';
-      }
-      ...
-    }
-
     typedef ipv6-address-no-zone {
       type inet:ipv6-address {
         pattern '[0-9a-fA-F:\.]*';
