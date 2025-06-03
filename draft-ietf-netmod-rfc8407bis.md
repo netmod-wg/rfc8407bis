@@ -1383,7 +1383,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The "organization" statement MUST be present.  If the module is
    contained in a document intended for IETF Standards Track status,
    then the organization SHOULD be the IETF working group (WG) chartered
-   to write the document, except for example modules or IANA-maintained modules. For other standards organizations, a similar
+   to write the document. Exceptions may be example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
    approach is also suggested.
 
    The "contact" statement MUST be present.  If the module is contained
