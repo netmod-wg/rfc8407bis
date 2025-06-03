@@ -137,7 +137,7 @@ informative:
 
 --- abstract
 
-   This memo provides guidelines for authors and reviewers of
+   This document provides guidelines for authors and reviewers of
    specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
@@ -249,6 +249,8 @@ informative:
   specific instructions to the authors. Text prefixed with "--" must not be
   copied as such when using a template. Note that for YANG templates, "//"
   is used to convey such instructions.
+
+  RFC IIII is used to refer to an RFC that defines an initial version of an IANA-maintained module.
 
   The following terms are used throughout this document:
 
