@@ -3112,8 +3112,7 @@ Although the document focuses on YANG data modeling language guidance, the docum
 
 This document defines guidelines for NETCONF or
 RESTCONF content defined with the YANG data modeling language.
-It does not introduce any new or increased security risks
-that need to be discussed.
+It does not introduce any new or increased security risks.
 
 --- back
 
@@ -3261,7 +3260,7 @@ that need to be discussed.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke and Mike Bishop for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, and Deb Cooley for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
