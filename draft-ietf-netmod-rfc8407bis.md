@@ -138,7 +138,7 @@ informative:
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
+   specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF Protocol implementations that utilize YANG
@@ -256,7 +256,7 @@ informative:
   : A YANG module that is maintained by IANA and has an IANA registry associated with it (e.g., "iana-tunnel-type" {{?RFC8675}} or "iana-pseudowire-types" {{?RFC9291}}).
 
   IETF module:
-  : A YANG module that is published by the IETF and which is not maintained by IANA.
+  : A YANG module that is published by the IETF and that is not maintained by IANA.
 
    published:
    : A stable release of a module or submodule.  For
@@ -340,7 +340,7 @@ module:
 A YANG data model can consist (1) of a single YANG module (e.g., {{?RFC9129}}) or (2) multiple YANG modules (e.g., {{?RFC7407}}).
 
 Note that the term "YANG model" is sometimes used as an abbreviation of YANG data model. However, that term should be avoided in favor of YANG data model.
-Likewise, "YANG data module" should be avoided.
+Likewise, "YANG data module" has no meaning and must be avoided.
 
 Even if a YANG data model is structured as a single YANG module, YANG data model term should be used in the title, abstract, and in the body of the document where the overall design is described. "YANG module" should be used when a specific "*.yang" file is referenced. Likewise, "YANG module" should be used when using terms related to YANG module specifications (e.g., augmentation or deviation). However, when extending the concepts embodied in a YANG module, authors should refer to those as an extension to the "YANG data model".
 
@@ -352,7 +352,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
    defined in the following: {{?RFC7322}} (and any future RFCs that
    obsolete it), {{RFC-STYLE}}, and {{?RFC7841}}.
 
-   The following sections MUST be present in an I-D containing a YANG module:
+   The following sections MUST be present in an I-D or RFC containing a YANG module:
 
    * Narrative sections
    * Definition sections
@@ -449,11 +449,11 @@ Refer to {{Section 2.2 of ?RFC8349}} for an example of such a reference.
 ##  Narrative Sections
 
 The narrative part MUST include an overview section that describes
-the scope and field of application of the module(s) defined by the
+the scope and field of application of the data model(s) defined by the
 specification and that specifies the relationship (if any) of these
-modules to other standards, particularly to standards containing
-other YANG modules.  The narrative part SHOULD include one or more
-sections to briefly describe the structure of the modules defined in
+data models to other standards, particularly to standards containing
+other YANG data models.  The narrative part SHOULD include one or more
+sections to briefly describe the structure of the data models defined in
 the specification.
 
 If the module or modules defined by the specification imports
@@ -465,7 +465,7 @@ as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
 If the document contains major Network Management Datastore Architecture (NMDA) exceptions or include a temporary non-NMDA module {{!RFC8342}}, then the Introduction
-section should mention this fact with the reasoning that motivated that design.
+section SHOULD mention this fact with the reasoning that motivated that design.
 Refer to {{sec-op-state}} for more NMDA-related guidance. Specifically, {{sec-4.23.2}} includes a recommendation for designers to describe and justify any NMDA exceptions in detail as part of the module itself.
 
 Consistent indentation SHOULD be used for all examples, including
@@ -514,7 +514,7 @@ semantics are needed in the module.  If any of the imported YANG
 modules are written using YANG 1.1, then the module MUST be written
 using YANG 1.1.
 
-A YIN syntax version of the module MAY also be present in the
+A YIN syntax version ({{Section 13 of !RFC7950}}) of the module MAY also be present in the
 document.  There MAY also be other types of modules present in the
 document, such as Structure of Management Information Version 2
 (SMIv2), which are not affected by these guidelines.
@@ -759,7 +759,7 @@ addresses/prefixes exclusively SHOULD be used in the examples.
 For some types (IP addresses, domain names, etc.), the IETF has reserved values for
 documentation use. Authors SHOULD use these reserved values in the usage examples if these types are used. Examples of reserved values are listed below:
 
-* IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in {{?RFC5737}} and {{?RFC3849}}.
+* IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in {{?RFC5737}}, {{?RFC3849}}, and {{?RFC9637}}.
 * The Enterprise Number 32473 reserved for documentation use is defined in {{?RFC5612}}.
 * Autonomous System Numbers (ASNs) reserved for documentation use are defined in {{?RFC5398}}.
 * Reserved domain names for documentation are defined in {{?RFC2606}}.
@@ -821,7 +821,7 @@ new module, not a name change.
 
 All YANG definitions are scoped by the module containing the
 definition being referenced. This allows the same name to be used
-in multiple moodules, even if the names are not unique. In the example
+in multiple modules, even if the names are not unique. In the example
 below, the identifier "foo" is used in all three modules:
 
 ~~~ yang
@@ -1331,7 +1331,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The YANG status statement MUST be present within a definition if its
    value is "deprecated" or "obsolete".  The status SHOULD NOT be
    changed from "current" directly to "obsolete".  An object SHOULD be
-   available for at least one year with a "deprecated" status before it
+   available for at least one year publication date with a "deprecated" status before it
    is changed to "obsolete".
 
    The module or submodule name MUST NOT be changed, once the document
@@ -1673,13 +1673,13 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    false negative or false positive matches, then these limitations
    SHOULD be documented within the typedef or data definition.
 
-   The following typedef from {{?RFC6991}} demonstrates the proper use of
+   The following typedefs from {{?RFC6991}} demonstrate the proper use of
    the "pattern" statement:
 
 ~~~ yang
-    typedef ipv4-address-no-zone {
-      type inet:ipv4-address {
-        pattern '[0-9\.]*';
+    typedef ipv6-address-no-zone {
+      type inet:ipv6-address {
+        pattern '[0-9a-fA-F:\.]*';
       }
       ...
     }
@@ -3245,7 +3245,7 @@ that need to be discussed.
 
    Italo Busi provided the examples of "case + when" construct.
 
-   Thanks to Rach Salz and Michael Richardson for the SAAG review.
+   Thanks to Rich Salz and Michael Richardson for the SAAG review.
 
    Kent Watsen contributed text to the security and IANA-maintained module templates.
 
@@ -3260,6 +3260,8 @@ that need to be discussed.
    Thanks to Christer Holmberg for the genart review, Jean Mahoney for the check on RPC implications,
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
+
+   Thanks Éric Vyncke for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
