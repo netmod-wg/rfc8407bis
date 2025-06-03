@@ -3632,10 +3632,6 @@ Table of Contents
 
 8.1.  Normative References
 
-   [ID-Guidelines]
-              IETF, "Guidelines to Authors of Internet-Drafts", n.d.,
-              <https://authors.ietf.org/en/content-guidelines-overview>.
-
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
@@ -3756,6 +3752,10 @@ Table of Contents
               IANA, "iana-tunnel-type YANG Module",
               <https://www.iana.org/assignments/iana-tunnel-type/iana-
               tunnel-type.xhtml>.
+
+   [ID-Guidelines]
+              IETF, "Guidelines to Authors of Internet-Drafts", n.d.,
+              <https://authors.ietf.org/en/content-guidelines-overview>.
 
    [RFC-STYLE]
               RFC Editor, "Style Guide",
