@@ -1673,7 +1673,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    false negative or false positive matches, then these limitations
    SHOULD be documented within the typedef or data definition.
 
-   The following typedefs from {{?RFC6991}} demonstrate the proper use of
+   The following typedef from {{?RFC6991}} demonstrates the proper use of
    the "pattern" statement:
 
 ~~~ yang
