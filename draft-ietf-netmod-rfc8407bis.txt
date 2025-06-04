@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 5 December 2025                                          Huawei
-                                                             3 June 2025
+Expires: 6 December 2025                                          Huawei
+                                                             4 June 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 December 2025.
+   This Internet-Draft will expire on 6 December 2025.
 
 Copyright Notice
 
@@ -333,6 +333,8 @@ Table of Contents
 
    *  Fixed an error (invalid statements) in Section 4.24.
 
+   *  Soften generic I-Ds authorship guidance.
+
 2.  Terminology & Notation Conventions
 
    Some of the templates defined in the document use "--" to easily
@@ -470,23 +472,24 @@ Table of Contents
 3.  General Documentation Guidelines
 
    YANG modules under review are likely to be contained in Internet-
-   Drafts (I-Ds).  All guidelines for I-D authors [ID-Guidelines] MUST
-   be followed.  The guidelines for RFCs should be followed and are
-   defined in the following: [RFC7322] (and any future RFCs that
-   obsolete it), [RFC-STYLE], and [RFC7841].
+   Drafts (I-Ds).  Guidelines for I-D authors can be found at
+   [ID-Guidelines].  These guidelines are not repeated here.
 
    The following sections MUST be present in an I-D or RFC containing a
    YANG module:
 
-   *  Narrative sections
+   *  Narrative sections (Section 3.5)
 
-   *  Definition sections
+   *  Definitions section (Section 3.6)
 
-   *  Security Considerations section
+   Additional YANG-specific considerations MUST be included for the
+   following sections:
 
-   *  IANA Considerations section
+   *  Security Considerations section (Section 3.7)
 
-   *  References section
+   *  IANA Considerations section (Section 3.8)
+
+   *  References section (Section 3.9)
 
    There are three usage scenarios for YANG that can appear in an I-D or
    RFC:
@@ -848,15 +851,6 @@ Table of Contents
       sections of the document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
-
-   In order to comply with IESG policy as set forth in
-   <https://www.ietf.org/id-info/checklist.html>, every I-D that is
-   submitted to the IESG for publication MUST contain an IANA
-   Considerations section.  The requirements for this section vary
-   depending on what actions are required of the IANA.  If there are no
-   IANA considerations applicable to the document, then the IANA
-   Considerations section will state that "This document has no IANA
-   actions".  Refer to the guidelines in [RFC8126] for more details.
 
    Each normative YANG module MUST be registered in both the "IETF XML
    Registry" [RFC3688] [IANA-XML] and the "YANG Module Names" registry
@@ -3824,18 +3818,9 @@ Table of Contents
               RFC 7224, DOI 10.17487/RFC7224, May 2014,
               <https://www.rfc-editor.org/rfc/rfc7224>.
 
-   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
-              DOI 10.17487/RFC7322, September 2014,
-              <https://www.rfc-editor.org/rfc/rfc7322>.
-
    [RFC7407]  Bjorklund, M. and J. Schoenwaelder, "A YANG Data Model for
               SNMP Configuration", RFC 7407, DOI 10.17487/RFC7407,
               December 2014, <https://www.rfc-editor.org/rfc/rfc7407>.
-
-   [RFC7841]  Halpern, J., Ed., Daigle, L., Ed., and O. Kolkman, Ed.,
-              "RFC Streams, Headers, and Boilerplates", RFC 7841,
-              DOI 10.17487/RFC7841, May 2016,
-              <https://www.rfc-editor.org/rfc/rfc7841>.
 
    [RFC7951]  Lhotka, L., "JSON Encoding of Data Modeled with YANG",
               RFC 7951, DOI 10.17487/RFC7951, August 2016,
@@ -4285,7 +4270,8 @@ Acknowledgments
    Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, and Deb Cooley for
+   the IESG review.
 
    The author of RFC 8407:  Andy Bierman
 
