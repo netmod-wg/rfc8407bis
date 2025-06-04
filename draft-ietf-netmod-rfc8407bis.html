@@ -4930,12 +4930,12 @@ registry within the "YANG Module Tags" registry <span>[<a href="#IANA-TAGS" clas
    specify an IANA-maintained module that echoes the content of that
    registry.  This is superior to including that content in an
    IETF-maintained module.<a href="#section-4.30.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.30.2-2">When one or multiple sub-registries are available under the same
-   registry, it is <span class="bcp14">RECOMMENDED</span> to define an IANA-maintained module for
-   each sub-registry.  However, module designers <span class="bcp14">MAY</span> consider defining
-   one single IANA-maintained module that covers all sub-registries if
+<p id="section-4.30.2-2">When one or multiple registries are available under the same
+   registry group, it is <span class="bcp14">RECOMMENDED</span> to define an IANA-maintained module for
+   each registry.  However, module designers <span class="bcp14">MAY</span> consider defining
+   one single IANA-maintained module that covers all registries if
    maintaining that single module is manageable (e.g., very few values
-   are present or expected to be present for each sub-registry).  An
+   are present or expected to be present for each registry).  An
    example of such a module is documented in <span><a href="https://rfc-editor.org/rfc/rfc9132#section-5.2" class="relref">Section 5.2</a> of [<a href="#RFC9132" class="cite xref">RFC9132</a>]</span>.<a href="#section-4.30.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.30.2-3">An IANA-maintained module may use the "identityref" data type (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
    an enumeration data type (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>). See <a href="#sec-fve" class="auto internal xref">Section 4.11.1</a> for a guidance on which data type to use. The decision about which type to use
@@ -4976,11 +4976,11 @@ registry within the "YANG Module Tags" registry <span>[<a href="#IANA-TAGS" clas
 <p id="section-4.30.2-7">It is <span class="bcp14">RECOMMENDED</span> to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
-   IANA-maintained module <span class="bcp14">SHOULD</span> include an appendix with the initial
-   full version of the module.  Including such an appendix in pre-RFC
+   IANA-maintained module have to include an appendix with the full script and <span class="bcp14">SHOULD</span> include an appendix with the initial
+   full version of the module. Including such an appendix in pre-RFC
    versions is meant to assess the correctness of the outcome of the
    supplied script.  The authors <span class="bcp14">MUST</span> include a note to the RFC Editor
-   requesting that the appendix be removed before publication as RFC and
+   requesting that the appendix with the initial version of the module be removed before publication as RFC and
    that RFC IIII is replaced with the RFC number that is assigned to the document.
    Initial versions of IANA-maintained modules that are published in
    RFCs may be misused despite the appropriate language to refer to the
