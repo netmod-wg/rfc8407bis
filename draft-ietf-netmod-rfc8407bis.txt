@@ -213,7 +213,8 @@ Table of Contents
 
    These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
-   models.
+   models.  These guidelines can be used independent of the IETF
+   publication stream or even by other organizations.
 
    YANG 1.0 modules have to conform to [RFC6020] while YANG 1.1 modules
    have to conform to [RFC7950].  This document adds usage guidelines in
