@@ -242,6 +242,7 @@ informative:
    - Updated the wiki URLs to use the new structure instead of the old trac.
    - Added anydata to the list of statements with mandatory description ({{sec-data-def}}).
    - Fixed an error (invalid statements) in Section 4.24.
+   - Soften generic I-Ds authorship guidance.
 
 #  Terminology & Notation Conventions
 
@@ -346,19 +347,19 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
 
 #  General Documentation Guidelines
 
-   YANG modules under review are likely to be contained in Internet-
-   Drafts (I-Ds).  All guidelines for I-D authors {{ID-Guidelines}} MUST
-   be followed.  The guidelines for RFCs should be followed and are
-   defined in the following: {{?RFC7322}} (and any future RFCs that
-   obsolete it), {{RFC-STYLE}}, and {{?RFC7841}}.
+   YANG modules under review are likely to be contained in Internet-Drafts (I-Ds).  Guidelines for I-D authors can be found at {{ID-Guidelines}}.
+   These guidelines are not repeated here.
 
    The following sections MUST be present in an I-D or RFC containing a YANG module:
 
-   * Narrative sections
-   * Definition sections
-   * Security Considerations section
-   * IANA Considerations section
-   * References section
+   * Narrative sections ({{sec-narrative}})
+   * Definitions section ({{sec-def}})
+
+   Additional YANG-specific considerations MUST be included for the following sections:
+
+   * Security Considerations section ({{sec-sec-cons-sec}})
+   * IANA Considerations section ({{sec-iana-cons}})
+   * References section ({{sec-ref}})
 
    There are three usage scenarios for YANG that can appear in an I-D or
    RFC:
@@ -446,7 +447,7 @@ If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
 Refer to {{Section 2.2 of ?RFC8349}} for an example of such a reference.
 
-##  Narrative Sections
+##  Narrative Sections {#sec-narrative}
 
 The narrative part MUST include an overview section that describes
 the scope and field of application of the data model(s) defined by the
@@ -505,7 +506,7 @@ Device Model:
 : A comprehensive list of device models is provided in Appendix 4.2 of {{?RFC8969}}.
 
 
-##  Definitions Section
+##  Definitions Section  {#sec-def}
 
 This section contains the module(s) defined by the specification.
 These modules SHOULD be written using the YANG 1.1 {{!RFC7950}} syntax.
@@ -581,14 +582,6 @@ Note:
 : By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and RFC AAAA (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
-
-In order to comply with IESG policy as set forth in ``<https://www.ietf.org/id-info/checklist.html>``, every I-D that is
-submitted to the IESG for publication MUST contain an IANA
-Considerations section.  The requirements for this section vary
-depending on what actions are required of the IANA. If there are no
-IANA considerations applicable to the document, then the IANA
-Considerations section will state that "This document has no IANA
-actions".  Refer to the guidelines in {{!RFC8126}} for more details.
 
 Each normative YANG module MUST be registered in both the "IETF XML
 Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
@@ -669,7 +662,7 @@ A registration template for a revised module is provided below:
 ~~~
 
 
-## References Sections
+## References Sections {#sec-ref}
 
 For every import or include statement that appears in a module
 contained in the specification that identifies a module in a separate
@@ -3260,7 +3253,7 @@ It does not introduce any new or increased security risks.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, and Deb Cooley for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
