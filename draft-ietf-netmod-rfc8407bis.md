@@ -44,13 +44,6 @@ author:
 
 normative:
 
-   ID-Guidelines:
-              title: "Guidelines to Authors of Internet-Drafts"
-              author:
-                org: IETF
-                date: false
-              target: https://authors.ietf.org/en/content-guidelines-overview
-
    W3C.REC-xpath:
               target: https://www.w3.org/TR/1999/REC-xpath-19991116
               title: "XML Path Language (XPath) Version 1.0"
@@ -134,10 +127,16 @@ informative:
               date: false
               target: https://www.iana.org/assignments/iana-tunnel-type/iana-tunnel-type.xhtml
 
+   ID-Guidelines:
+              title: "Guidelines to Authors of Internet-Drafts"
+              author:
+                org: IETF
+                date: false
+              target: https://authors.ietf.org/en/content-guidelines-overview
 
 --- abstract
 
-   This memo provides guidelines for authors and reviewers of
+   This document provides guidelines for authors and reviewers of
    specifications containing YANG data models, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
@@ -250,6 +249,8 @@ informative:
   specific instructions to the authors. Text prefixed with "--" must not be
   copied as such when using a template. Note that for YANG templates, "//"
   is used to convey such instructions.
+
+  RFC IIII is used to refer to an RFC that defines an initial version of an IANA-maintained module.
 
   The following terms are used throughout this document:
 
@@ -1544,7 +1545,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    Note that a different URN prefix string SHOULD be used for modules
    that are not Standards Track.  The string SHOULD be selected
-   according to the guidelines in {{!RFC7950}}.
+   according to the guidelines in {{Section 5.3 of !RFC7950}}.
 
    The following URIs exemplify what might be used by modules that are
    not Standards Track.  Note that the domain "example.com" SHOULD be
@@ -3252,7 +3253,7 @@ It does not introduce any new or increased security risks.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan Talaulikar, and Deb Cooley for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
