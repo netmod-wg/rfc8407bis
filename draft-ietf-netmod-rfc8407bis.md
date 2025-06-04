@@ -531,7 +531,7 @@ Example YANG modules and example YANG fragments MUST NOT contain any
 normative text, including any all-uppercase reserved words from
 {{!RFC2119}} and {{!RFC8174}}.
 
-Consistent indentation and formatting SHOULD be used in all YANG
+Consistent indentation and formatting (e.g., folding) SHOULD be used in all YANG
 statements within a module.
 
 See {{sec-usage-guidelines}} for guidelines on YANG usage.
@@ -863,7 +863,7 @@ SHOULD be used when the module is imported, unless there is a conflict.
 
 Prefix values SHOULD be short but meaningful to the intended user. Prefix values SHOULD NOT conflict with known modules that have been previously published.
 
-For convenience, prefix values of example modules MAY be prefixed with "ex"
+For convenience, prefix values of example modules SHOULD be prefixed with "ex"
 or similar patterns. In doing so, readers of example modules or tree diagrams
 that mix both example and standard modules can easily identify example parts.
 
@@ -1365,7 +1365,6 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
         "This object has no purpose at this time, but a future
          revision of this module might define a purpose
          for this object.";
-      }
     }
 ~~~
 
@@ -1377,7 +1376,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The "organization" statement MUST be present.  If the module is
    contained in a document intended for IETF Standards Track status,
    then the organization SHOULD be the IETF working group (WG) chartered
-   to write the document.  For other standards organizations, a similar
+   to write the document. Exceptions may be example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
    approach is also suggested.
 
    The "contact" statement MUST be present.  If the module is contained
@@ -1529,7 +1528,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    unpublished YANG modules:
 
 ~~~
-    urn:ietf:params:xml:ns:yang:
+    urn:ietf:params:xml:ns:yang
 ~~~
 
    The following example URNs would be valid namespace statement values
@@ -3253,7 +3252,7 @@ It does not introduce any new or increased security risks.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, and Deb Cooley for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
