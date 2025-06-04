@@ -2847,12 +2847,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    registry.  This is superior to including that content in an
    IETF-maintained module.
 
-   When one or multiple sub-registries are available under the same
-   registry, it is RECOMMENDED to define an IANA-maintained module for
-   each sub-registry.  However, module designers MAY consider defining
-   one single IANA-maintained module that covers all sub-registries if
+   When one or multiple registries are available under the same
+   registry group, it is RECOMMENDED to define an IANA-maintained module for
+   each registry.  However, module designers MAY consider defining
+   one single IANA-maintained module that covers all registries if
    maintaining that single module is manageable (e.g., very few values
-   are present or expected to be present for each sub-registry).  An
+   are present or expected to be present for each registry).  An
    example of such a module is documented in {{Section 5.2 of ?RFC9132}}.
 
    An IANA-maintained module may use the "identityref" data type (e.g., {{?RFC8675}}) or
@@ -2893,11 +2893,11 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    It is RECOMMENDED to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
-   IANA-maintained module SHOULD include an appendix with the initial
-   full version of the module.  Including such an appendix in pre-RFC
+   IANA-maintained module have to include an appendix with the full script and SHOULD include an appendix with the initial
+   full version of the module. Including such an appendix in pre-RFC
    versions is meant to assess the correctness of the outcome of the
    supplied script.  The authors MUST include a note to the RFC Editor
-   requesting that the appendix be removed before publication as RFC and
+   requesting that the appendix with the initial version of the module be removed before publication as RFC and
    that RFC IIII is replaced with the RFC number that is assigned to the document.
    Initial versions of IANA-maintained modules that are published in
    RFCs may be misused despite the appropriate language to refer to the
