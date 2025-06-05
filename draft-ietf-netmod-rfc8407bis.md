@@ -1379,7 +1379,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The "organization" statement MUST be present.  If the module is
    contained in a document intended for IETF Standards Track status,
    then the organization SHOULD be the IETF working group (WG) chartered
-   to write the document. Exceptions may be example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
+   to write the document. Exceptions include (but not limited): example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
    approach is also suggested.
 
    The "contact" statement MUST be present.  If the module is contained
@@ -2824,15 +2824,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    registries, and the same values are always present in all formats of
    the same registry.
 
-   Also, some YANG modules include parameters and values directly in a
+   A design, in which a YANG module includes parameters and values directly in a
    module that is not maintained by IANA while these are populated in an
-   IANA registry.  Such a design is suboptimal as it creates another
+   IANA registry, is suboptimal. Such a design creates another
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
    For the sake of consistency and ability to support new values while
    maintaining IANA registries as the unique authoritative source of
-   information, this document encourages the use of IANA-maintained modules
+   information, this document recommends the use of IANA-maintained modules
    as the single source of information.
 
    The following section provides a set of guidelines for YANG module authors
@@ -2863,7 +2863,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
-   It is RECOMMENDED that the reasoning for the design choice is
+   The reasoning for the design choice MUST
    documented in the companion specification that registers an
    IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
