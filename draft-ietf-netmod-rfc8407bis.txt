@@ -4179,7 +4179,7 @@ Appendix C.  Template for IANA-Maintained Modules
         (https://trustee.ietf.org/license-info).
 
         All revisions of IETF and IANA published modules can be found
-        at the YANG Parameters registry
+        at the YANG Parameters registry group
         (https://www.iana.org/assignments/yang-parameters).
 
         The initial version of this YANG module is part of RFC IIII;
