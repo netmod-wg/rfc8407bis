@@ -557,7 +557,7 @@ Table of Contents
 
    Example modules are not code components.  The <CODE BEGINS>
    convention MUST NOT be used for example modules.  However, example
-   modules MUST be validated.
+   modules MUST be validated (Section 3.10).
 
    An example module SHOULD be named using the term "example", followed
    by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -1012,11 +1012,11 @@ Table of Contents
    usage examples, either throughout the document or in an appendix.
    This includes example instance document snippets in an appropriate
    encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-   the YANG module(s).  Examples MUST be validated.  Refer to
-   Section 3.10 for tools that validate YANG modules and examples.  If
-   IP addresses/prefixes are used, then a mix of either IPv4 and IPv6
-   addresses/prefixes or IPv6 addresses/prefixes exclusively SHOULD be
-   used in the examples.
+   the YANG module(s).  Examples MUST be validated (Section 3.10).
+   Refer to Section 3.10 for tools that validate YANG modules and
+   examples.  If IP addresses/prefixes are used, then a mix of either
+   IPv4 and IPv6 addresses/prefixes or IPv6 addresses/prefixes
+   exclusively SHOULD be used in the examples.
 
    For some types (IP addresses, domain names, etc.), the IETF has
    reserved values for documentation use.  Authors SHOULD use these
@@ -1662,10 +1662,10 @@ Table of Contents
    The "organization" statement MUST be present.  If the module is
    contained in a document intended for IETF Standards Track status,
    then the organization SHOULD be the IETF working group (WG) chartered
-   to write the document.  Exceptions may be example modules, IANA-
-   maintained modules, or modules contained in AD-sponsored documents.
-   For other standards organizations, a similar approach is also
-   suggested.
+   to write the document.  Exceptions include (but not limited): example
+   modules, IANA-maintained modules, or modules contained in AD-
+   sponsored documents.  For other standards organizations, a similar
+   approach is also suggested.
 
    The "contact" statement MUST be present.  If the module is contained
    in a document intended for Standards Track status, then the WG web
@@ -3095,15 +3095,16 @@ Table of Contents
    registries, and the same values are always present in all formats of
    the same registry.
 
-   Also, some YANG modules include parameters and values directly in a
-   module that is not maintained by IANA while these are populated in an
-   IANA registry.  Such a design is suboptimal as it creates another
-   source of information that may deviate from the IANA registry as new
-   values are assigned or some values are deprecated.
+   A design, in which a YANG module includes parameters and values
+   directly in a module that is not maintained by IANA while these are
+   populated in an IANA registry, could lead to ambiguity and maintain
+   stale information.  Such a design creates another source of
+   information that may deviate from the IANA registry as new values are
+   assigned or some values are deprecated.
 
    For the sake of consistency and ability to support new values while
    maintaining IANA registries as the unique authoritative source of
-   information, this document encourages the use of IANA-maintained
+   information, this document recommends the use of IANA-maintained
    modules as the single source of information.
 
    The following section provides a set of guidelines for YANG module
@@ -3134,11 +3135,11 @@ Table of Contents
    decision about which type to use should be made based upon specifics
    related to the intended use of the IANA-maintained module.  For
    example, identities are useful if the registry entries are organized
-   hierarchically, possibly including multiple inheritances.  It is
-   RECOMMENDED that the reasoning for the design choice is documented in
-   the companion specification that registers an IANA-maintained module.
-   For example, [RFC9244] defines an IANA-maintained module that uses
-   enumerations for the following reason:
+   hierarchically, possibly including multiple inheritances.  The
+   reasoning for the design choice MUST be documented in the companion
+   specification that registers an IANA-maintained module.  For example,
+   [RFC9244] defines an IANA-maintained module that uses enumerations
+   for the following reason:
 
    |  The DOTS telemetry module (Section 11.1) uses "enumerations"
    |  rather than "identities" to define units, samples, and intervals
@@ -3236,17 +3237,17 @@ Table of Contents
       ("value", "status", "description", and "reference").
 
       -  When creating a new "identity" statement name or a new "enum"
-         statement, it is RECOMMENDED to mirror the name (if present) as
-         recorded in the IANA registry.
+         statement, it is RECOMMENDED to use the same name (if present)
+         as recorded in the IANA registry.
 
       -  If the name in the IANA registry does not comply with the
          naming conventions listed in Section 4.3.1, the procedure MUST
          detail how IANA can generate legal identifiers from such a
          name.  Specifically, if the name begins with a number, it is
-         RECOMMENDED to spell out the number when used as an identifier.
-         IANA should be provided with instructions to perform such task.
-         For example, authors of a module with such identifiers have to
-         indicate whether:
+         RECOMMENDED to spell out (i.e., writte in full) the number when
+         used as an identifier.  IANA should be provided with
+         instructions to perform such task.  For example, authors of a
+         module with such identifiers have to indicate whether:
 
          o  "3des-cbc" should be "three-des-cbc" or rather "triple-des-
             cbc" to be consistent with Section 6.3 of [RFC4253].
@@ -3404,10 +3405,10 @@ Table of Contents
       module.  They must instead be added to the "foo" registry.
 
    When a value is added to the "foo" registry, a new "identity"
-   statement must be added to the "iana-foo" YANG module.  The name of
-   the "identity" MUST be the name as provided in the
-   registry.  The "identity" statement should have the following sub-
-   statements defined:
+   statement needs to be added to the "iana-foo" YANG module. The name
+   of the "identity" MUST be the name as provided in the registry.
+   The "identity" statement should have the following
+   sub-statements defined:
 
     "base":        Contains 'name-base-identity-defined-in-foo'.
 
@@ -3505,9 +3506,9 @@ Table of Contents
    Unassigned or reserved values are not present in the module.
 
    When the "iana-foo" YANG module is updated, a new "revision"
-   statement with a unique revision date must be added in front of the
-   existing revision statements. The "revision" statement MUST contain
-   both "description" and "reference" substatements as follows.
+   statement with a unique revision date needs to be added in front of
+   the existing revision statements. The "revision" statement MUST
+   contain both "description" and "reference" substatements as follows.
 
    The "description" substatement captures what changed in the
    revised version. Typically, the description enumerates the changes
@@ -4281,7 +4282,7 @@ Acknowledgments
    and Yoav Nir for the secdir review.
 
    Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan
-   Talaulikar, and Deb Cooley for the IESG review.
+   Talaulikar, Deb Cooley, and Gorry Fairhurst for the IESG review.
 
    The author of RFC 8407:  Andy Bierman
 

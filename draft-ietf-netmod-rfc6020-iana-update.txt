@@ -179,9 +179,9 @@ Table of Contents
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
               Authors and Reviewers of Documents Containing YANG Data
               Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-26, 4 June 2025,
+              netmod-rfc8407bis-27, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-26>.
+              rfc8407bis-27>.
 
    [IANA-MOD-NAMES]
               IANA, "YANG Module Names",
