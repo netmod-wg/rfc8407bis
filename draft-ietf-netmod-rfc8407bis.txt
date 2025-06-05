@@ -163,7 +163,7 @@ Table of Contents
                Defining IANA-Maintained Modules
    5.  IANA Considerations
      5.1.  YANG Modules
-     5.2.  Update YANG Parameters Registry
+     5.2.  Update YANG Parameters Registry Group
      5.3.  IANA-Maintained Modules
    6.  Operations and Manageability Considerations
    7.  Security Considerations
@@ -861,12 +861,12 @@ Table of Contents
 3.8.  IANA Considerations Section
 
    Each normative YANG module MUST be registered in both the "IETF XML
-   Registry" [RFC3688] [IANA-XML] and the "YANG Module Names" registry
-   [RFC6020] [IANA-MOD-NAMES].  The registration request in the "YANG
-   Module Names" registry should indicate whether the module is IANA-
-   maintained or not.  This applies to new modules and updated modules.
-   An example of an update registration for the "ietf-template" module
-   can be found in Section 5.
+   Registry" group [RFC3688] [IANA-XML] and the "YANG Module Names"
+   registry [RFC6020] [IANA-MOD-NAMES].  The registration request in the
+   "YANG Module Names" registry should indicate whether the module is
+   IANA-maintained or not.  This applies to new modules and updated
+   modules.  An example of an update registration for the "ietf-
+   template" module can be found in Section 5.
 
    Additional IANA considerations applicable to IANA-maintained modules
    (including instructions to maintain them) are provided in
@@ -1681,8 +1681,8 @@ Table of Contents
    statement:
 
       All revisions of IETF and IANA published modules can be found at
-      the YANG Parameters registry: https://www.iana.org/assignments/
-      yang-parameters.
+      the "YANG Parameters" registry group:
+      https://www.iana.org/assignments/yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
@@ -3587,7 +3587,7 @@ Table of Contents
       Prefix:  iana-foo
       Reference:  RFC AAAA
 
-5.2.  Update YANG Parameters Registry
+5.2.  Update YANG Parameters Registry Group
 
    Also, this document requests IANA to update the RFC8407 reference for
    the "YANG Module Names" registry under the "YANG Parameters" registry
