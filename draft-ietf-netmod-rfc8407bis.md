@@ -587,7 +587,7 @@ Note:
 ##  IANA Considerations Section {#sec-iana-cons}
 
 Each normative YANG module MUST be registered in both the "IETF XML
-Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
+Registry" group {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
 {{!RFC6020}} {{IANA-MOD-NAMES}}. The registration request in the "YANG Module Names" registry
 should indicate whether the module is IANA-maintained or not. This applies to new modules and updated
 modules. An example of an update registration for the
@@ -1394,7 +1394,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    within IETF documents, the appropriate IETF Trust Copyright text MUST
    be present, as described in Section 3.1 and contain the following statement:
 
-   > All revisions of IETF and IANA published modules can be found at the YANG Parameters registry: https://www.iana.org/assignments/yang-parameters.
+   > All revisions of IETF and IANA published modules can be found at the "YANG Parameters" registry group: https://www.iana.org/assignments/yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
@@ -3074,7 +3074,7 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
    Reference:  RFC AAAA
 ~~~~
 
-## Update YANG Parameters Registry
+## Update YANG Parameters Registry Group
 
 Also, this document requests IANA to update the RFC8407 reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
