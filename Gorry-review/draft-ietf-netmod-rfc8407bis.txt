@@ -4281,7 +4281,7 @@ Acknowledgments
    and Yoav Nir for the secdir review.
 
    Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan
-   Talaulikar, and Deb Cooley for the IESG review.
+   Talaulikar, Deb Cooley, and Gorry Fairhurst for the IESG review.
 
    The author of RFC 8407:  Andy Bierman
 
