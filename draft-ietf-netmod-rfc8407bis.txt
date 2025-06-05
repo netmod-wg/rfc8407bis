@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 8126 (if approved)                                       Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 6 December 2025                                          Huawei
-                                                             4 June 2025
+Expires: 7 December 2025                                          Huawei
+                                                             5 June 2025
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 December 2025.
+   This Internet-Draft will expire on 7 December 2025.
 
 Copyright Notice
 
@@ -880,7 +880,7 @@ Table of Contents
 
    Specifically, if any YANG module namespace statement value contained
    in the document is not already registered with IANA, then a new entry
-   in the "ns" subregistry within the "IETF XML Registry" MUST be
+   in the "ns" registry within the "IETF XML Registry" group MUST be
    requested from the IANA.
 
    A registration template for new YANG modules is provided in
@@ -900,15 +900,15 @@ Table of Contents
    A registration template for a new module is provided below:
 
     IANA is requested to register the following URI in the "ns"
-    subregistry within the "IETF XML Registry" [RFC3688]:
+    registry within the "IETF XML Registry" group [RFC3688]:
 
        URI:
        Registrant Contact:  The IESG.
        XML: N/A; the requested URI is an XML namespace.
 
     IANA is requested to register the following YANG module in the "YANG
-    Module Names" subregistry [RFC6020] within the "YANG Parameters"
-    registry.
+    Module Names" registry [RFC6020] within the "YANG Parameters"
+    registry group.
 
        Name:
        Maintained by IANA?  Y/N
@@ -921,16 +921,16 @@ Table of Contents
    A registration template for a revised module is provided below:
 
     IANA is requested to update the following registration in the "ns"
-    subregistry within the "IETF XML Registry" [RFC3688] to reference
-    this document:
+    registry within the "IETF XML Registry" group [RFC3688] to
+    reference this document:
 
        URI:
        Registrant Contact:  The IESG.
        XML: N/A; the requested URI is an XML namespace.
 
     IANA is requested to register the following YANG module in the "YANG
-    Module Names" subregistry [RFC6020] within the "YANG Parameters"
-    registry.
+    Module Names" registry [RFC6020] within the "YANG Parameters"
+    registry group.
 
        Name:
        Maintained by IANA?  Y/N
@@ -3555,7 +3555,7 @@ Table of Contents
 
 5.1.  YANG Modules
 
-   The following registration in the "ns" subregistry of the "IETF XML
+   The following registration in the "ns" registry of the "IETF XML
    Registry" [RFC3688] was detailed in [RFC8407].  This document
    requests IANA to update this registration to reference this document.
 
@@ -3563,8 +3563,8 @@ Table of Contents
         Registrant Contact: The IESG.
         XML: N/A, the requested URI is an XML namespace.
 
-   IANA is requested to register the following URI in the "ns"
-   subregistry within the "IETF XML Registry" [RFC3688]:
+   IANA is requested to register the following URI in the "ns" registry
+   within the "IETF XML Registry" group [RFC3688]:
 
       URI:  urn:ietf:params:xml:ns:yang:iana-template
       Registrant Contact:  The IESG.
