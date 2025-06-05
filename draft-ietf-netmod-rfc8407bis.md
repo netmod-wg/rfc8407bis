@@ -425,7 +425,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
 ###  Example Modules
 
 Example modules are not code components.  The ``<CODE BEGINS>``
-convention MUST NOT be used for example modules. However, example modules MUST be validated.
+convention MUST NOT be used for example modules. However, example modules MUST be validated ({{sec-tools}}).
 
 An example module SHOULD be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -747,7 +747,7 @@ Each specification that defines one or more modules SHOULD contain
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Examples MUST be validated.  Refer to
+the YANG module(s).  Examples MUST be validated ({{sec-tools}}).  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively SHOULD be used in the examples.
@@ -2826,7 +2826,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 
    A design, in which a YANG module includes parameters and values directly in a
    module that is not maintained by IANA while these are populated in an
-   IANA registry, is suboptimal. Such a design creates another
+   IANA registry, could lead to ambiguity and maintain stale information. Such a design creates another
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
@@ -2961,12 +2961,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       sub-statements ("value", "status", "description", and "reference").
 
          - When creating a new "identity" statement name or a new "enum" statement,
-      it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
+      it is RECOMMENDED to use the same name (if present) as recorded in the IANA registry.
 
          - If the name in the IANA registry does not comply with the naming conventions
       listed in {{sec-id-naming}}, the procedure MUST detail how IANA
       can generate legal identifiers from such a name. Specifically, if the name
-      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
+      begins with a number, it is RECOMMENDED to spell out (i.e., writte in full) the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
 
              + "3des-cbc" should be "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
