@@ -2863,7 +2863,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
-   The reasoning for the design choice MUST
+   The reasoning for the design choice MUST be
    documented in the companion specification that registers an
    IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
