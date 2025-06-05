@@ -557,7 +557,7 @@ Table of Contents
 
    Example modules are not code components.  The <CODE BEGINS>
    convention MUST NOT be used for example modules.  However, example
-   modules MUST be validated.
+   modules MUST be validated (Section 3.10).
 
    An example module SHOULD be named using the term "example", followed
    by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -1012,11 +1012,11 @@ Table of Contents
    usage examples, either throughout the document or in an appendix.
    This includes example instance document snippets in an appropriate
    encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-   the YANG module(s).  Examples MUST be validated.  Refer to
-   Section 3.10 for tools that validate YANG modules and examples.  If
-   IP addresses/prefixes are used, then a mix of either IPv4 and IPv6
-   addresses/prefixes or IPv6 addresses/prefixes exclusively SHOULD be
-   used in the examples.
+   the YANG module(s).  Examples MUST be validated (Section 3.10).
+   Refer to Section 3.10 for tools that validate YANG modules and
+   examples.  If IP addresses/prefixes are used, then a mix of either
+   IPv4 and IPv6 addresses/prefixes or IPv6 addresses/prefixes
+   exclusively SHOULD be used in the examples.
 
    For some types (IP addresses, domain names, etc.), the IETF has
    reserved values for documentation use.  Authors SHOULD use these
@@ -3097,9 +3097,10 @@ Table of Contents
 
    A design, in which a YANG module includes parameters and values
    directly in a module that is not maintained by IANA while these are
-   populated in an IANA registry, is suboptimal.  Such a design creates
-   another source of information that may deviate from the IANA registry
-   as new values are assigned or some values are deprecated.
+   populated in an IANA registry, could lead to ambiguity and maintain
+   stale information.  Such a design creates another source of
+   information that may deviate from the IANA registry as new values are
+   assigned or some values are deprecated.
 
    For the sake of consistency and ability to support new values while
    maintaining IANA registries as the unique authoritative source of
@@ -3236,17 +3237,17 @@ Table of Contents
       ("value", "status", "description", and "reference").
 
       -  When creating a new "identity" statement name or a new "enum"
-         statement, it is RECOMMENDED to mirror the name (if present) as
-         recorded in the IANA registry.
+         statement, it is RECOMMENDED to use the same name (if present)
+         as recorded in the IANA registry.
 
       -  If the name in the IANA registry does not comply with the
          naming conventions listed in Section 4.3.1, the procedure MUST
          detail how IANA can generate legal identifiers from such a
          name.  Specifically, if the name begins with a number, it is
-         RECOMMENDED to spell out the number when used as an identifier.
-         IANA should be provided with instructions to perform such task.
-         For example, authors of a module with such identifiers have to
-         indicate whether:
+         RECOMMENDED to spell out (i.e., writte in full) the number when
+         used as an identifier.  IANA should be provided with
+         instructions to perform such task.  For example, authors of a
+         module with such identifiers have to indicate whether:
 
          o  "3des-cbc" should be "three-des-cbc" or rather "triple-des-
             cbc" to be consistent with Section 6.3 of [RFC4253].

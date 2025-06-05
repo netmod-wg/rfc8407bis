@@ -1996,7 +1996,7 @@ Likewise, "YANG data module" has no meaning and must be avoided.<a href="#sectio
 <a href="#section-3.2.1" class="section-number selfRef">3.2.1. </a><a href="#name-example-modules" class="section-name selfRef">Example Modules</a>
           </h4>
 <p id="section-3.2.1-1">Example modules are not code components.  The <code>&lt;CODE BEGINS&gt;</code>
-convention <span class="bcp14">MUST NOT</span> be used for example modules. However, example modules <span class="bcp14">MUST</span> be validated.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
+convention <span class="bcp14">MUST NOT</span> be used for example modules. However, example modules <span class="bcp14">MUST</span> be validated (<a href="#sec-tools" class="auto internal xref">Section 3.10</a>).<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-2">An example module <span class="bcp14">SHOULD</span> be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".<a href="#section-3.2.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-3">See <a href="#sec-namespace-assignments" class="auto internal xref">Section 4.9</a> regarding the namespace guidelines for example
@@ -2529,7 +2529,7 @@ extract YANG modules from a document.<a href="#section-3.11-4" class="pilcrow">�
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Examples <span class="bcp14">MUST</span> be validated.  Refer to
+the YANG module(s).  Examples <span class="bcp14">MUST</span> be validated (<a href="#sec-tools" class="auto internal xref">Section 3.10</a>).  Refer to
 <a href="#sec-tools" class="auto internal xref">Section 3.10</a> for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively <span class="bcp14">SHOULD</span> be used in the examples.<a href="#section-3.12-1" class="pilcrow">¶</a></p>
@@ -4912,7 +4912,7 @@ registry within the "YANG Module Tags" registry <span>[<a href="#IANA-TAGS" clas
    the same registry.<a href="#section-4.30.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.30.1-2">A design, in which a YANG module includes parameters and values directly in a
    module that is not maintained by IANA while these are populated in an
-   IANA registry, is suboptimal. Such a design creates another
+   IANA registry, could lead to ambiguity and maintain stale information. Such a design creates another
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.<a href="#section-4.30.1-2" class="pilcrow">¶</a></p>
 <p id="section-4.30.1-3">For the sake of consistency and ability to support new values while
@@ -5056,13 +5056,13 @@ sub-statements ("value", "status", "description", and "reference").<a href="#sec
 <ul class="normal">
 <li class="normal" id="section-4.30.3-2.3.2.1">
                   <p id="section-4.30.3-2.3.2.1.1">When creating a new "identity" statement name or a new "enum" statement,
-it is <span class="bcp14">RECOMMENDED</span> to mirror the name (if present) as recorded in the IANA registry.<a href="#section-4.30.3-2.3.2.1.1" class="pilcrow">¶</a></p>
+it is <span class="bcp14">RECOMMENDED</span> to use the same name (if present) as recorded in the IANA registry.<a href="#section-4.30.3-2.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
                 <li class="normal" id="section-4.30.3-2.3.2.2">
                   <p id="section-4.30.3-2.3.2.2.1">If the name in the IANA registry does not comply with the naming conventions
 listed in <a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>, the procedure <span class="bcp14">MUST</span> detail how IANA
 can generate legal identifiers from such a name. Specifically, if the name
-begins with a number, it is <span class="bcp14">RECOMMENDED</span> to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:<a href="#section-4.30.3-2.3.2.2.1" class="pilcrow">¶</a></p>
+begins with a number, it is <span class="bcp14">RECOMMENDED</span> to spell out (i.e., writte in full) the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:<a href="#section-4.30.3-2.3.2.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.30.3-2.3.2.2.2.1">
                       <p id="section-4.30.3-2.3.2.2.2.1.1">"3des-cbc" should be "three-des-cbc" or rather "triple-des-cbc" to be consistent with <span><a href="https://rfc-editor.org/rfc/rfc4253#section-6.3" class="relref">Section 6.3</a> of [<a href="#RFC4253" class="cite xref">RFC4253</a>]</span>.<a href="#section-4.30.3-2.3.2.2.2.1.1" class="pilcrow">¶</a></p>
