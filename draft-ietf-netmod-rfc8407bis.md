@@ -1519,7 +1519,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    provided for the namespace statement in a YANG module.  A value
    SHOULD be selected that is not likely to collide with other YANG
    namespaces.  Standard module names, prefixes, and URI strings already
-   listed in the "YANG Module Names" registry MUST NOT be used.
+   listed in the "YANG Module Names" registry group MUST NOT be used.
 
    A standard namespace statement value SHOULD have the following form:
 
