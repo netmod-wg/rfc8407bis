@@ -603,7 +603,7 @@ that specifies how the namespace is to be administered.
 
 Specifically, if any YANG module namespace statement value contained
 in the document is not already registered with IANA, then a new entry
-in the "ns" subregistry within the "IETF XML Registry" MUST be
+in the "ns" registry within the "IETF XML Registry" group MUST be
 requested from the IANA.
 
 A registration template for new YANG modules is provided in {{sec-reg-def-iana}}.
@@ -623,15 +623,15 @@ A registration template for a new module is provided below:
 
 ~~~
    IANA is requested to register the following URI in the "ns"
-   subregistry within the "IETF XML Registry" [RFC3688]:
+   registry within the "IETF XML Registry" group [RFC3688]:
 
       URI:
       Registrant Contact:  The IESG.
       XML: N/A; the requested URI is an XML namespace.
 
    IANA is requested to register the following YANG module in the "YANG
-   Module Names" subregistry [RFC6020] within the "YANG Parameters"
-   registry.
+   Module Names" registry [RFC6020] within the "YANG Parameters"
+   registry group.
 
       Name:
       Maintained by IANA?  Y/N
@@ -646,16 +646,16 @@ A registration template for a revised module is provided below:
 
 ~~~
    IANA is requested to update the following registration in the "ns"
-   subregistry within the "IETF XML Registry" [RFC3688] to reference
-   this document:
+   registry within the "IETF XML Registry" group [RFC3688] to
+   reference this document:
 
       URI:
       Registrant Contact:  The IESG.
       XML: N/A; the requested URI is an XML namespace.
 
    IANA is requested to register the following YANG module in the "YANG
-   Module Names" subregistry [RFC6020] within the "YANG Parameters"
-   registry.
+   Module Names" registry [RFC6020] within the "YANG Parameters"
+   registry group.
 
       Name:
       Maintained by IANA?  Y/N
@@ -3038,7 +3038,7 @@ The following example shows how to generate the "revision" statements following 
 
 ## YANG Modules
 
-The following registration in the "ns" subregistry of the "IETF XML
+The following registration in the "ns" registry of the "IETF XML
 Registry" {{!RFC3688}} was detailed in {{?RFC8407}}. This document requests IANA
 to update this registration to reference this document.
 
@@ -3048,8 +3048,8 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-   IANA is requested to register the following URI in the "ns" subregistry within
-   the "IETF XML Registry" {{!RFC3688}}:
+   IANA is requested to register the following URI in the "ns" registry within
+   the "IETF XML Registry" group {{!RFC3688}}:
 
 ~~~~
    URI:  urn:ietf:params:xml:ns:yang:iana-template
