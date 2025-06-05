@@ -425,7 +425,7 @@ Even if a YANG data model is structured as a single YANG module, YANG data model
 ###  Example Modules
 
 Example modules are not code components.  The ``<CODE BEGINS>``
-convention MUST NOT be used for example modules. However, example modules MUST be validated.
+convention MUST NOT be used for example modules. However, example modules MUST be validated ({{sec-tools}}).
 
 An example module SHOULD be named using the term "example", followed
 by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -747,7 +747,7 @@ Each specification that defines one or more modules SHOULD contain
 usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-the YANG module(s).  Examples MUST be validated.  Refer to
+the YANG module(s).  Examples MUST be validated ({{sec-tools}}).  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples. If IP addresses/prefixes
 are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
 addresses/prefixes exclusively SHOULD be used in the examples.
@@ -1379,7 +1379,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    The "organization" statement MUST be present.  If the module is
    contained in a document intended for IETF Standards Track status,
    then the organization SHOULD be the IETF working group (WG) chartered
-   to write the document. Exceptions may be example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
+   to write the document. Exceptions include (but not limited): example modules, IANA-maintained modules, or modules contained in AD-sponsored documents. For other standards organizations, a similar
    approach is also suggested.
 
    The "contact" statement MUST be present.  If the module is contained
@@ -2824,15 +2824,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    registries, and the same values are always present in all formats of
    the same registry.
 
-   Also, some YANG modules include parameters and values directly in a
+   A design, in which a YANG module includes parameters and values directly in a
    module that is not maintained by IANA while these are populated in an
-   IANA registry.  Such a design is suboptimal as it creates another
+   IANA registry, could lead to ambiguity and maintain stale information. Such a design creates another
    source of information that may deviate from the IANA registry as new
    values are assigned or some values are deprecated.
 
    For the sake of consistency and ability to support new values while
    maintaining IANA registries as the unique authoritative source of
-   information, this document encourages the use of IANA-maintained modules
+   information, this document recommends the use of IANA-maintained modules
    as the single source of information.
 
    The following section provides a set of guidelines for YANG module authors
@@ -2863,7 +2863,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
-   It is RECOMMENDED that the reasoning for the design choice is
+   The reasoning for the design choice MUST be
    documented in the companion specification that registers an
    IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
@@ -2961,12 +2961,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       sub-statements ("value", "status", "description", and "reference").
 
          - When creating a new "identity" statement name or a new "enum" statement,
-      it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
+      it is RECOMMENDED to use the same name (if present) as recorded in the IANA registry.
 
          - If the name in the IANA registry does not comply with the naming conventions
       listed in {{sec-id-naming}}, the procedure MUST detail how IANA
       can generate legal identifiers from such a name. Specifically, if the name
-      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
+      begins with a number, it is RECOMMENDED to spell out (i.e., writte in full) the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
 
              + "3des-cbc" should be "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
@@ -3255,7 +3255,7 @@ It does not introduce any new or increased security risks.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan Talaulikar, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan Talaulikar, Deb Cooley, and Gorry Fairhurst for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
