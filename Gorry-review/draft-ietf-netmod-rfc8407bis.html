@@ -5304,6 +5304,8 @@ registry]:
 <div class="breakable sourcecode" id="section-4.30.3.2-1">
 <pre>&lt;CODE BEGINS&gt;
 
+=============== NOTE: '\' line wrapping per RFC 8792 ================
+
 
 This document defines the initial version of the IANA-maintained
 "iana-foo" YANG module.  The most recent version of the YANG module
@@ -5337,7 +5339,8 @@ and sub-statements thereof, should be defined:
 Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
-statement with a unique revision date must be added in front of the
+statement with a unique revision date needs to be added in front of \
+                                                                  the
 existing revision statements. The "revision" statement MUST contain
 both "description" and "reference" substatements as follows.
 
