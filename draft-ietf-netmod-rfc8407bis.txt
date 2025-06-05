@@ -3244,7 +3244,7 @@ Table of Contents
          naming conventions listed in Section 4.3.1, the procedure MUST
          detail how IANA can generate legal identifiers from such a
          name.  Specifically, if the name begins with a number, it is
-         RECOMMENDED to spell out (i.e., writte in full) the number when
+         RECOMMENDED to spell out (i.e., write in full) the number when
          used as an identifier.  IANA should be provided with
          instructions to perform such task.  For example, authors of a
          module with such identifiers have to indicate whether:
