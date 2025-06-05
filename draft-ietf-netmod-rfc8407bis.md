@@ -3255,7 +3255,7 @@ It does not introduce any new or increased security risks.
    Ralf Weber for the dnsdir, Giuseppe Fioccola for the opsdir review, Joseph Touch for the tsvart review,
    and Yoav Nir for the secdir review.
 
-   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan Talaulikar, and Deb Cooley for the IESG review.
+   Thanks Éric Vyncke, Mike Bishop, Roman Danyliw, Orie Steele, Ketan Talaulikar, Deb Cooley, and Gorry Fairhurst for the IESG review.
 
 The author of RFC 8407:
 : Andy Bierman
