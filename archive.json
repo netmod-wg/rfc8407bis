@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-05T01:55:50.921457+00:00",
+  "timestamp": "2025-06-08T02:05:26.515674+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2602,6 +2602,34 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "483fb5e7c47edc8f3addc1292969a51e1f62bbc4"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 89,
+      "id": "PR_kwDOJTh_ks6ZLSkf",
+      "title": "Gorry review",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/89",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-05T10:37:48Z",
+      "updatedAt": "2025-06-05T12:23:23Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "d34d878e492306c6de4a2590fae74ba278e77d77",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "Gorry-review",
+      "headRefOid": "cac99e9b57a2d3f5fb1a0a41b0a83f4e2728cff2",
+      "closedAt": "2025-06-05T12:23:23Z",
+      "mergedAt": "2025-06-05T12:23:23Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "b802fb4fe30d458147197b1e73b75f90ff74f09a"
       },
       "comments": [],
       "reviews": []
