@@ -99,7 +99,7 @@ NEW:
 : All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
 : All module revisions MUST have the same XML namespace as the initial version of the module.
 
-# Operations and Manageability Considerations
+# Operational Considerations
 
 This document aligns an IANA policy with the practice for handling YANG module names ({{sec-amend}}). As such, there are no new operations or manageability requirements introduced by this document.
 
