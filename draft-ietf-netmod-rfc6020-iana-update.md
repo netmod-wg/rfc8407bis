@@ -96,7 +96,7 @@ NEW:
 : Modules and their revisions are maintained in the registry.
 : All initial version module and submodule names in the registry MUST be unique.
 : All XML namespaces of initial version modules in the registry MUST be unique.
-: All modules and submodules revisions MUST have the same name as the one in the initial version of the module and submodule.
+: All module and submodule revisions MUST have the same name as the one in the initial version of the module and submodule.
 : All module revisions MUST have the same XML namespace as the initial version of the module.
 
 # Operational Considerations
@@ -119,3 +119,5 @@ Mahesh Jethanandani suggested to offload this part from {{?I-D.ietf-netmod-rfc84
 Thanks to Mahesh and Kent Watsen for the discussion and comments.
 
 Thanks to Mallory Knodel for the genart review and Barry Leiba artart review.
+
+Thanks Mike Bishop for the IESG review.
